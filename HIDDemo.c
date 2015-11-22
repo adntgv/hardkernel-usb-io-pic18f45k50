@@ -1,0 +1,198 @@
+/*This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+/*Host side for microchip's USB HID example firmware.
+Omar Alejandro Rodriguez Rosas, omar.alejandro.rodriguez@gmail.com.
+
+This file is loosely based on "USB and PIC: quick guide to an USB HID framework"
+by Alberto Maccioni, available at http://openprog.altervista.org/USB_firm_eng.html
+*/
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/ioctl.h>
+#include <linux/hiddev.h>
+#include <string.h>
+#include <unistd.h>
+#include <ctype.h>
+#include <fcntl.h>
+
+
+#define BUFFER_SIZE 64
+#define REPORT_SIZE 64
+#define SLEEP_MILISECONDS 100
+#define MAX_DESCRIPTORS  1
+
+
+int deviceDescriptor = -1;
+char devicePath[256];
+unsigned char inBuffer[BUFFER_SIZE];
+unsigned char outBuffer[BUFFER_SIZE];
+int loop = 1;
+
+//these structs hold information about the reports
+struct hiddev_report_info inReportInfo;
+struct hiddev_report_info outReportInfo;
+//information about the endpoint usage
+struct hiddev_usage_ref_multi inUsage;
+struct hiddev_usage_ref_multi outUsage;
+//information about the device
+struct hiddev_devinfo deviceInfo;
+//function prototypes
+int InitializeUSB(int VID, int PID);
+void GetUSBData(unsigned char* destinationBuffer, unsigned char command);
+void CloseUSB();
+
+int main(int nargs, char* args[])
+{
+	char selection;
+	unsigned char buffer[BUFFER_SIZE];
+	//Initialize using Microchip's HID example's VID and PID
+	if(InitializeUSB(0x04D8,0x003F)<0){
+		printf("Error, device was not opened correctly\n");
+		return -1;		
+		};
+	printf("Microchip PIC18 HID demo\n What do yo want to do?\n");
+	while(loop)
+	{	
+		printf("1. Get POT value\n");
+		printf("2. Get button state\n");
+		printf("3. Toggle LED's\n");
+		printf("4. Exit\n");
+		printf("Select a number: \n");
+		fflush(stdin);
+		scanf("%c",&selection);
+
+
+		switch(selection)
+		{
+	
+			//Get POT
+			case '1':
+				GetUSBData(buffer, 0x37);
+				printf("%i\n", (buffer[2]<<8) + buffer[1]);
+				break;
+			//Get button state
+			case '2':
+				GetUSBData(buffer, 0x81);
+				if(buffer[1] == 0x01)
+					printf("Button is Not pressed\n");
+				else
+					printf("Button is pressed\n");
+				break;
+
+			case '3':
+				GetUSBData(buffer, 0x80);
+				break;	
+	
+			case '4':
+				loop = 0;
+				break;
+
+			default:
+				printf("Invalid option %c\n",selection);
+		}//switch
+	}//while
+	
+	CloseUSB();
+	return 0;
+}
+
+int InitializeUSB(int VID, int PID)
+{	
+	int i=0;
+	
+	printf("Searching Microchip (VID 0x%04X and PID 0x%04X)\n",VID, PID);
+	//search amongst the first MAX_DESCRIPTORS descriptors in "/dev/usb/hiddev%d"
+	// for the device's VID & PID
+	for( i=0; i<MAX_DESCRIPTORS ;i++)
+	{
+		sprintf(devicePath,"/dev/usb/hiddev%i",i);
+		deviceDescriptor = open(devicePath,O_RDONLY);
+		if(deviceDescriptor >= 0)//if file was opened properly
+		{
+			ioctl(deviceDescriptor, HIDIOCGDEVINFO, &deviceInfo);
+			if(deviceInfo.vendor == VID && deviceInfo.product == PID)
+			{
+				printf("Device found: %s\n",devicePath);
+				break;
+				
+			}
+		}
+		else {
+			printf}
+	}
+
+	if(i >= MAX_DESCRIPTORS)
+	{
+		printf("USB sensors not found! i = %i\n",i);
+		return -1;
+	}
+	return 0;
+}
+
+void GetUSBData(unsigned char* destinationBuffer, unsigned char command)
+{	
+	//Lots of info about the next part here http://www.wetlogic.net/hiddev/	
+	//Now that usb port is open, this is the actual initialization
+
+	outReportInfo.report_type = HID_REPORT_TYPE_OUTPUT;
+	outReportInfo.report_id = HID_REPORT_ID_FIRST;
+	outReportInfo.num_fields = 1;
+
+	inReportInfo.report_type = HID_REPORT_TYPE_INPUT;
+	inReportInfo.report_id = HID_REPORT_ID_FIRST;
+	inReportInfo.num_fields = 1;
+
+	outUsage.uref.report_type = HID_REPORT_TYPE_OUTPUT;
+	outUsage.uref.report_id = HID_REPORT_ID_FIRST;
+	outUsage.uref.field_index = 0;
+	outUsage.uref.usage_index = 0;
+	outUsage.num_values = REPORT_SIZE;
+
+	inUsage.uref.report_type = HID_REPORT_TYPE_INPUT;	
+	inUsage.uref.report_id = HID_REPORT_ID_FIRST;
+	inUsage.uref.field_index = 0;
+	inUsage.uref.usage_index = 0;	
+    	inUsage.num_values = REPORT_SIZE;
+
+	/*
+	HIDIOCSUSAGE: Sets the value of a usage in an output report.
+	HIDIOCSREPORT: Instructs the kernel to send a report to the device. This report can be filled in by the user through HIDIOCSUSAGE calls (below) to fill in individual usage values in the report before sending the report in full to the device.
+
+
+	HIDIOCSUSAGE:Returns the value of a usage in a hiddev_usage_ref structure. The usage to be retrieved can be specified as above, or the user can choose to fill in the report_type field and specify the report_id as HID_REPORT_ID_UNKNOWN. In this case, the hiddev_usage_ref will be filled in with the report and field infomation associated with this usage if it is found.
+	HIDIOCGREPORTInstructs the kernel to get a feature or input report from the device, in order to selectively update the usage structures (in contrast to INITREPORT).
+
+	*/
+	//Set the report ID
+	outUsage.values[0] = command;
+	
+	//write
+	ioctl(deviceDescriptor,HIDIOCSUSAGES, &outUsage); //set the output report
+	ioctl(deviceDescriptor,HIDIOCSREPORT, &outReportInfo); //send the output report
+	usleep(SLEEP_MILISECONDS*1000); //short sleep
+	//read
+	ioctl(deviceDescriptor,HIDIOCGUSAGES, &inUsage); //set the input report
+	ioctl(deviceDescriptor,HIDIOCGREPORT, &inReportInfo); //get the input report
+	int i;
+	
+	for( i = 1 ; i < REPORT_SIZE ; i++)
+	{destinationBuffer[i] = inUsage.values[i];}
+}
+
+void CloseUSB()
+{
+	close(deviceDescriptor);
+}
+
