@@ -52,7 +52,7 @@
     unsigned char ToSendDataBuffer[64];
 #endif
 
-volatile USB_HANDLE USBOutHandle;    
+volatile USB_HANDLE USBOutHandle;
 volatile USB_HANDLE USBInHandle;
 
 /** DEFINITIONS ****************************************************/
@@ -61,8 +61,8 @@ typedef enum
     COMMAND_TOGGLE_LED = 0x80,
     COMMAND_GET_BUTTON_STATUS = 0x81,
     COMMAND_READ_POTENTIOMETER = 0x37,
-    COMMAND_ACQUIRE_FROM_PIN = 101,
-    COMMAND_GENERATE_FROM_ADC = 102
+    COMMAND_ACQUIRE_FROM_PIN = 0x10,
+    COMMAND_GENERATE_FROM_ADC = 0x11
 
 
 } CUSTOM_HID_DEMO_COMMANDS;
@@ -109,10 +109,10 @@ void APP_DeviceCustomHIDInitialize()
 *
 ********************************************************************/
 void APP_DeviceCustomHIDTasks()
-{   
+{
     //Check if we have received an OUT data packet from the host
     if(HIDRxHandleBusy(USBOutHandle) == false)
-    {   
+    {
         //We just received a packet of data from the USB host.
         //Check the first uint8_t of the packet to see what command the host
         //application software wants us to fulfill.
@@ -126,21 +126,24 @@ void APP_DeviceCustomHIDTasks()
                 if(!HIDTxHandleBusy(USBInHandle))
                 {
                     ToSendDataBuffer[0] = 0x81;				//Echo back to the host PC the command we are fulfilling in the first uint8_t.  In this case, the Get Pushbutton State command.
-                    if(BUTTON_IsPressed(BUTTON_USB_DEVICE_HID_CUSTOM) == false)	//pushbutton not pressed, pull up resistor on circuit board is pulling the PORT pin high
-                    {
-                            ToSendDataBuffer[1] = 0x01;
-                    }
-                    else									//sw3 must be == 0, pushbutton is pressed and overpowering the pull up resistor
-                    {
-                            ToSendDataBuffer[1] = 0x00;
-                    }
+                  
                     //Prepare the USB module to send the data packet to the host
                     USBInHandle = HIDTxPacket(CUSTOM_DEVICE_HID_EP, (uint8_t*)&ToSendDataBuffer[0],64);
                 }
                 break;
             case COMMAND_ACQUIRE_FROM_PIN:
+                int i;
+                uint16_t pot;
+                if(!HIDTxHandleBusy(USBInHandle))
                 {
+                    ToSendDataBuffer[0] = 0x10;				//Echo back to the host PC the command we are fulfilling in the first uint8_t.  In this case, the Get Pushbutton State command.
 
+                    for(i =1; i<64;i=i+2 ){
+                         ToSendDataBuffer[i] = (uint8_t)pot; //LSB
+                        ToSendDataBuffer[i+1] = pot >> 8;     //MSB
+                    }
+                    //Prepare the USB module to send the data packet to the host
+                    USBInHandle = HIDTxPacket(CUSTOM_DEVICE_HID_EP, (uint8_t*)&ToSendDataBuffer[0],64);
                 }
                 break;
             case COMMAND_GENERATE_FROM_ADC:
@@ -173,7 +176,7 @@ void APP_DeviceCustomHIDTasks()
                 }
                 break;
         }
-        //Re-arm the OUT endpoint, so we can receive the next OUT data packet 
+        //Re-arm the OUT endpoint, so we can receive the next OUT data packet
         //that the host may try to send us.
         USBOutHandle = HIDRxPacket(CUSTOM_DEVICE_HID_EP, (uint8_t*)&ReceivedDataBuffer, 64);
     }
