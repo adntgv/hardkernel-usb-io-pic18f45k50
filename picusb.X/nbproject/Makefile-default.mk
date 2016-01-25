@@ -19,7 +19,7 @@ endif
 endif
 
 # Environment
-MKDIR=mkdir -p
+MKDIR=gnumkdir -p
 RM=rm -f 
 MV=mv 
 CP=cp 
@@ -45,17 +45,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../bsp_pic18f45k50/buttons.c ../bsp_pic18f45k50/adc.c ../bsp_pic18f45k50/leds.c ../src/system_config/pic18f45k50/system.c ../src/usb_descriptors.c ../src/main.c ../src/app_device_custom_hid.c ../src/app_led_usb_status.c ../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/src/usb_device_hid.c ../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/src/usb_device.c ../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/src/usb_device_generic.c
+SOURCEFILES_QUOTED_IF_SPACED=../bsp_pic18f45k50/buttons.c ../bsp_pic18f45k50/adc.c ../bsp_pic18f45k50/leds.c ../src/system_config/pic18f45k50/system.c ../src/usb_descriptors.c ../src/main.c ../src/app_device_custom_hid.c ../src/app_led_usb_status.c ../../../../../../microchip/mla/v2015_08_10/framework/usb/src/usb_device.c ../../../../../../microchip/mla/v2015_08_10/framework/usb/src/usb_device_generic.c ../../../../../../microchip/mla/v2015_08_10/framework/usb/src/usb_device_hid.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/495161761/buttons.p1 ${OBJECTDIR}/_ext/495161761/adc.p1 ${OBJECTDIR}/_ext/495161761/leds.p1 ${OBJECTDIR}/_ext/405898695/system.p1 ${OBJECTDIR}/_ext/1360937237/usb_descriptors.p1 ${OBJECTDIR}/_ext/1360937237/main.p1 ${OBJECTDIR}/_ext/1360937237/app_device_custom_hid.p1 ${OBJECTDIR}/_ext/1360937237/app_led_usb_status.p1 ${OBJECTDIR}/_ext/1570191837/usb_device_hid.p1 ${OBJECTDIR}/_ext/1570191837/usb_device.p1 ${OBJECTDIR}/_ext/1570191837/usb_device_generic.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/495161761/buttons.p1.d ${OBJECTDIR}/_ext/495161761/adc.p1.d ${OBJECTDIR}/_ext/495161761/leds.p1.d ${OBJECTDIR}/_ext/405898695/system.p1.d ${OBJECTDIR}/_ext/1360937237/usb_descriptors.p1.d ${OBJECTDIR}/_ext/1360937237/main.p1.d ${OBJECTDIR}/_ext/1360937237/app_device_custom_hid.p1.d ${OBJECTDIR}/_ext/1360937237/app_led_usb_status.p1.d ${OBJECTDIR}/_ext/1570191837/usb_device_hid.p1.d ${OBJECTDIR}/_ext/1570191837/usb_device.p1.d ${OBJECTDIR}/_ext/1570191837/usb_device_generic.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/495161761/buttons.p1 ${OBJECTDIR}/_ext/495161761/adc.p1 ${OBJECTDIR}/_ext/495161761/leds.p1 ${OBJECTDIR}/_ext/405898695/system.p1 ${OBJECTDIR}/_ext/1360937237/usb_descriptors.p1 ${OBJECTDIR}/_ext/1360937237/main.p1 ${OBJECTDIR}/_ext/1360937237/app_device_custom_hid.p1 ${OBJECTDIR}/_ext/1360937237/app_led_usb_status.p1 ${OBJECTDIR}/_ext/86914052/usb_device.p1 ${OBJECTDIR}/_ext/86914052/usb_device_generic.p1 ${OBJECTDIR}/_ext/86914052/usb_device_hid.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/495161761/buttons.p1.d ${OBJECTDIR}/_ext/495161761/adc.p1.d ${OBJECTDIR}/_ext/495161761/leds.p1.d ${OBJECTDIR}/_ext/405898695/system.p1.d ${OBJECTDIR}/_ext/1360937237/usb_descriptors.p1.d ${OBJECTDIR}/_ext/1360937237/main.p1.d ${OBJECTDIR}/_ext/1360937237/app_device_custom_hid.p1.d ${OBJECTDIR}/_ext/1360937237/app_led_usb_status.p1.d ${OBJECTDIR}/_ext/86914052/usb_device.p1.d ${OBJECTDIR}/_ext/86914052/usb_device_generic.p1.d ${OBJECTDIR}/_ext/86914052/usb_device_hid.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/495161761/buttons.p1 ${OBJECTDIR}/_ext/495161761/adc.p1 ${OBJECTDIR}/_ext/495161761/leds.p1 ${OBJECTDIR}/_ext/405898695/system.p1 ${OBJECTDIR}/_ext/1360937237/usb_descriptors.p1 ${OBJECTDIR}/_ext/1360937237/main.p1 ${OBJECTDIR}/_ext/1360937237/app_device_custom_hid.p1 ${OBJECTDIR}/_ext/1360937237/app_led_usb_status.p1 ${OBJECTDIR}/_ext/1570191837/usb_device_hid.p1 ${OBJECTDIR}/_ext/1570191837/usb_device.p1 ${OBJECTDIR}/_ext/1570191837/usb_device_generic.p1
+OBJECTFILES=${OBJECTDIR}/_ext/495161761/buttons.p1 ${OBJECTDIR}/_ext/495161761/adc.p1 ${OBJECTDIR}/_ext/495161761/leds.p1 ${OBJECTDIR}/_ext/405898695/system.p1 ${OBJECTDIR}/_ext/1360937237/usb_descriptors.p1 ${OBJECTDIR}/_ext/1360937237/main.p1 ${OBJECTDIR}/_ext/1360937237/app_device_custom_hid.p1 ${OBJECTDIR}/_ext/1360937237/app_led_usb_status.p1 ${OBJECTDIR}/_ext/86914052/usb_device.p1 ${OBJECTDIR}/_ext/86914052/usb_device_generic.p1 ${OBJECTDIR}/_ext/86914052/usb_device_hid.p1
 
 # Source Files
-SOURCEFILES=../bsp_pic18f45k50/buttons.c ../bsp_pic18f45k50/adc.c ../bsp_pic18f45k50/leds.c ../src/system_config/pic18f45k50/system.c ../src/usb_descriptors.c ../src/main.c ../src/app_device_custom_hid.c ../src/app_led_usb_status.c ../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/src/usb_device_hid.c ../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/src/usb_device.c ../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/src/usb_device_generic.c
+SOURCEFILES=../bsp_pic18f45k50/buttons.c ../bsp_pic18f45k50/adc.c ../bsp_pic18f45k50/leds.c ../src/system_config/pic18f45k50/system.c ../src/usb_descriptors.c ../src/main.c ../src/app_device_custom_hid.c ../src/app_led_usb_status.c ../../../../../../microchip/mla/v2015_08_10/framework/usb/src/usb_device.c ../../../../../../microchip/mla/v2015_08_10/framework/usb/src/usb_device_generic.c ../../../../../../microchip/mla/v2015_08_10/framework/usb/src/usb_device_hid.c
 
 
 CFLAGS=
@@ -85,7 +85,7 @@ ${OBJECTDIR}/_ext/495161761/buttons.p1: ../bsp_pic18f45k50/buttons.c  nbproject/
 	@${MKDIR} "${OBJECTDIR}/_ext/495161761" 
 	@${RM} ${OBJECTDIR}/_ext/495161761/buttons.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/495161761/buttons.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/495161761/buttons.p1  ../bsp_pic18f45k50/buttons.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../../../../../microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/495161761/buttons.p1  ../bsp_pic18f45k50/buttons.c 
 	@-${MV} ${OBJECTDIR}/_ext/495161761/buttons.d ${OBJECTDIR}/_ext/495161761/buttons.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/495161761/buttons.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
@@ -93,7 +93,7 @@ ${OBJECTDIR}/_ext/495161761/adc.p1: ../bsp_pic18f45k50/adc.c  nbproject/Makefile
 	@${MKDIR} "${OBJECTDIR}/_ext/495161761" 
 	@${RM} ${OBJECTDIR}/_ext/495161761/adc.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/495161761/adc.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/495161761/adc.p1  ../bsp_pic18f45k50/adc.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../../../../../microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/495161761/adc.p1  ../bsp_pic18f45k50/adc.c 
 	@-${MV} ${OBJECTDIR}/_ext/495161761/adc.d ${OBJECTDIR}/_ext/495161761/adc.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/495161761/adc.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
@@ -101,7 +101,7 @@ ${OBJECTDIR}/_ext/495161761/leds.p1: ../bsp_pic18f45k50/leds.c  nbproject/Makefi
 	@${MKDIR} "${OBJECTDIR}/_ext/495161761" 
 	@${RM} ${OBJECTDIR}/_ext/495161761/leds.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/495161761/leds.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/495161761/leds.p1  ../bsp_pic18f45k50/leds.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../../../../../microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/495161761/leds.p1  ../bsp_pic18f45k50/leds.c 
 	@-${MV} ${OBJECTDIR}/_ext/495161761/leds.d ${OBJECTDIR}/_ext/495161761/leds.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/495161761/leds.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
@@ -109,7 +109,7 @@ ${OBJECTDIR}/_ext/405898695/system.p1: ../src/system_config/pic18f45k50/system.c
 	@${MKDIR} "${OBJECTDIR}/_ext/405898695" 
 	@${RM} ${OBJECTDIR}/_ext/405898695/system.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/405898695/system.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/405898695/system.p1  ../src/system_config/pic18f45k50/system.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../../../../../microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/405898695/system.p1  ../src/system_config/pic18f45k50/system.c 
 	@-${MV} ${OBJECTDIR}/_ext/405898695/system.d ${OBJECTDIR}/_ext/405898695/system.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/405898695/system.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
@@ -117,7 +117,7 @@ ${OBJECTDIR}/_ext/1360937237/usb_descriptors.p1: ../src/usb_descriptors.c  nbpro
 	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/usb_descriptors.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/usb_descriptors.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1360937237/usb_descriptors.p1  ../src/usb_descriptors.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../../../../../microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1360937237/usb_descriptors.p1  ../src/usb_descriptors.c 
 	@-${MV} ${OBJECTDIR}/_ext/1360937237/usb_descriptors.d ${OBJECTDIR}/_ext/1360937237/usb_descriptors.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1360937237/usb_descriptors.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
@@ -125,7 +125,7 @@ ${OBJECTDIR}/_ext/1360937237/main.p1: ../src/main.c  nbproject/Makefile-${CND_CO
 	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/main.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/main.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1360937237/main.p1  ../src/main.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../../../../../microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1360937237/main.p1  ../src/main.c 
 	@-${MV} ${OBJECTDIR}/_ext/1360937237/main.d ${OBJECTDIR}/_ext/1360937237/main.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1360937237/main.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
@@ -133,7 +133,7 @@ ${OBJECTDIR}/_ext/1360937237/app_device_custom_hid.p1: ../src/app_device_custom_
 	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/app_device_custom_hid.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/app_device_custom_hid.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1360937237/app_device_custom_hid.p1  ../src/app_device_custom_hid.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../../../../../microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1360937237/app_device_custom_hid.p1  ../src/app_device_custom_hid.c 
 	@-${MV} ${OBJECTDIR}/_ext/1360937237/app_device_custom_hid.d ${OBJECTDIR}/_ext/1360937237/app_device_custom_hid.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1360937237/app_device_custom_hid.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
@@ -141,40 +141,40 @@ ${OBJECTDIR}/_ext/1360937237/app_led_usb_status.p1: ../src/app_led_usb_status.c 
 	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/app_led_usb_status.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/app_led_usb_status.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1360937237/app_led_usb_status.p1  ../src/app_led_usb_status.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../../../../../microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1360937237/app_led_usb_status.p1  ../src/app_led_usb_status.c 
 	@-${MV} ${OBJECTDIR}/_ext/1360937237/app_led_usb_status.d ${OBJECTDIR}/_ext/1360937237/app_led_usb_status.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1360937237/app_led_usb_status.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1570191837/usb_device_hid.p1: ../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/src/usb_device_hid.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1570191837" 
-	@${RM} ${OBJECTDIR}/_ext/1570191837/usb_device_hid.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/1570191837/usb_device_hid.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1570191837/usb_device_hid.p1  ../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/src/usb_device_hid.c 
-	@-${MV} ${OBJECTDIR}/_ext/1570191837/usb_device_hid.d ${OBJECTDIR}/_ext/1570191837/usb_device_hid.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/1570191837/usb_device_hid.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+${OBJECTDIR}/_ext/86914052/usb_device.p1: ../../../../../../microchip/mla/v2015_08_10/framework/usb/src/usb_device.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/86914052" 
+	@${RM} ${OBJECTDIR}/_ext/86914052/usb_device.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/86914052/usb_device.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../../../../../microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/86914052/usb_device.p1  ../../../../../../microchip/mla/v2015_08_10/framework/usb/src/usb_device.c 
+	@-${MV} ${OBJECTDIR}/_ext/86914052/usb_device.d ${OBJECTDIR}/_ext/86914052/usb_device.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/86914052/usb_device.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1570191837/usb_device.p1: ../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/src/usb_device.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1570191837" 
-	@${RM} ${OBJECTDIR}/_ext/1570191837/usb_device.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/1570191837/usb_device.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1570191837/usb_device.p1  ../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/src/usb_device.c 
-	@-${MV} ${OBJECTDIR}/_ext/1570191837/usb_device.d ${OBJECTDIR}/_ext/1570191837/usb_device.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/1570191837/usb_device.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+${OBJECTDIR}/_ext/86914052/usb_device_generic.p1: ../../../../../../microchip/mla/v2015_08_10/framework/usb/src/usb_device_generic.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/86914052" 
+	@${RM} ${OBJECTDIR}/_ext/86914052/usb_device_generic.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/86914052/usb_device_generic.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../../../../../microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/86914052/usb_device_generic.p1  ../../../../../../microchip/mla/v2015_08_10/framework/usb/src/usb_device_generic.c 
+	@-${MV} ${OBJECTDIR}/_ext/86914052/usb_device_generic.d ${OBJECTDIR}/_ext/86914052/usb_device_generic.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/86914052/usb_device_generic.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1570191837/usb_device_generic.p1: ../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/src/usb_device_generic.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1570191837" 
-	@${RM} ${OBJECTDIR}/_ext/1570191837/usb_device_generic.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/1570191837/usb_device_generic.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1570191837/usb_device_generic.p1  ../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/src/usb_device_generic.c 
-	@-${MV} ${OBJECTDIR}/_ext/1570191837/usb_device_generic.d ${OBJECTDIR}/_ext/1570191837/usb_device_generic.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/1570191837/usb_device_generic.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+${OBJECTDIR}/_ext/86914052/usb_device_hid.p1: ../../../../../../microchip/mla/v2015_08_10/framework/usb/src/usb_device_hid.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/86914052" 
+	@${RM} ${OBJECTDIR}/_ext/86914052/usb_device_hid.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/86914052/usb_device_hid.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../../../../../microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/86914052/usb_device_hid.p1  ../../../../../../microchip/mla/v2015_08_10/framework/usb/src/usb_device_hid.c 
+	@-${MV} ${OBJECTDIR}/_ext/86914052/usb_device_hid.d ${OBJECTDIR}/_ext/86914052/usb_device_hid.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/86914052/usb_device_hid.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 else
 ${OBJECTDIR}/_ext/495161761/buttons.p1: ../bsp_pic18f45k50/buttons.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/495161761" 
 	@${RM} ${OBJECTDIR}/_ext/495161761/buttons.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/495161761/buttons.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/495161761/buttons.p1  ../bsp_pic18f45k50/buttons.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../../../../../microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/495161761/buttons.p1  ../bsp_pic18f45k50/buttons.c 
 	@-${MV} ${OBJECTDIR}/_ext/495161761/buttons.d ${OBJECTDIR}/_ext/495161761/buttons.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/495161761/buttons.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
@@ -182,7 +182,7 @@ ${OBJECTDIR}/_ext/495161761/adc.p1: ../bsp_pic18f45k50/adc.c  nbproject/Makefile
 	@${MKDIR} "${OBJECTDIR}/_ext/495161761" 
 	@${RM} ${OBJECTDIR}/_ext/495161761/adc.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/495161761/adc.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/495161761/adc.p1  ../bsp_pic18f45k50/adc.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../../../../../microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/495161761/adc.p1  ../bsp_pic18f45k50/adc.c 
 	@-${MV} ${OBJECTDIR}/_ext/495161761/adc.d ${OBJECTDIR}/_ext/495161761/adc.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/495161761/adc.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
@@ -190,7 +190,7 @@ ${OBJECTDIR}/_ext/495161761/leds.p1: ../bsp_pic18f45k50/leds.c  nbproject/Makefi
 	@${MKDIR} "${OBJECTDIR}/_ext/495161761" 
 	@${RM} ${OBJECTDIR}/_ext/495161761/leds.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/495161761/leds.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/495161761/leds.p1  ../bsp_pic18f45k50/leds.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../../../../../microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/495161761/leds.p1  ../bsp_pic18f45k50/leds.c 
 	@-${MV} ${OBJECTDIR}/_ext/495161761/leds.d ${OBJECTDIR}/_ext/495161761/leds.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/495161761/leds.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
@@ -198,7 +198,7 @@ ${OBJECTDIR}/_ext/405898695/system.p1: ../src/system_config/pic18f45k50/system.c
 	@${MKDIR} "${OBJECTDIR}/_ext/405898695" 
 	@${RM} ${OBJECTDIR}/_ext/405898695/system.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/405898695/system.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/405898695/system.p1  ../src/system_config/pic18f45k50/system.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../../../../../microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/405898695/system.p1  ../src/system_config/pic18f45k50/system.c 
 	@-${MV} ${OBJECTDIR}/_ext/405898695/system.d ${OBJECTDIR}/_ext/405898695/system.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/405898695/system.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
@@ -206,7 +206,7 @@ ${OBJECTDIR}/_ext/1360937237/usb_descriptors.p1: ../src/usb_descriptors.c  nbpro
 	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/usb_descriptors.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/usb_descriptors.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1360937237/usb_descriptors.p1  ../src/usb_descriptors.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../../../../../microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1360937237/usb_descriptors.p1  ../src/usb_descriptors.c 
 	@-${MV} ${OBJECTDIR}/_ext/1360937237/usb_descriptors.d ${OBJECTDIR}/_ext/1360937237/usb_descriptors.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1360937237/usb_descriptors.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
@@ -214,7 +214,7 @@ ${OBJECTDIR}/_ext/1360937237/main.p1: ../src/main.c  nbproject/Makefile-${CND_CO
 	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/main.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/main.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1360937237/main.p1  ../src/main.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../../../../../microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1360937237/main.p1  ../src/main.c 
 	@-${MV} ${OBJECTDIR}/_ext/1360937237/main.d ${OBJECTDIR}/_ext/1360937237/main.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1360937237/main.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
@@ -222,7 +222,7 @@ ${OBJECTDIR}/_ext/1360937237/app_device_custom_hid.p1: ../src/app_device_custom_
 	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/app_device_custom_hid.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/app_device_custom_hid.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1360937237/app_device_custom_hid.p1  ../src/app_device_custom_hid.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../../../../../microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1360937237/app_device_custom_hid.p1  ../src/app_device_custom_hid.c 
 	@-${MV} ${OBJECTDIR}/_ext/1360937237/app_device_custom_hid.d ${OBJECTDIR}/_ext/1360937237/app_device_custom_hid.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1360937237/app_device_custom_hid.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
@@ -230,33 +230,33 @@ ${OBJECTDIR}/_ext/1360937237/app_led_usb_status.p1: ../src/app_led_usb_status.c 
 	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/app_led_usb_status.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/app_led_usb_status.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1360937237/app_led_usb_status.p1  ../src/app_led_usb_status.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../../../../../microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1360937237/app_led_usb_status.p1  ../src/app_led_usb_status.c 
 	@-${MV} ${OBJECTDIR}/_ext/1360937237/app_led_usb_status.d ${OBJECTDIR}/_ext/1360937237/app_led_usb_status.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1360937237/app_led_usb_status.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1570191837/usb_device_hid.p1: ../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/src/usb_device_hid.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1570191837" 
-	@${RM} ${OBJECTDIR}/_ext/1570191837/usb_device_hid.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/1570191837/usb_device_hid.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1570191837/usb_device_hid.p1  ../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/src/usb_device_hid.c 
-	@-${MV} ${OBJECTDIR}/_ext/1570191837/usb_device_hid.d ${OBJECTDIR}/_ext/1570191837/usb_device_hid.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/1570191837/usb_device_hid.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+${OBJECTDIR}/_ext/86914052/usb_device.p1: ../../../../../../microchip/mla/v2015_08_10/framework/usb/src/usb_device.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/86914052" 
+	@${RM} ${OBJECTDIR}/_ext/86914052/usb_device.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/86914052/usb_device.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../../../../../microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/86914052/usb_device.p1  ../../../../../../microchip/mla/v2015_08_10/framework/usb/src/usb_device.c 
+	@-${MV} ${OBJECTDIR}/_ext/86914052/usb_device.d ${OBJECTDIR}/_ext/86914052/usb_device.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/86914052/usb_device.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1570191837/usb_device.p1: ../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/src/usb_device.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1570191837" 
-	@${RM} ${OBJECTDIR}/_ext/1570191837/usb_device.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/1570191837/usb_device.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1570191837/usb_device.p1  ../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/src/usb_device.c 
-	@-${MV} ${OBJECTDIR}/_ext/1570191837/usb_device.d ${OBJECTDIR}/_ext/1570191837/usb_device.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/1570191837/usb_device.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+${OBJECTDIR}/_ext/86914052/usb_device_generic.p1: ../../../../../../microchip/mla/v2015_08_10/framework/usb/src/usb_device_generic.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/86914052" 
+	@${RM} ${OBJECTDIR}/_ext/86914052/usb_device_generic.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/86914052/usb_device_generic.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../../../../../microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/86914052/usb_device_generic.p1  ../../../../../../microchip/mla/v2015_08_10/framework/usb/src/usb_device_generic.c 
+	@-${MV} ${OBJECTDIR}/_ext/86914052/usb_device_generic.d ${OBJECTDIR}/_ext/86914052/usb_device_generic.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/86914052/usb_device_generic.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1570191837/usb_device_generic.p1: ../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/src/usb_device_generic.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1570191837" 
-	@${RM} ${OBJECTDIR}/_ext/1570191837/usb_device_generic.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/1570191837/usb_device_generic.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1570191837/usb_device_generic.p1  ../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/src/usb_device_generic.c 
-	@-${MV} ${OBJECTDIR}/_ext/1570191837/usb_device_generic.d ${OBJECTDIR}/_ext/1570191837/usb_device_generic.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/1570191837/usb_device_generic.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+${OBJECTDIR}/_ext/86914052/usb_device_hid.p1: ../../../../../../microchip/mla/v2015_08_10/framework/usb/src/usb_device_hid.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/86914052" 
+	@${RM} ${OBJECTDIR}/_ext/86914052/usb_device_hid.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/86914052/usb_device_hid.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../../../../../microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/86914052/usb_device_hid.p1  ../../../../../../microchip/mla/v2015_08_10/framework/usb/src/usb_device_hid.c 
+	@-${MV} ${OBJECTDIR}/_ext/86914052/usb_device_hid.d ${OBJECTDIR}/_ext/86914052/usb_device_hid.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/86914052/usb_device_hid.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 
@@ -271,13 +271,13 @@ endif
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 dist/${CND_CONF}/${IMAGE_TYPE}/picusb.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk    
 	@${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_CC} $(MP_EXTRA_LD_PRE) --chip=$(MP_PROCESSOR_OPTION) -G -mdist/${CND_CONF}/${IMAGE_TYPE}/picusb.X.${IMAGE_TYPE}.map  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"       --memorysummary dist/${CND_CONF}/${IMAGE_TYPE}/memoryfile.xml -odist/${CND_CONF}/${IMAGE_TYPE}/picusb.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}     
+	${MP_CC} $(MP_EXTRA_LD_PRE) --chip=$(MP_PROCESSOR_OPTION) -G -mdist/${CND_CONF}/${IMAGE_TYPE}/picusb.X.${IMAGE_TYPE}.map  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../../../../../microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"        -odist/${CND_CONF}/${IMAGE_TYPE}/picusb.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}     
 	@${RM} dist/${CND_CONF}/${IMAGE_TYPE}/picusb.X.${IMAGE_TYPE}.hex 
 	
 else
 dist/${CND_CONF}/${IMAGE_TYPE}/picusb.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   
 	@${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_CC} $(MP_EXTRA_LD_PRE) --chip=$(MP_PROCESSOR_OPTION) -G -mdist/${CND_CONF}/${IMAGE_TYPE}/picusb.X.${IMAGE_TYPE}.map  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    --memorysummary dist/${CND_CONF}/${IMAGE_TYPE}/memoryfile.xml -odist/${CND_CONF}/${IMAGE_TYPE}/picusb.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}     
+	${MP_CC} $(MP_EXTRA_LD_PRE) --chip=$(MP_PROCESSOR_OPTION) -G -mdist/${CND_CONF}/${IMAGE_TYPE}/picusb.X.${IMAGE_TYPE}.map  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 -I"../src" -I"../src/system_config/pic18f45k50" -I"../bsp_pic18f45k50" -I"../../../../../../microchip/mla/v2015_08_10/framework/usb/inc" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -odist/${CND_CONF}/${IMAGE_TYPE}/picusb.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}     
 	
 endif
 
@@ -297,7 +297,7 @@ endif
 # Enable dependency checking
 .dep.inc: .depcheck-impl
 
-DEPFILES=$(shell "${PATH_TO_IDE_BIN}"mplabwildcard ${POSSIBLE_DEPFILES})
+DEPFILES=$(shell mplabwildcard ${POSSIBLE_DEPFILES})
 ifneq (${DEPFILES},)
 include ${DEPFILES}
 endif

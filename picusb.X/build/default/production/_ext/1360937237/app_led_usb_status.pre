@@ -1,7 +1,7 @@
 
 # 1 "../src/app_led_usb_status.c"
 
-# 13 "/opt/microchip/xc8/v1.35/include/stdint.h"
+# 13 "C:\Program Files (x86)\Microchip\xc8\v1.34\include\stdint.h"
 typedef signed char int8_t;
 
 # 20
@@ -91,17 +91,15 @@ typedef int16_t intptr_t;
 
 typedef uint16_t uintptr_t;
 
-# 26 "/opt/microchip/xc8/v1.35/include/htc.h"
+# 26 "C:\Program Files (x86)\Microchip\xc8\v1.34\include\htc.h"
 extern const char __xc8_OPTIM_SPEED;
 
-extern double __fpnormalize(double);
 
-
-# 13 "/opt/microchip/xc8/v1.35/include/xc8debug.h"
+# 13 "C:\Program Files (x86)\Microchip\xc8\v1.34\include\xc8debug.h"
 #pragma intrinsic(__builtin_software_breakpoint)
 extern void __builtin_software_breakpoint(void);
 
-# 49 "/opt/microchip/xc8/v1.35/include/pic18f45k50.h"
+# 49 "C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18f45k50.h"
 extern volatile unsigned char SRCON1 @ 0xF57;
 
 asm("SRCON1 equ 0F57h");
@@ -7950,17 +7948,16 @@ extern volatile __bit nW @ (((unsigned) &SSP1STAT)*8) + 2;
 
 extern volatile __bit nWRITE @ (((unsigned) &SSP1STAT)*8) + 2;
 
-# 18 "/opt/microchip/xc8/v1.35/include/pic18.h"
-__attribute__((__unsupported__("The " "flash_write" " routine is no longer supported. Please use the MPLAB X MCC."))) void flash_write(const unsigned char *, unsigned int, __far unsigned char *);
-__attribute__((__unsupported__("The " "EraseFlash" " routine is no longer supported. Please use the MPLAB X MCC."))) void EraseFlash(unsigned long startaddr, unsigned long endaddr);
+# 18 "C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18.h"
+__attribute__((__unsupported__("The flash_write routine is no longer supported. Please use the peripheral library functions: WriteBytesFlash, WriteBlockFlash or WriteWordFlash"))) void flash_write(const unsigned char *, unsigned int, __far unsigned char *);
 
 
-# 42
+# 41
 #pragma intrinsic(__nop)
 extern void __nop(void);
 
 
-# 151
+# 160
 #pragma intrinsic(_delay)
 extern __nonreentrant void _delay(unsigned long);
 #pragma intrinsic(_delaywdt)
@@ -7968,10 +7965,10 @@ extern __nonreentrant void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __nonreentrant void _delay3(unsigned char);
 
-# 12 "/opt/microchip/xc8/v1.35/include/stdbool.h"
+# 12 "C:\Program Files (x86)\Microchip\xc8\v1.34\include\stdbool.h"
 typedef unsigned char bool;
 
-# 29 "../bsp_pic18f45k50/buttons.h"
+# 29 "../bsp_pic18f45k50\buttons.h"
 typedef enum
 {
 BUTTON_NONE,
@@ -7986,7 +7983,7 @@ bool BUTTON_IsPressed(BUTTON button);
 # 72
 void BUTTON_Enable(BUTTON button);
 
-# 29 "../bsp_pic18f45k50/leds.h"
+# 29 "../bsp_pic18f45k50\leds.h"
 typedef enum
 {
 LED_NONE,
@@ -8010,7 +8007,7 @@ bool LED_Get(LED led);
 # 129
 void LED_Enable(LED led);
 
-# 32 "../bsp_pic18f45k50/adc.h"
+# 32 "../bsp_pic18f45k50\adc.h"
 typedef enum
 {
 ADC_CHANNEL_0 = 0,
@@ -8033,7 +8030,7 @@ bool ADC_Enable(ADC_CHANNEL channel);
 # 109
 bool ADC_SetConfiguration(ADC_CONFIGURATION configuration);
 
-# 27 "../bsp_pic18f45k50/power.h"
+# 27 "../bsp_pic18f45k50\power.h"
 typedef enum
 {
 POWER_SOURCE_USB,
@@ -8054,7 +8051,7 @@ SYSTEM_STATE_USB_RESUME
 # 59
 void SYSTEM_Initialize( SYSTEM_STATE state );
 
-# 69 "../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb_ch9.h"
+# 69 "../../../../../../microchip/mla/v2015_08_10/framework/usb/inc\usb_ch9.h"
 typedef struct  _USB_DEVICE_DESCRIPTOR
 {
 uint8_t bLength;
@@ -8298,7 +8295,7 @@ unsigned :8;
 
 } CTRL_TRF_SETUP, SETUP_PKT, *PSETUP_PKT;
 
-# 135 "../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb_common.h"
+# 135 "../../../../../../microchip/mla/v2015_08_10/framework/usb/inc\usb_common.h"
 typedef union
 {
 uint8_t bitmap;
@@ -8461,7 +8458,7 @@ uint8_t bDeviceProtocol;
 # 466
 typedef bool (*USB_EVENT_HANDLER) ( USB_EVENT event, void *data, unsigned int size );
 
-# 72 "../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb_device.h"
+# 72 "../../../../../../microchip/mla/v2015_08_10/framework/usb/inc\usb_device.h"
 typedef enum
 {
 
@@ -8702,15 +8699,20 @@ extern volatile USB_DEVICE_STATE USBDeviceState;
 extern volatile uint8_t USBActiveConfiguration;
 extern volatile uint8_t USBTicksSinceSuspendEnd;
 
-# 4 "/opt/microchip/xc8/v1.35/include/__size_t.h"
+# 4 "C:\Program Files (x86)\Microchip\xc8\v1.34\include\string.h"
+typedef int ptrdiff_t;
 typedef unsigned size_t;
+typedef unsigned short wchar_t;
 
-# 14 "/opt/microchip/xc8/v1.35/include/string.h"
+
+extern int errno;
+
+# 22
 extern void * memcpy(void *, const void *, size_t);
 extern void * memmove(void *, const void *, size_t);
 extern void * memset(void *, int, size_t);
 
-# 34
+# 42
 extern char * strcat(char *, const char *);
 extern char * strcpy(char *, const char *);
 extern char * strncat(char *, const char *, size_t);
@@ -8737,7 +8739,7 @@ extern char * strichr(const char *, int);
 extern char * strrchr(const char *, int);
 extern char * strrichr(const char *, int);
 
-# 258 "../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb_hal_pic18.h"
+# 258 "../../../../../../microchip/mla/v2015_08_10/framework/usb/inc\usb_hal_pic18.h"
 typedef union _BD_STAT
 {
 uint8_t Val;
@@ -8837,7 +8839,7 @@ extern volatile OUT_PIPE outPipes[1];
 extern volatile BDT_ENTRY* pBDTEntryOut[1+1];
 extern volatile BDT_ENTRY* pBDTEntryIn[1+1];
 
-# 161 "../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb_hal.h"
+# 161 "../../../../../../microchip/mla/v2015_08_10/framework/usb/inc\usb_hal.h"
 void OTGCORE_SetDeviceAddr( uint8_t addr );
 
 # 197
@@ -8885,7 +8887,7 @@ static uint16_t ledCount = 0;
 
 if(USBBusIsSuspended == 1)
 {
-LED_Off(LED_D1);
+LED_Off(LED_NONE);
 return;
 }
 
@@ -8896,11 +8898,11 @@ case CONFIGURED_STATE:
 # 90
 if(ledCount == 1)
 {
-LED_On(LED_D1);
+LED_On(LED_NONE);
 }
 else if(ledCount == 75)
 {
-LED_Off(LED_D1);
+LED_Off(LED_NONE);
 }
 else if(ledCount > 150)
 {
@@ -8913,11 +8915,11 @@ default:
 # 107
 if(ledCount == 1)
 {
-LED_On(LED_D1);
+LED_On(LED_NONE);
 }
 else if(ledCount == 50)
 {
-LED_Off(LED_D1);
+LED_Off(LED_NONE);
 }
 else if(ledCount > 950)
 {

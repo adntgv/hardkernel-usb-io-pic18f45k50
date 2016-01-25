@@ -1,6 +1,6 @@
- build/default/production/_ext/1360937237/usb_descriptors.d  \
- build/default/production/_ext/1360937237/usb_descriptors.p1:  \
- ../src/usb_descriptors.c  \
+ build/default/production/_ext/86914052/usb_device_hid.d  \
+ build/default/production/_ext/86914052/usb_device_hid.p1:  \
+ ../../../../../../microchip/mla/v2015_08_10/framework/usb/src/usb_device_hid.c  \
 ../../../../../../microchip/mla/v2015_08_10/framework/usb/inc/usb_common.h  \
 ../bsp_pic18f45k50/adc.h  \
 ../../../../../../microchip/mla/v2015_08_10/framework/usb/inc/usb_device_hid.h  \

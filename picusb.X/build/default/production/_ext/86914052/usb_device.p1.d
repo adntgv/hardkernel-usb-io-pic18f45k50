@@ -1,10 +1,10 @@
- build/default/production/_ext/1360937237/usb_descriptors.d  \
- build/default/production/_ext/1360937237/usb_descriptors.p1:  \
- ../src/usb_descriptors.c  \
+ build/default/production/_ext/86914052/usb_device.d  \
+ build/default/production/_ext/86914052/usb_device.p1:  \
+ ../../../../../../microchip/mla/v2015_08_10/framework/usb/src/usb_device.c  \
 ../../../../../../microchip/mla/v2015_08_10/framework/usb/inc/usb_common.h  \
 ../bsp_pic18f45k50/adc.h  \
-../../../../../../microchip/mla/v2015_08_10/framework/usb/inc/usb_device_hid.h  \
 ../src/usb_config.h  \
+../../../../../../microchip/mla/v2015_08_10/framework/usb/src/usb_device_local.h  \
 ../src/system_config/pic18f45k50/system.h  \
 ../../../../../../microchip/mla/v2015_08_10/framework/usb/inc/usb_ch9.h  \
 ../src/system_config/pic18f45k50/io_mapping.h  \
@@ -13,8 +13,8 @@
 ../bsp_pic18f45k50/power.h  \
 ../../../../../../microchip/mla/v2015_08_10/framework/usb/inc/usb_hal.h  \
 ../src/system_config.h  \
-../../../../../../microchip/mla/v2015_08_10/framework/usb/inc/usb.h  \
 ../bsp_pic18f45k50/buttons.h  \
+../../../../../../microchip/mla/v2015_08_10/framework/usb/inc/usb.h  \
 ../src/system_config/pic18f45k50/fixed_address_memory.h  \
 ../bsp_pic18f45k50/leds.h  \
 ../src/system.h 

@@ -3,12 +3,12 @@
 [d edition pro ]
 [d chip 18F45K50 ]
 [d frameptr 4065 ]
-"64 /home/s/MPLABXProjects/bsp_pic18f45k50/buttons.c
-[e E6648 . `uc
+"64 C:\Users\user\Downloads\hardkernel-usb-io-pic18f45k50-master\hardkernel-usb-io-pic18f45k50-master/bsp_pic18f45k50/buttons.c
+[e E6643 . `uc
 BUTTON_NONE 0
 BUTTON_S2 1
 ]
-"54 /home/s/MPLABXProjects/bsp_pic18f45k50/adc.c
+"54 C:\Users\user\Downloads\hardkernel-usb-io-pic18f45k50-master\hardkernel-usb-io-pic18f45k50-master/bsp_pic18f45k50/adc.c
 [e E30 . `uc
 ADC_CHANNEL_0 0
 ]
@@ -16,43 +16,43 @@ ADC_CHANNEL_0 0
 [e E33 . `uc
 ADC_CONFIGURATION_DEFAULT 0
 ]
-"68 /home/s/MPLABXProjects/bsp_pic18f45k50/leds.c
+"68 C:\Users\user\Downloads\hardkernel-usb-io-pic18f45k50-master\hardkernel-usb-io-pic18f45k50-master/bsp_pic18f45k50/leds.c
 [e E2 . `uc
 LED_NONE 0
 LED_D1 1
 ]
-"89 /home/s/MPLABXProjects/src/system_config/pic18f45k50/system.c
-[e E6718 . `uc
+"89 C:\Users\user\Downloads\hardkernel-usb-io-pic18f45k50-master\hardkernel-usb-io-pic18f45k50-master/src/system_config/pic18f45k50/system.c
+[e E6713 . `uc
 SYSTEM_STATE_USB_START 0
 SYSTEM_STATE_USB_SUSPEND 1
 SYSTEM_STATE_USB_RESUME 2
 ]
 "104
-[e E6656 . `uc
+[e E6651 . `uc
 LED_NONE 0
 LED_D1 1
 ]
 "107
-[e E6648 . `uc
+[e E6643 . `uc
 BUTTON_NONE 0
 BUTTON_S2 1
 ]
 "109
-[e E6701 . `uc
+[e E6696 . `uc
 ADC_CONFIGURATION_DEFAULT 0
 ]
 "110
-[e E6698 . `uc
+[e E6693 . `uc
 ADC_CHANNEL_0 0
 ]
-"37 /home/s/MPLABXProjects/src/main.c
-[e E6718 . `uc
+"37 C:\Users\user\Downloads\hardkernel-usb-io-pic18f45k50-master\hardkernel-usb-io-pic18f45k50-master/src/main.c
+[e E6713 . `uc
 SYSTEM_STATE_USB_START 0
 SYSTEM_STATE_USB_SUSPEND 1
 SYSTEM_STATE_USB_RESUME 2
 ]
 "65
-[e E6986 . `uc
+[e E6981 . `uc
 DETACHED_STATE 0
 ATTACHED_STATE 1
 POWERED_STATE 2
@@ -62,7 +62,7 @@ ADDRESS_STATE 16
 CONFIGURED_STATE 32
 ]
 "110
-[e E6927 . `ui
+[e E6922 . `ui
 EVENT_NONE 0
 EVENT_DEVICE_STACK_BASE 1
 EVENT_HOST_STACK_BASE 100
@@ -101,40 +101,42 @@ EVENT_USER_BASE 10000
 EVENT_BUS_ERROR 32767
 ]
 "111
-[e E6995 . `uc
+[e E6990 . `uc
 EVENT_CONFIGURED 1
 EVENT_SET_DESCRIPTOR 2
 EVENT_EP0_REQUEST 3
 EVENT_ATTACH 4
 EVENT_TRANSFER_TERMINATED 5
 ]
-"118 /home/s/MPLABXProjects/src/app_device_custom_hid.c
-[e E6656 . `uc
+"122 C:\Users\user\Downloads\hardkernel-usb-io-pic18f45k50-master\hardkernel-usb-io-pic18f45k50-master/src/app_device_custom_hid.c
+[e E6651 . `uc
 LED_NONE 0
 LED_D1 1
 ]
-"125
-[e E6648 . `uc
+"129
+[e E6643 . `uc
 BUTTON_NONE 0
 BUTTON_S2 1
 ]
-"150
-[e E6698 . `uc
+"163
+[e E6693 . `uc
 ADC_CHANNEL_0 0
 ]
-"115
-[e E7342 . `uc
+"119
+[e E7398 . `uc
 COMMAND_TOGGLE_LED 128
 COMMAND_GET_BUTTON_STATUS 129
 COMMAND_READ_POTENTIOMETER 55
+COMMAND_ACQUIRE_FROM_PIN 101
+COMMAND_GENERATE_FROM_ADC 102
 ]
-"81 /home/s/MPLABXProjects/src/app_led_usb_status.c
-[e E6684 . `uc
+"81 C:\Users\user\Downloads\hardkernel-usb-io-pic18f45k50-master\hardkernel-usb-io-pic18f45k50-master/src/app_led_usb_status.c
+[e E6679 . `uc
 LED_NONE 0
 LED_D1 1
 ]
 "85
-[e E6986 . `uc
+[e E6981 . `uc
 DETACHED_STATE 0
 ATTACHED_STATE 1
 POWERED_STATE 2
@@ -143,8 +145,8 @@ ADR_PENDING_STATE 8
 ADDRESS_STATE 16
 CONFIGURED_STATE 32
 ]
-"131 /home/s/Документы/forpic/microchip/mla/v2015_08_10/framework/usb/src/usb_device.c
-[e E6988 . `uc
+"131 C:/microchip/mla/v2015_08_10/framework/usb/src/usb_device.c
+[e E6985 . `uc
 DETACHED_STATE 0
 ATTACHED_STATE 1
 POWERED_STATE 2
@@ -154,7 +156,7 @@ ADDRESS_STATE 16
 CONFIGURED_STATE 32
 ]
 "731
-[e E6929 . `ui
+[e E6926 . `ui
 EVENT_NONE 0
 EVENT_DEVICE_STACK_BASE 1
 EVENT_HOST_STACK_BASE 100
@@ -193,7 +195,7 @@ EVENT_USER_BASE 10000
 EVENT_BUS_ERROR 32767
 ]
 "2035
-[e E6997 . `uc
+[e E6994 . `uc
 EVENT_CONFIGURED 1
 EVENT_SET_DESCRIPTOR 2
 EVENT_EP0_REQUEST 3
@@ -250,9 +252,9 @@ EVENT_TRANSFER_TERMINATED 5
 [v _USBStdFeatureReqHandler USBStdFeatureReqHandler `(v  1 s 0 USBStdFeatureReqHandler ]
 "3042
 [v _USBIncrement1msInternalTimers USBIncrement1msInternalTimers `(v  1 e 0 0 ]
-"153 /home/s/Документы/forpic/microchip/mla/v2015_08_10/framework/usb/src/usb_device_hid.c
+"153 C:/microchip/mla/v2015_08_10/framework/usb/src/usb_device_hid.c
 [v _USBCheckHIDRequest USBCheckHIDRequest `(v  1 e 0 0 ]
-"93 /home/s/MPLABXProjects/bsp_pic18f45k50/adc.c
+"93 C:\Users\user\Downloads\hardkernel-usb-io-pic18f45k50-master\hardkernel-usb-io-pic18f45k50-master/bsp_pic18f45k50/adc.c
 [v _ADC_Read10bit ADC_Read10bit `(ui  1 e 2 0 ]
 "130
 [v _ADC_Enable ADC_Enable `(uc  1 e 1 0 ]
@@ -260,12 +262,12 @@ EVENT_TRANSFER_TERMINATED 5
 "156
 [v _ADC_SetConfiguration ADC_SetConfiguration `(uc  1 e 1 0 ]
 [v i2_ADC_SetConfiguration ADC_SetConfiguration `(uc  1 e 1 0 ]
-"63 /home/s/MPLABXProjects/bsp_pic18f45k50/buttons.c
+"63 C:\Users\user\Downloads\hardkernel-usb-io-pic18f45k50-master\hardkernel-usb-io-pic18f45k50-master/bsp_pic18f45k50/buttons.c
 [v _BUTTON_IsPressed BUTTON_IsPressed `(uc  1 e 1 0 ]
 "96
 [v _BUTTON_Enable BUTTON_Enable `(v  1 e 0 0 ]
 [v i2_BUTTON_Enable BUTTON_Enable `(v  1 e 0 0 ]
-"67 /home/s/MPLABXProjects/bsp_pic18f45k50/leds.c
+"67 C:\Users\user\Downloads\hardkernel-usb-io-pic18f45k50-master\hardkernel-usb-io-pic18f45k50-master/bsp_pic18f45k50/leds.c
 [v _LED_On LED_On `(v  1 e 0 0 ]
 "108
 [v _LED_Off LED_Off `(v  1 e 0 0 ]
@@ -274,55 +276,57 @@ EVENT_TRANSFER_TERMINATED 5
 "227
 [v _LED_Enable LED_Enable `(v  1 e 0 0 ]
 [v i2_LED_Enable LED_Enable `(v  1 e 0 0 ]
-"80 /home/s/MPLABXProjects/src/app_device_custom_hid.c
+"84 C:\Users\user\Downloads\hardkernel-usb-io-pic18f45k50-master\hardkernel-usb-io-pic18f45k50-master/src/app_device_custom_hid.c
 [v _APP_DeviceCustomHIDInitialize APP_DeviceCustomHIDInitialize `(v  1 e 0 0 ]
-"107
+"111
 [v _APP_DeviceCustomHIDTasks APP_DeviceCustomHIDTasks `(v  1 e 0 0 ]
-"75 /home/s/MPLABXProjects/src/app_led_usb_status.c
+"75 C:\Users\user\Downloads\hardkernel-usb-io-pic18f45k50-master\hardkernel-usb-io-pic18f45k50-master/src/app_led_usb_status.c
 [v _APP_LEDUpdateUSBStatus APP_LEDUpdateUSBStatus `(v  1 e 0 0 ]
-"35 /home/s/MPLABXProjects/src/main.c
+"35 C:\Users\user\Downloads\hardkernel-usb-io-pic18f45k50-master\hardkernel-usb-io-pic18f45k50-master/src/main.c
 [v _main main `(v  1 e 0 0 ]
 "109
 [v _USER_USB_CALLBACK_EVENT_HANDLER USER_USB_CALLBACK_EVENT_HANDLER `(uc  1 e 1 0 ]
-"88 /home/s/MPLABXProjects/src/system_config/pic18f45k50/system.c
+"88 C:\Users\user\Downloads\hardkernel-usb-io-pic18f45k50-master\hardkernel-usb-io-pic18f45k50-master/src/system_config/pic18f45k50/system.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 0 0 ]
 [v i2_SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 0 0 ]
 "124
 [v _SYS_InterruptHigh SYS_InterruptHigh `II(v  1 e 0 0 ]
-"62 /opt/microchip/xc8/v1.35/sources/common/float.c
+"63 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\double.c
+[v ___flpack __flpack `(d  1 e 3 0 ]
+"88 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\fladd.c
+[v ___fladd __fladd `(d  1 e 3 0 ]
+"54 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\fldiv.c
+[v ___fldiv __fldiv `(d  1 e 3 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\flmul.c
+[v ___flmul __flmul `(d  1 e 3 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
-"86 /opt/microchip/xc8/v1.35/sources/common/ftadd.c
+"20 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\flsub.c
+[v ___flsub __flsub `(d  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftadd.c
 [v ___ftadd __ftadd `(f  1 e 3 0 ]
-"54 /opt/microchip/xc8/v1.35/sources/common/ftdiv.c
+"54 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftdiv.c
 [v ___ftdiv __ftdiv `(f  1 e 3 0 ]
-"62 /opt/microchip/xc8/v1.35/sources/common/ftmul.c
+"62 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftmul.c
 [v ___ftmul __ftmul `(f  1 e 3 0 ]
-"20 /opt/microchip/xc8/v1.35/sources/common/ftsub.c
+"20 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftsub.c
 [v ___ftsub __ftsub `(f  1 e 3 0 ]
-"8 /opt/microchip/xc8/v1.35/sources/common/lwdiv.c
+"8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lwdiv.c
 [v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
-"11 /opt/microchip/xc8/v1.35/sources/common/memcpy.c
+"11 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\memcpy.c
 [v _memcpy memcpy `(*.39v  1 e 2 0 ]
-"8 /opt/microchip/xc8/v1.35/sources/common/memset.c
+"8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\memset.c
 [v _memset memset `(*.39v  1 e 2 0 ]
 [v i2_memset memset `(*.39v  1 e 2 0 ]
-"10 /opt/microchip/xc8/v1.35/sources/common/sprcadd.c
-[v ___fladd __fladd `(d  1 e 3 0 ]
-"245
-[v ___flsub __flsub `(d  1 e 3 0 ]
-"11 /opt/microchip/xc8/v1.35/sources/common/sprcdiv.c
-[v ___fldiv __fldiv `(d  1 e 3 0 ]
-"8 /opt/microchip/xc8/v1.35/sources/common/sprcmul.c
-[v ___flmul __flmul `(d  1 e 3 0 ]
-"15 /opt/microchip/xc8/v1.35/sources/common/Umul32.c
+"15 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\Umul32.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
-"131 /home/s/Документы/forpic/microchip/mla/v2015_08_10/framework/usb/src/usb_device.c
-[v _USBDeviceState USBDeviceState `VEE6986  1 e 1 0 ]
+"131 C:/microchip/mla/v2015_08_10/framework/usb/src/usb_device.c
+[v _USBDeviceState USBDeviceState `VEE6981  1 e 1 0 ]
 "132
 [v _USBActiveConfiguration USBActiveConfiguration `VEuc  1 e 1 0 ]
 "133
 [v _USBAlternateInterface USBAlternateInterface `VE[1]uc  1 e 1 0 ]
-[s S1119 . 1 `uc 1 BC8 1 0 :1:0 
+[s S793 . 1 `uc 1 BC8 1 0 :1:0 
 `uc 1 BC9 1 0 :1:1 
 `uc 1 BSTALL 1 0 :1:2 
 `uc 1 DTSEN 1 0 :1:3 
@@ -332,80 +336,80 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 UOWN 1 0 :1:7 
 ]
 "134
-[s S1128 . 1 `uc 1 . 1 0 :2:0 
+[s S802 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID0 1 0 :1:2 
 `uc 1 PID1 1 0 :1:3 
 `uc 1 PID2 1 0 :1:4 
 `uc 1 PID3 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 ]
-[s S1135 . 1 `uc 1 . 1 0 :2:0 
+[s S809 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID 1 0 :4:2 
 `uc 1 . 1 0 :2:6 
 ]
-[u S1139 _BD_STAT 1 `uc 1 Val 1 0 `S1119 1 . 1 0 `S1128 1 . 1 0 `S1135 1 . 1 0 ]
-[s S1144 . 4 `S1139 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
-[s S1149 . 4 `uc 1 . 1 0 :8:0 
+[u S813 _BD_STAT 1 `uc 1 Val 1 0 `S793 1 . 1 0 `S802 1 . 1 0 `S809 1 . 1 0 ]
+[s S818 . 4 `S813 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S823 . 4 `uc 1 . 1 0 :8:0 
 `uc 1 . 1 1 :8:0 
 `ui 1 ADR 2 2 ]
-[u S1153 __BDT 4 `S1144 1 . 4 0 `S1149 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
-[v _pBDTEntryEP0OutCurrent pBDTEntryEP0OutCurrent `*.39VES1153  1 e 2 0 ]
+[u S827 __BDT 4 `S818 1 . 4 0 `S823 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v _pBDTEntryEP0OutCurrent pBDTEntryEP0OutCurrent `*.39VES827  1 e 2 0 ]
 "135
-[v _pBDTEntryEP0OutNext pBDTEntryEP0OutNext `*.39VES1153  1 e 2 0 ]
+[v _pBDTEntryEP0OutNext pBDTEntryEP0OutNext `*.39VES827  1 e 2 0 ]
 "136
-[v _pBDTEntryOut pBDTEntryOut `[2]*.39VES1153  1 e 4 0 ]
+[v _pBDTEntryOut pBDTEntryOut `[2]*.39VES827  1 e 4 0 ]
 "137
-[v _pBDTEntryIn pBDTEntryIn `[2]*.39VES1153  1 e 4 0 ]
+[v _pBDTEntryIn pBDTEntryIn `[2]*.39VES827  1 e 4 0 ]
 "138
 [v _shortPacketStatus shortPacketStatus `VEuc  1 e 1 0 ]
 "139
 [v _controlTransferState controlTransferState `VEuc  1 e 1 0 ]
-[u S1004 . 3 `*.2uc 1 bRam 3 0 `*.2Cuc 1 bRom 3 0 `*.2ui 1 wRam 3 0 `*.2Cui 1 wRom 3 0 ]
+[u S832 . 3 `*.2uc 1 bRam 3 0 `*.2Cuc 1 bRom 3 0 `*.2ui 1 wRam 3 0 `*.2Cui 1 wRom 3 0 ]
 "140
-[s S1009 . 1 `uc 1 ctrl_trf_mem 1 0 :1:0 
+[s S837 . 1 `uc 1 ctrl_trf_mem 1 0 :1:0 
 `uc 1 reserved 1 0 :5:1 
 `uc 1 includeZero 1 0 :1:6 
 `uc 1 busy 1 0 :1:7 
 ]
-[u S1014 . 1 `S1009 1 bits 1 0 `uc 1 Val 1 0 ]
-[s S789 . 2 `uc 1 LB 1 0 `uc 1 HB 1 1 ]
-[u S792 . 2 `ui 1 Val 2 0 `[2]uc 1 v 2 0 `S789 1 byte 2 0 ]
-[s S1024 . 6 `S1004 1 pSrc 3 0 `S1014 1 info 1 3 `S792 1 wCount 2 4 ]
-[v _inPipes inPipes `VE[1]S1024  1 e 6 0 ]
-[u S1182 . 3 `*.2uc 1 bRam 3 0 `*.2ui 1 wRam 3 0 ]
+[u S842 . 1 `S837 1 bits 1 0 `uc 1 Val 1 0 ]
+[s S845 . 2 `uc 1 LB 1 0 `uc 1 HB 1 1 ]
+[u S848 . 2 `ui 1 Val 2 0 `[2]uc 1 v 2 0 `S845 1 byte 2 0 ]
+[s S852 . 6 `S832 1 pSrc 3 0 `S842 1 info 1 3 `S848 1 wCount 2 4 ]
+[v _inPipes inPipes `VE[1]S852  1 e 6 0 ]
+[u S856 . 3 `*.2uc 1 bRam 3 0 `*.2ui 1 wRam 3 0 ]
 "141
-[s S1185 . 1 `uc 1 reserved 1 0 :7:0 
+[s S859 . 1 `uc 1 reserved 1 0 :7:0 
 `uc 1 busy 1 0 :1:7 
 ]
-[u S1188 . 1 `S1185 1 bits 1 0 `uc 1 Val 1 0 ]
-[s S1192 . 8 `S1182 1 pDst 3 0 `S1188 1 info 1 3 `S792 1 wCount 2 4 `*.37(v 1 pFunc 2 6 ]
-[v _outPipes outPipes `VE[1]S1192  1 e 8 0 ]
+[u S862 . 1 `S859 1 bits 1 0 `uc 1 Val 1 0 ]
+[s S866 . 8 `S856 1 pDst 3 0 `S862 1 info 1 3 `S848 1 wCount 2 4 `*.37(v 1 pFunc 2 6 ]
+[v _outPipes outPipes `VE[1]S866  1 e 8 0 ]
 "142
 [v _pDst pDst `*.39VEuc  1 e 2 0 ]
 "143
 [v _RemoteWakeup RemoteWakeup `VEuc  1 e 1 0 ]
 "144
 [v _USBBusIsSuspended USBBusIsSuspended `VEuc  1 e 1 0 ]
-[s S1197 . 1 `uc 1 filler1 1 0 :1:0 
+[s S871 . 1 `uc 1 filler1 1 0 :1:0 
 `uc 1 ping_pong 1 0 :1:1 
 `uc 1 direction 1 0 :1:2 
 `uc 1 endpoint_number 1 0 :4:3 
 ]
 "145
-[u S1202 __USTAT 1 `S1197 1 . 1 0 `uc 1 Val 1 0 ]
-[v _USTATcopy USTATcopy `VES1202  1 e 1 0 ]
+[u S876 __USTAT 1 `S871 1 . 1 0 `uc 1 Val 1 0 ]
+[v _USTATcopy USTATcopy `VES876  1 e 1 0 ]
 "146
 [v _endpoint_number endpoint_number `VEuc  1 e 1 0 ]
 "147
 [v _BothEP0OutUOWNsSet BothEP0OutUOWNsSet `VEuc  1 e 1 0 ]
-[s S1205 . 1 `uc 1 ping_pong_state 1 0 :1:0 
+[s S879 . 1 `uc 1 ping_pong_state 1 0 :1:0 
 `uc 1 transfer_terminated 1 0 :1:1 
 ]
 "148
-[u S1208 . 1 `S1205 1 bits 1 0 `uc 1 Val 1 0 ]
-[v _ep_data_in ep_data_in `VE[2]S1208  1 e 2 0 ]
+[u S882 . 1 `S879 1 bits 1 0 `uc 1 Val 1 0 ]
+[v _ep_data_in ep_data_in `VE[2]S882  1 e 2 0 ]
 "149
-[v _ep_data_out ep_data_out `VE[2]S1208  1 e 2 0 ]
+[v _ep_data_out ep_data_out `VE[2]S882  1 e 2 0 ]
 "150
 [v _USBStatusStageTimeoutCounter USBStatusStageTimeoutCounter `VEuc  1 e 1 0 ]
 "151
@@ -423,13 +427,13 @@ EVENT_TRANSFER_TERMINATED 5
 "157
 [v _USBTicksSinceSuspendEnd USBTicksSinceSuspendEnd `VEuc  1 e 1 0 ]
 "164
-[v _BDT BDT `VE[8]S1153  1 e 32 @1024 ]
-[s S783 . 8 `uc 1 bmRequestType 1 0 `uc 1 bRequest 1 1 `ui 1 wValue 2 2 `ui 1 wIndex 2 4 `ui 1 wLength 2 6 ]
+[v _BDT BDT `VE[8]S827  1 e 32 @1024 ]
+[s S885 . 8 `uc 1 bmRequestType 1 0 `uc 1 bRequest 1 1 `ui 1 wValue 2 2 `ui 1 wIndex 2 4 `ui 1 wLength 2 6 ]
 "169
-[s S810 . 8 `uc 1 . 1 0 :8:0 
+[s S912 . 8 `uc 1 . 1 0 :8:0 
 `uc 1 . 1 1 :8:0 
-`S792 1 W_Value 2 2 `S792 1 W_Index 2 4 `S792 1 W_Length 2 6 ]
-[s S816 . 8 `uc 1 Recipient 1 0 :5:0 
+`S848 1 W_Value 2 2 `S848 1 W_Index 2 4 `S848 1 W_Length 2 6 ]
+[s S918 . 8 `uc 1 Recipient 1 0 :5:0 
 `uc 1 RequestType 1 0 :2:5 
 `uc 1 DataDir 1 0 :1:7 
 `uc 1 . 1 1 :8:0 
@@ -439,44 +443,44 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 . 1 6 :8:0 
 `uc 1 . 1 7 :8:0 
 ]
-[s S827 . 1 `uc 1 recipient 1 0 :5:0 
+[s S929 . 1 `uc 1 recipient 1 0 :5:0 
 `uc 1 type 1 0 :2:5 
 `uc 1 direction 1 0 :1:7 
 ]
-[u S831 . 1 `uc 1 bmRequestType 1 0 `S827 1 . 1 0 ]
-[s S834 . 1 `S831 1 requestInfo 1 0 ]
-[s S836 . 8 `uc 1 . 1 0 :8:0 
+[u S933 . 1 `uc 1 bmRequestType 1 0 `S929 1 . 1 0 ]
+[s S936 . 1 `S933 1 requestInfo 1 0 ]
+[s S938 . 8 `uc 1 . 1 0 :8:0 
 `uc 1 . 1 1 :8:0 
 `uc 1 bDscIndex 1 2 `uc 1 bDescriptorType 1 3 `ui 1 wLangID 2 4 `uc 1 . 1 6 :8:0 
 `uc 1 . 1 7 :8:0 
 ]
-[s S844 . 8 `uc 1 . 1 0 :8:0 
+[s S946 . 8 `uc 1 . 1 0 :8:0 
 `uc 1 . 1 1 :8:0 
 `uc 1 bDevADR 1 2 `uc 1 bDevADRH 1 3 `uc 1 . 1 4 :8:0 
 `uc 1 . 1 5 :8:0 
 `uc 1 . 1 6 :8:0 
 `uc 1 . 1 7 :8:0 
 ]
-[s S853 . 8 `uc 1 . 1 0 :8:0 
+[s S955 . 8 `uc 1 . 1 0 :8:0 
 `uc 1 . 1 1 :8:0 
 `uc 1 bConfigurationValue 1 2 `uc 1 bCfgRSD 1 3 `uc 1 . 1 4 :8:0 
 `uc 1 . 1 5 :8:0 
 `uc 1 . 1 6 :8:0 
 `uc 1 . 1 7 :8:0 
 ]
-[s S862 . 8 `uc 1 . 1 0 :8:0 
+[s S964 . 8 `uc 1 . 1 0 :8:0 
 `uc 1 . 1 1 :8:0 
 `uc 1 bAltID 1 2 `uc 1 bAltID_H 1 3 `uc 1 bIntfID 1 4 `uc 1 bIntfID_H 1 5 `uc 1 . 1 6 :8:0 
 `uc 1 . 1 7 :8:0 
 ]
-[s S871 . 8 `uc 1 . 1 0 :8:0 
+[s S973 . 8 `uc 1 . 1 0 :8:0 
 `uc 1 . 1 1 :8:0 
 `uc 1 . 1 2 :8:0 
 `uc 1 . 1 3 :8:0 
 `uc 1 bEPID 1 4 `uc 1 bEPID_H 1 5 `uc 1 . 1 6 :8:0 
 `uc 1 . 1 7 :8:0 
 ]
-[s S880 . 8 `uc 1 . 1 0 :8:0 
+[s S982 . 8 `uc 1 . 1 0 :8:0 
 `uc 1 . 1 1 :8:0 
 `uc 1 . 1 2 :8:0 
 `uc 1 . 1 3 :8:0 
@@ -487,15 +491,15 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 . 1 6 :8:0 
 `uc 1 . 1 7 :8:0 
 ]
-[u S891 . 8 `S783 1 . 8 0 `S810 1 . 8 0 `S816 1 . 8 0 `S834 1 . 1 0 `S836 1 . 8 0 `S844 1 . 8 0 `S853 1 . 8 0 `S862 1 . 8 0 `S871 1 . 8 0 `S880 1 . 8 0 ]
-[v _SetupPkt SetupPkt `VES891  1 e 8 @1056 ]
+[u S993 . 8 `S885 1 . 8 0 `S912 1 . 8 0 `S918 1 . 8 0 `S936 1 . 1 0 `S938 1 . 8 0 `S946 1 . 8 0 `S955 1 . 8 0 `S964 1 . 8 0 `S973 1 . 8 0 `S982 1 . 8 0 ]
+[v _SetupPkt SetupPkt `VES993  1 e 8 @1056 ]
 "170
 [v _CtrlTrfData CtrlTrfData `VE[8]uc  1 e 8 @1064 ]
-"79 /home/s/Документы/forpic/microchip/mla/v2015_08_10/framework/usb/src/usb_device_hid.c
+"79 C:/microchip/mla/v2015_08_10/framework/usb/src/usb_device_hid.c
 [v _idle_rate idle_rate `uc  1 s 1 idle_rate ]
 "80
 [v _active_protocol active_protocol `uc  1 s 1 active_protocol ]
-"47 /home/s/MPLABXProjects/src/app_device_custom_hid.c
+"47 C:\Users\user\Downloads\hardkernel-usb-io-pic18f45k50-master\hardkernel-usb-io-pic18f45k50-master/src/app_device_custom_hid.c
 [v _ReceivedDataBuffer ReceivedDataBuffer `[64]uc  1 e 64 @1280 ]
 "48
 [v _ToSendDataBuffer ToSendDataBuffer `[64]uc  1 e 64 @1344 ]
@@ -504,7 +508,7 @@ EVENT_TRANSFER_TERMINATED 5
 "56
 [v _USBInHandle USBInHandle `*.39VEv  1 e 2 0 ]
 [s S545 _USB_DEVICE_DESCRIPTOR 18 `uc 1 bLength 1 0 `uc 1 bDescriptorType 1 1 `ui 1 bcdUSB 2 2 `uc 1 bDeviceClass 1 4 `uc 1 bDeviceSubClass 1 5 `uc 1 bDeviceProtocol 1 6 `uc 1 bMaxPacketSize0 1 7 `ui 1 idVendor 2 8 `ui 1 idProduct 2 10 `ui 1 bcdDevice 2 12 `uc 1 iManufacturer 1 14 `uc 1 iProduct 1 15 `uc 1 iSerialNumber 1 16 `uc 1 bNumConfigurations 1 17 ]
-"161 /home/s/MPLABXProjects/src/usb_descriptors.c
+"161 C:\Users\user\Downloads\hardkernel-usb-io-pic18f45k50-master\hardkernel-usb-io-pic18f45k50-master/src/usb_descriptors.c
 [v _device_dsc device_dsc `CS545  1 e 18 0 ]
 "180
 [v _configDescriptor1 configDescriptor1 `C[41]uc  1 e 41 0 ]
@@ -531,7 +535,7 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 . 1 0 :1:4 
 `uc 1 ANSA5 1 0 :1:5 
 ]
-"240 /opt/microchip/xc8/v1.35/include/pic18f45k50.h
+"240 C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18f45k50.h
 [u S269 . 1 `S262 1 . 1 0 ]
 [v _ANSELAbits ANSELAbits `VES269  1 e 1 @3931 ]
 [s S436 . 1 `uc 1 . 1 0 :2:0 
@@ -576,7 +580,7 @@ EVENT_TRANSFER_TERMINATED 5
 [v _UADDR UADDR `VEuc  1 e 1 @3939 ]
 "696
 [v _UIE UIE `VEuc  1 e 1 @3940 ]
-[s S1421 . 1 `uc 1 URSTIE 1 0 :1:0 
+[s S1095 . 1 `uc 1 URSTIE 1 0 :1:0 
 `uc 1 UERRIE 1 0 :1:1 
 `uc 1 ACTVIE 1 0 :1:2 
 `uc 1 TRNIE 1 0 :1:3 
@@ -585,11 +589,11 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 SOFIE 1 0 :1:6 
 ]
 "712
-[u S1429 . 1 `S1421 1 . 1 0 ]
-[v _UIEbits UIEbits `VES1429  1 e 1 @3940 ]
+[u S1103 . 1 `S1095 1 . 1 0 ]
+[v _UIEbits UIEbits `VES1103  1 e 1 @3940 ]
 "751
 [v _UIR UIR `VEuc  1 e 1 @3941 ]
-[s S1402 . 1 `uc 1 URSTIF 1 0 :1:0 
+[s S1076 . 1 `uc 1 URSTIF 1 0 :1:0 
 `uc 1 UERRIF 1 0 :1:1 
 `uc 1 ACTVIF 1 0 :1:2 
 `uc 1 TRNIF 1 0 :1:3 
@@ -598,51 +602,51 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 SOFIF 1 0 :1:6 
 ]
 "767
-[u S1410 . 1 `S1402 1 . 1 0 ]
-[v _UIRbits UIRbits `VES1410  1 e 1 @3941 ]
+[u S1084 . 1 `S1076 1 . 1 0 ]
+[v _UIRbits UIRbits `VES1084  1 e 1 @3941 ]
 "806
 [v _UEIE UEIE `VEuc  1 e 1 @3942 ]
 "856
 [v _UEIR UEIR `VEuc  1 e 1 @3943 ]
 "1028
 [v _UEP0 UEP0 `VEuc  1 e 1 @3946 ]
-[s S1726 . 1 `uc 1 EPSTALL 1 0 :1:0 
+[s S1400 . 1 `uc 1 EPSTALL 1 0 :1:0 
 `uc 1 EPINEN 1 0 :1:1 
 `uc 1 EPOUTEN 1 0 :1:2 
 `uc 1 EPCONDIS 1 0 :1:3 
 `uc 1 EPHSHK 1 0 :1:4 
 ]
 "1080
-[s S1732 . 1 `uc 1 . 1 0 :3:0 
+[s S1406 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 EP0CONDIS 1 0 :1:3 
 ]
-[s S1735 . 1 `uc 1 . 1 0 :4:0 
+[s S1409 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 EP0HSHK 1 0 :1:4 
 ]
-[s S1738 . 1 `uc 1 . 1 0 :1:0 
+[s S1412 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 EP0INEN 1 0 :1:1 
 ]
-[s S1741 . 1 `uc 1 . 1 0 :2:0 
+[s S1415 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 EP0OUTEN 1 0 :1:2 
 ]
-[s S1744 . 1 `uc 1 EP0STALL 1 0 :1:0 
+[s S1418 . 1 `uc 1 EP0STALL 1 0 :1:0 
 ]
-[s S1746 . 1 `uc 1 . 1 0 :3:0 
+[s S1420 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 EPCONDIS0 1 0 :1:3 
 ]
-[s S1749 . 1 `uc 1 . 1 0 :4:0 
+[s S1423 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 EPHSHK0 1 0 :1:4 
 ]
-[s S1752 . 1 `uc 1 . 1 0 :1:0 
+[s S1426 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 EPINEN0 1 0 :1:1 
 ]
-[s S1755 . 1 `uc 1 . 1 0 :2:0 
+[s S1429 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 EPOUTEN0 1 0 :1:2 
 ]
-[s S1758 . 1 `uc 1 EPSTALL0 1 0 :1:0 
+[s S1432 . 1 `uc 1 EPSTALL0 1 0 :1:0 
 ]
-[u S1760 . 1 `S1726 1 . 1 0 `S1732 1 . 1 0 `S1735 1 . 1 0 `S1738 1 . 1 0 `S1741 1 . 1 0 `S1744 1 . 1 0 `S1746 1 . 1 0 `S1749 1 . 1 0 `S1752 1 . 1 0 `S1755 1 . 1 0 `S1758 1 . 1 0 ]
-[v _UEP0bits UEP0bits `VES1760  1 e 1 @3946 ]
+[u S1434 . 1 `S1400 1 . 1 0 `S1406 1 . 1 0 `S1409 1 . 1 0 `S1412 1 . 1 0 `S1415 1 . 1 0 `S1418 1 . 1 0 `S1420 1 . 1 0 `S1423 1 . 1 0 `S1426 1 . 1 0 `S1429 1 . 1 0 `S1432 1 . 1 0 ]
+[v _UEP0bits UEP0bits `VES1434  1 e 1 @3946 ]
 "1159
 [v _UEP1 UEP1 `VEuc  1 e 1 @3947 ]
 [s S24 . 1 `uc 1 RD0 1 0 :1:0 
@@ -761,50 +765,50 @@ EVENT_TRANSFER_TERMINATED 5
 [v _TRISDbits TRISDbits `VES89  1 e 1 @3989 ]
 "6569
 [v _OSCTUNE OSCTUNE `VEuc  1 e 1 @3995 ]
-[s S1330 . 1 `uc 1 TMR1GIE 1 0 :1:0 
+[s S1004 . 1 `uc 1 TMR1GIE 1 0 :1:0 
 `uc 1 TMR3GIE 1 0 :1:1 
 `uc 1 USBIE 1 0 :1:2 
 `uc 1 CTMUIE 1 0 :1:3 
 ]
 "7327
-[s S1335 . 1 `uc 1 RXB0IE 1 0 :1:0 
+[s S1009 . 1 `uc 1 RXB0IE 1 0 :1:0 
 ]
-[s S1337 . 1 `uc 1 . 1 0 :1:0 
+[s S1011 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RXB1IE 1 0 :1:1 
 ]
-[s S1340 . 1 `uc 1 . 1 0 :1:0 
+[s S1014 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RXBNIE 1 0 :1:1 
 ]
-[s S1343 . 1 `uc 1 . 1 0 :2:0 
+[s S1017 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 TXB0IE 1 0 :1:2 
 ]
-[s S1346 . 1 `uc 1 . 1 0 :3:0 
+[s S1020 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 TXB1IE 1 0 :1:3 
 ]
-[u S1349 . 1 `S1330 1 . 1 0 `S1335 1 . 1 0 `S1337 1 . 1 0 `S1340 1 . 1 0 `S1343 1 . 1 0 `S1346 1 . 1 0 ]
-[v _PIE3bits PIE3bits `VES1349  1 e 1 @4003 ]
-[s S1444 . 1 `uc 1 TMR1GIF 1 0 :1:0 
+[u S1023 . 1 `S1004 1 . 1 0 `S1009 1 . 1 0 `S1011 1 . 1 0 `S1014 1 . 1 0 `S1017 1 . 1 0 `S1020 1 . 1 0 ]
+[v _PIE3bits PIE3bits `VES1023  1 e 1 @4003 ]
+[s S1118 . 1 `uc 1 TMR1GIF 1 0 :1:0 
 `uc 1 TMR3GIF 1 0 :1:1 
 `uc 1 USBIF 1 0 :1:2 
 `uc 1 CTMUIF 1 0 :1:3 
 ]
 "7393
-[s S1449 . 1 `uc 1 . 1 0 :1:0 
+[s S1123 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RXBNIF 1 0 :1:1 
 ]
-[u S1452 . 1 `S1444 1 . 1 0 `S1449 1 . 1 0 ]
-[v _PIR3bits PIR3bits `VES1452  1 e 1 @4004 ]
-[s S1609 . 1 `uc 1 TMR1GIP 1 0 :1:0 
+[u S1126 . 1 `S1118 1 . 1 0 `S1123 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES1126  1 e 1 @4004 ]
+[s S1283 . 1 `uc 1 TMR1GIP 1 0 :1:0 
 `uc 1 TMR3GIP 1 0 :1:1 
 `uc 1 USBIP 1 0 :1:2 
 `uc 1 CTMUIP 1 0 :1:3 
 ]
 "7439
-[s S1614 . 1 `uc 1 . 1 0 :1:0 
+[s S1288 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RXBNIP 1 0 :1:1 
 ]
-[u S1617 . 1 `S1609 1 . 1 0 `S1614 1 . 1 0 ]
-[v _IPR3bits IPR3bits `VES1617  1 e 1 @4005 ]
+[u S1291 . 1 `S1283 1 . 1 0 `S1288 1 . 1 0 ]
+[v _IPR3bits IPR3bits `VES1291  1 e 1 @4005 ]
 "8722
 [v _ACTCON ACTCON `VEuc  1 e 1 @4021 ]
 "10205
@@ -842,22 +846,22 @@ EVENT_TRANSFER_TERMINATED 5
 [v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
 "10433
 [v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
-[s S1542 . 1 `uc 1 NOT_BOR 1 0 :1:0 
+[s S1216 . 1 `uc 1 NOT_BOR 1 0 :1:0 
 ]
 "13002
-[s S1544 . 1 `uc 1 . 1 0 :1:0 
+[s S1218 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 NOT_POR 1 0 :1:1 
 ]
-[s S1547 . 1 `uc 1 . 1 0 :2:0 
+[s S1221 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_PD 1 0 :1:2 
 ]
-[s S1550 . 1 `uc 1 . 1 0 :3:0 
+[s S1224 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 NOT_TO 1 0 :1:3 
 ]
-[s S1553 . 1 `uc 1 . 1 0 :4:0 
+[s S1227 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 NOT_RI 1 0 :1:4 
 ]
-[s S1556 . 1 `uc 1 nBOR 1 0 :1:0 
+[s S1230 . 1 `uc 1 nBOR 1 0 :1:0 
 `uc 1 nPOR 1 0 :1:1 
 `uc 1 nPD 1 0 :1:2 
 `uc 1 nTO 1 0 :1:3 
@@ -866,14 +870,14 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 SBOREN 1 0 :1:6 
 `uc 1 IPEN 1 0 :1:7 
 ]
-[s S1565 . 1 `uc 1 BOR 1 0 :1:0 
+[s S1239 . 1 `uc 1 BOR 1 0 :1:0 
 `uc 1 POR 1 0 :1:1 
 `uc 1 PD 1 0 :1:2 
 `uc 1 TO 1 0 :1:3 
 `uc 1 RI 1 0 :1:4 
 ]
-[u S1571 . 1 `S1542 1 . 1 0 `S1544 1 . 1 0 `S1547 1 . 1 0 `S1550 1 . 1 0 `S1553 1 . 1 0 `S1556 1 . 1 0 `S1565 1 . 1 0 ]
-[v _RCONbits RCONbits `VES1571  1 e 1 @4048 ]
+[u S1245 . 1 `S1216 1 . 1 0 `S1218 1 . 1 0 `S1221 1 . 1 0 `S1224 1 . 1 0 `S1227 1 . 1 0 `S1230 1 . 1 0 `S1239 1 . 1 0 ]
+[v _RCONbits RCONbits `VES1245  1 e 1 @4048 ]
 "13118
 [v _OSCCON2 OSCCON2 `VEuc  1 e 1 @4050 ]
 [s S489 . 1 `uc 1 LFIOFS 1 0 :1:0 
@@ -890,7 +894,7 @@ EVENT_TRANSFER_TERMINATED 5
 [v _OSCCON2bits OSCCON2bits `VES498  1 e 1 @4050 ]
 "13179
 [v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
-[s S1629 . 1 `uc 1 IOCIF 1 0 :1:0 
+[s S1303 . 1 `uc 1 IOCIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 IOCIE 1 0 :1:3 
@@ -900,15 +904,15 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 GIE_GIEH 1 0 :1:7 
 ]
 "14064
-[s S1638 . 1 `uc 1 . 1 0 :6:0 
+[s S1312 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
-[s S1642 . 1 `uc 1 . 1 0 :6:0 
+[s S1316 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 GIEL 1 0 :1:6 
 `uc 1 GIEH 1 0 :1:7 
 ]
-[s S1646 . 1 `uc 1 . 1 0 :1:0 
+[s S1320 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 INT0F 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -917,21 +921,21 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
-[u S1659 . 1 `S1629 1 . 1 0 `S1638 1 . 1 0 `S1642 1 . 1 0 `S1646 1 . 1 0 `S1642 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES1659  1 e 1 @4082 ]
-"35 /home/s/MPLABXProjects/src/main.c
+[u S1333 . 1 `S1303 1 . 1 0 `S1312 1 . 1 0 `S1316 1 . 1 0 `S1320 1 . 1 0 `S1316 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES1333  1 e 1 @4082 ]
+"35 C:\Users\user\Downloads\hardkernel-usb-io-pic18f45k50-master\hardkernel-usb-io-pic18f45k50-master/src/main.c
 [v _main main `(v  1 e 0 0 ]
 {
 "85
 } 0
-"295 /home/s/Документы/forpic/microchip/mla/v2015_08_10/framework/usb/src/usb_device.c
+"295 C:/microchip/mla/v2015_08_10/framework/usb/src/usb_device.c
 [v _USBDeviceInit USBDeviceInit `(v  1 e 0 0 ]
 {
 "297
 [v USBDeviceInit@i i `uc  1 a 1 8 ]
 "389
 } 0
-"8 /opt/microchip/xc8/v1.35/sources/common/memset.c
+"8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\memset.c
 [v _memset memset `(*.39v  1 e 2 0 ]
 {
 "15
@@ -942,20 +946,20 @@ EVENT_TRANSFER_TERMINATED 5
 [v memset@n n `ui  1 p 2 4 ]
 "22
 } 0
-"1370 /home/s/Документы/forpic/microchip/mla/v2015_08_10/framework/usb/src/usb_device.c
+"1370 C:/microchip/mla/v2015_08_10/framework/usb/src/usb_device.c
 [v _USBDeviceAttach USBDeviceAttach `(v  1 e 0 0 ]
 {
 "1400
 } 0
-"88 /home/s/MPLABXProjects/src/system_config/pic18f45k50/system.c
+"88 C:\Users\user\Downloads\hardkernel-usb-io-pic18f45k50-master\hardkernel-usb-io-pic18f45k50-master/src/system_config/pic18f45k50/system.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 0 0 ]
 {
-[v SYSTEM_Initialize@state state `E6718  1 a 1 wreg ]
-[v SYSTEM_Initialize@state state `E6718  1 a 1 wreg ]
-[v SYSTEM_Initialize@state state `E6718  1 a 1 1 ]
+[v SYSTEM_Initialize@state state `E6713  1 a 1 wreg ]
+[v SYSTEM_Initialize@state state `E6713  1 a 1 wreg ]
+[v SYSTEM_Initialize@state state `E6713  1 a 1 1 ]
 "119
 } 0
-"227 /home/s/MPLABXProjects/bsp_pic18f45k50/leds.c
+"227 C:\Users\user\Downloads\hardkernel-usb-io-pic18f45k50-master\hardkernel-usb-io-pic18f45k50-master/bsp_pic18f45k50/leds.c
 [v _LED_Enable LED_Enable `(v  1 e 0 0 ]
 {
 [v LED_Enable@led led `E2  1 a 1 wreg ]
@@ -963,15 +967,15 @@ EVENT_TRANSFER_TERMINATED 5
 [v LED_Enable@led led `E2  1 a 1 0 ]
 "254
 } 0
-"96 /home/s/MPLABXProjects/bsp_pic18f45k50/buttons.c
+"96 C:\Users\user\Downloads\hardkernel-usb-io-pic18f45k50-master\hardkernel-usb-io-pic18f45k50-master/bsp_pic18f45k50/buttons.c
 [v _BUTTON_Enable BUTTON_Enable `(v  1 e 0 0 ]
 {
-[v BUTTON_Enable@button button `E6648  1 a 1 wreg ]
-[v BUTTON_Enable@button button `E6648  1 a 1 wreg ]
-[v BUTTON_Enable@button button `E6648  1 a 1 0 ]
+[v BUTTON_Enable@button button `E6643  1 a 1 wreg ]
+[v BUTTON_Enable@button button `E6643  1 a 1 wreg ]
+[v BUTTON_Enable@button button `E6643  1 a 1 0 ]
 "113
 } 0
-"156 /home/s/MPLABXProjects/bsp_pic18f45k50/adc.c
+"156 C:\Users\user\Downloads\hardkernel-usb-io-pic18f45k50-master\hardkernel-usb-io-pic18f45k50-master/bsp_pic18f45k50/adc.c
 [v _ADC_SetConfiguration ADC_SetConfiguration `(uc  1 e 1 0 ]
 {
 [v ADC_SetConfiguration@configuration configuration `E33  1 a 1 wreg ]
@@ -988,18 +992,18 @@ EVENT_TRANSFER_TERMINATED 5
 [v ADC_Enable@channel channel `E30  1 a 1 0 ]
 "142
 } 0
-"107 /home/s/MPLABXProjects/src/app_device_custom_hid.c
+"111 C:\Users\user\Downloads\hardkernel-usb-io-pic18f45k50-master\hardkernel-usb-io-pic18f45k50-master/src/app_device_custom_hid.c
 [v _APP_DeviceCustomHIDTasks APP_DeviceCustomHIDTasks `(v  1 e 0 0 ]
 {
-"140
+"153
 [v APP_DeviceCustomHIDTasks@pot pot `ui  1 a 2 7 ]
-"167
+"180
 } 0
-"1013 /home/s/Документы/forpic/microchip/mla/v2015_08_10/framework/usb/src/usb_device.c
+"1013 C:/microchip/mla/v2015_08_10/framework/usb/src/usb_device.c
 [v _USBTransferOnePacket USBTransferOnePacket `(*.39v  1 e 2 0 ]
 {
 [v USBTransferOnePacket@ep ep `uc  1 a 1 wreg ]
-[s S1119 . 1 `uc 1 BC8 1 0 :1:0 
+[s S793 . 1 `uc 1 BC8 1 0 :1:0 
 `uc 1 BC9 1 0 :1:1 
 `uc 1 BSTALL 1 0 :1:2 
 `uc 1 DTSEN 1 0 :1:3 
@@ -1009,24 +1013,24 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 UOWN 1 0 :1:7 
 ]
 "1015
-[s S1128 . 1 `uc 1 . 1 0 :2:0 
+[s S802 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID0 1 0 :1:2 
 `uc 1 PID1 1 0 :1:3 
 `uc 1 PID2 1 0 :1:4 
 `uc 1 PID3 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 ]
-[s S1135 . 1 `uc 1 . 1 0 :2:0 
+[s S809 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID 1 0 :4:2 
 `uc 1 . 1 0 :2:6 
 ]
-[u S1139 _BD_STAT 1 `uc 1 Val 1 0 `S1119 1 . 1 0 `S1128 1 . 1 0 `S1135 1 . 1 0 ]
-[s S1144 . 4 `S1139 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
-[s S1149 . 4 `uc 1 . 1 0 :8:0 
+[u S813 _BD_STAT 1 `uc 1 Val 1 0 `S793 1 . 1 0 `S802 1 . 1 0 `S809 1 . 1 0 ]
+[s S818 . 4 `S813 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S823 . 4 `uc 1 . 1 0 :8:0 
 `uc 1 . 1 1 :8:0 
 `ui 1 ADR 2 2 ]
-[u S1153 __BDT 4 `S1144 1 . 4 0 `S1149 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
-[v USBTransferOnePacket@handle handle `*.39VES1153  1 a 2 5 ]
+[u S827 __BDT 4 `S818 1 . 4 0 `S823 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v USBTransferOnePacket@handle handle `*.39VES827  1 a 2 5 ]
 "1013
 [v USBTransferOnePacket@ep ep `uc  1 a 1 wreg ]
 [v USBTransferOnePacket@dir dir `uc  1 p 1 0 ]
@@ -1036,7 +1040,7 @@ EVENT_TRANSFER_TERMINATED 5
 [v USBTransferOnePacket@ep ep `uc  1 a 1 4 ]
 "1065
 } 0
-"149 /home/s/MPLABXProjects/bsp_pic18f45k50/leds.c
+"149 C:\Users\user\Downloads\hardkernel-usb-io-pic18f45k50-master\hardkernel-usb-io-pic18f45k50-master/bsp_pic18f45k50/leds.c
 [v _LED_Toggle LED_Toggle `(v  1 e 0 0 ]
 {
 [v LED_Toggle@led led `E2  1 a 1 wreg ]
@@ -1044,15 +1048,15 @@ EVENT_TRANSFER_TERMINATED 5
 [v LED_Toggle@led led `E2  1 a 1 0 ]
 "171
 } 0
-"63 /home/s/MPLABXProjects/bsp_pic18f45k50/buttons.c
+"63 C:\Users\user\Downloads\hardkernel-usb-io-pic18f45k50-master\hardkernel-usb-io-pic18f45k50-master/bsp_pic18f45k50/buttons.c
 [v _BUTTON_IsPressed BUTTON_IsPressed `(uc  1 e 1 0 ]
 {
-[v BUTTON_IsPressed@button button `E6648  1 a 1 wreg ]
-[v BUTTON_IsPressed@button button `E6648  1 a 1 wreg ]
-[v BUTTON_IsPressed@button button `E6648  1 a 1 0 ]
+[v BUTTON_IsPressed@button button `E6643  1 a 1 wreg ]
+[v BUTTON_IsPressed@button button `E6643  1 a 1 wreg ]
+[v BUTTON_IsPressed@button button `E6643  1 a 1 0 ]
 "78
 } 0
-"93 /home/s/MPLABXProjects/bsp_pic18f45k50/adc.c
+"93 C:\Users\user\Downloads\hardkernel-usb-io-pic18f45k50-master\hardkernel-usb-io-pic18f45k50-master/bsp_pic18f45k50/adc.c
 [v _ADC_Read10bit ADC_Read10bit `(ui  1 e 2 0 ]
 {
 [v ADC_Read10bit@channel channel `E30  1 a 1 wreg ]
@@ -1063,12 +1067,12 @@ EVENT_TRANSFER_TERMINATED 5
 [v ADC_Read10bit@channel channel `E30  1 a 1 5 ]
 "115
 } 0
-"124 /home/s/MPLABXProjects/src/system_config/pic18f45k50/system.c
+"124 C:\Users\user\Downloads\hardkernel-usb-io-pic18f45k50-master\hardkernel-usb-io-pic18f45k50-master/src/system_config/pic18f45k50/system.c
 [v _SYS_InterruptHigh SYS_InterruptHigh `II(v  1 e 0 0 ]
 {
 "129
 } 0
-"495 /home/s/Документы/forpic/microchip/mla/v2015_08_10/framework/usb/src/usb_device.c
+"495 C:/microchip/mla/v2015_08_10/framework/usb/src/usb_device.c
 [v _USBDeviceTasks USBDeviceTasks `(v  1 e 0 0 ]
 {
 "497
@@ -1106,7 +1110,7 @@ EVENT_TRANSFER_TERMINATED 5
 {
 "2441
 } 0
-"11 /opt/microchip/xc8/v1.35/sources/common/memcpy.c
+"11 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\memcpy.c
 [v _memcpy memcpy `(*.39v  1 e 2 0 ]
 {
 "20
@@ -1119,7 +1123,7 @@ EVENT_TRANSFER_TERMINATED 5
 [v memcpy@n n `ui  1 p 2 4 ]
 "32
 } 0
-"2483 /home/s/Документы/forpic/microchip/mla/v2015_08_10/framework/usb/src/usb_device.c
+"2483 C:/microchip/mla/v2015_08_10/framework/usb/src/usb_device.c
 [v _USBCtrlTrfSetupHandler USBCtrlTrfSetupHandler `(v  1 s 0 USBCtrlTrfSetupHandler ]
 {
 "2532
@@ -1146,7 +1150,7 @@ EVENT_TRANSFER_TERMINATED 5
 [v USBStdSetCfgHandler@i i `uc  1 a 1 20 ]
 "2042
 } 0
-"8 /opt/microchip/xc8/v1.35/sources/common/memset.c
+"8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\memset.c
 [v i2_memset memset `(*.39v  1 e 2 0 ]
 {
 [v i2memset@p memset `*.39uc  1 a 2 6 ]
@@ -1155,10 +1159,10 @@ EVENT_TRANSFER_TERMINATED 5
 [v i2memset@n n `ui  1 p 2 4 ]
 "22
 } 0
-"2147 /home/s/Документы/forpic/microchip/mla/v2015_08_10/framework/usb/src/usb_device.c
+"2147 C:/microchip/mla/v2015_08_10/framework/usb/src/usb_device.c
 [v _USBStdGetStatusHandler USBStdGetStatusHandler `(v  1 s 0 USBStdGetStatusHandler ]
 {
-[s S1119 . 1 `uc 1 BC8 1 0 :1:0 
+[s S793 . 1 `uc 1 BC8 1 0 :1:0 
 `uc 1 BC9 1 0 :1:1 
 `uc 1 BSTALL 1 0 :1:2 
 `uc 1 DTSEN 1 0 :1:3 
@@ -1168,24 +1172,24 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 UOWN 1 0 :1:7 
 ]
 "2179
-[s S1128 . 1 `uc 1 . 1 0 :2:0 
+[s S802 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID0 1 0 :1:2 
 `uc 1 PID1 1 0 :1:3 
 `uc 1 PID2 1 0 :1:4 
 `uc 1 PID3 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 ]
-[s S1135 . 1 `uc 1 . 1 0 :2:0 
+[s S809 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID 1 0 :4:2 
 `uc 1 . 1 0 :2:6 
 ]
-[u S1139 _BD_STAT 1 `uc 1 Val 1 0 `S1119 1 . 1 0 `S1128 1 . 1 0 `S1135 1 . 1 0 ]
-[s S1144 . 4 `S1139 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
-[s S1149 . 4 `uc 1 . 1 0 :8:0 
+[u S813 _BD_STAT 1 `uc 1 Val 1 0 `S793 1 . 1 0 `S802 1 . 1 0 `S809 1 . 1 0 ]
+[s S818 . 4 `S813 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S823 . 4 `uc 1 . 1 0 :8:0 
 `uc 1 . 1 1 :8:0 
 `ui 1 ADR 2 2 ]
-[u S1153 __BDT 4 `S1144 1 . 4 0 `S1149 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
-[v USBStdGetStatusHandler@p p `*.39S1153  1 a 2 1 ]
+[u S827 __BDT 4 `S818 1 . 4 0 `S823 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v USBStdGetStatusHandler@p p `*.39S827  1 a 2 1 ]
 "2202
 } 0
 "2061
@@ -1196,7 +1200,7 @@ EVENT_TRANSFER_TERMINATED 5
 "2771
 [v _USBStdFeatureReqHandler USBStdFeatureReqHandler `(v  1 s 0 USBStdFeatureReqHandler ]
 {
-[s S1119 . 1 `uc 1 BC8 1 0 :1:0 
+[s S793 . 1 `uc 1 BC8 1 0 :1:0 
 `uc 1 BC9 1 0 :1:1 
 `uc 1 BSTALL 1 0 :1:2 
 `uc 1 DTSEN 1 0 :1:3 
@@ -1206,51 +1210,51 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 UOWN 1 0 :1:7 
 ]
 "2773
-[s S1128 . 1 `uc 1 . 1 0 :2:0 
+[s S802 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID0 1 0 :1:2 
 `uc 1 PID1 1 0 :1:3 
 `uc 1 PID2 1 0 :1:4 
 `uc 1 PID3 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 ]
-[s S1135 . 1 `uc 1 . 1 0 :2:0 
+[s S809 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID 1 0 :4:2 
 `uc 1 . 1 0 :2:6 
 ]
-[u S1139 _BD_STAT 1 `uc 1 Val 1 0 `S1119 1 . 1 0 `S1128 1 . 1 0 `S1135 1 . 1 0 ]
-[s S1144 . 4 `S1139 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
-[s S1149 . 4 `uc 1 . 1 0 :8:0 
+[u S813 _BD_STAT 1 `uc 1 Val 1 0 `S793 1 . 1 0 `S802 1 . 1 0 `S809 1 . 1 0 ]
+[s S818 . 4 `S813 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S823 . 4 `uc 1 . 1 0 :8:0 
 `uc 1 . 1 1 :8:0 
 `ui 1 ADR 2 2 ]
-[u S1153 __BDT 4 `S1144 1 . 4 0 `S1149 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
-[v USBStdFeatureReqHandler@p p `*.39S1153  1 a 2 24 ]
+[u S827 __BDT 4 `S818 1 . 4 0 `S823 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v USBStdFeatureReqHandler@p p `*.39S827  1 a 2 24 ]
 "2778
 [v USBStdFeatureReqHandler@pUEP pUEP `*.39uc  1 a 2 21 ]
-[s S1205 . 1 `uc 1 ping_pong_state 1 0 :1:0 
+[s S879 . 1 `uc 1 ping_pong_state 1 0 :1:0 
 `uc 1 transfer_terminated 1 0 :1:1 
 ]
 "2774
-[u S1208 . 1 `S1205 1 bits 1 0 `uc 1 Val 1 0 ]
-[v USBStdFeatureReqHandler@current_ep_data current_ep_data `S1208  1 a 1 23 ]
+[u S882 . 1 `S879 1 bits 1 0 `uc 1 Val 1 0 ]
+[v USBStdFeatureReqHandler@current_ep_data current_ep_data `S882  1 a 1 23 ]
 "2997
 } 0
-"109 /home/s/MPLABXProjects/src/main.c
+"109 C:\Users\user\Downloads\hardkernel-usb-io-pic18f45k50-master\hardkernel-usb-io-pic18f45k50-master/src/main.c
 [v _USER_USB_CALLBACK_EVENT_HANDLER USER_USB_CALLBACK_EVENT_HANDLER `(uc  1 e 1 0 ]
 {
-[v USER_USB_CALLBACK_EVENT_HANDLER@event event `E6927  1 p 2 12 ]
+[v USER_USB_CALLBACK_EVENT_HANDLER@event event `E6922  1 p 2 12 ]
 [v USER_USB_CALLBACK_EVENT_HANDLER@pdata pdata `*.39v  1 p 2 14 ]
 [v USER_USB_CALLBACK_EVENT_HANDLER@size size `ui  1 p 2 16 ]
 "171
 } 0
-"88 /home/s/MPLABXProjects/src/system_config/pic18f45k50/system.c
+"88 C:\Users\user\Downloads\hardkernel-usb-io-pic18f45k50-master\hardkernel-usb-io-pic18f45k50-master/src/system_config/pic18f45k50/system.c
 [v i2_SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 0 0 ]
 {
-[v i2SYSTEM_Initialize@state state `E6718  1 a 1 wreg ]
-[v i2SYSTEM_Initialize@state state `E6718  1 a 1 wreg ]
-[v i2SYSTEM_Initialize@state state `E6718  1 a 1 1 ]
+[v i2SYSTEM_Initialize@state state `E6713  1 a 1 wreg ]
+[v i2SYSTEM_Initialize@state state `E6713  1 a 1 wreg ]
+[v i2SYSTEM_Initialize@state state `E6713  1 a 1 1 ]
 "119
 } 0
-"227 /home/s/MPLABXProjects/bsp_pic18f45k50/leds.c
+"227 C:\Users\user\Downloads\hardkernel-usb-io-pic18f45k50-master\hardkernel-usb-io-pic18f45k50-master/bsp_pic18f45k50/leds.c
 [v i2_LED_Enable LED_Enable `(v  1 e 0 0 ]
 {
 [v i2LED_Enable@led led `E2  1 a 1 wreg ]
@@ -1258,15 +1262,15 @@ EVENT_TRANSFER_TERMINATED 5
 [v i2LED_Enable@led led `E2  1 a 1 0 ]
 "254
 } 0
-"96 /home/s/MPLABXProjects/bsp_pic18f45k50/buttons.c
+"96 C:\Users\user\Downloads\hardkernel-usb-io-pic18f45k50-master\hardkernel-usb-io-pic18f45k50-master/bsp_pic18f45k50/buttons.c
 [v i2_BUTTON_Enable BUTTON_Enable `(v  1 e 0 0 ]
 {
-[v i2BUTTON_Enable@button button `E6648  1 a 1 wreg ]
-[v i2BUTTON_Enable@button button `E6648  1 a 1 wreg ]
-[v i2BUTTON_Enable@button button `E6648  1 a 1 0 ]
+[v i2BUTTON_Enable@button button `E6643  1 a 1 wreg ]
+[v i2BUTTON_Enable@button button `E6643  1 a 1 wreg ]
+[v i2BUTTON_Enable@button button `E6643  1 a 1 0 ]
 "113
 } 0
-"156 /home/s/MPLABXProjects/bsp_pic18f45k50/adc.c
+"156 C:\Users\user\Downloads\hardkernel-usb-io-pic18f45k50-master\hardkernel-usb-io-pic18f45k50-master/bsp_pic18f45k50/adc.c
 [v i2_ADC_SetConfiguration ADC_SetConfiguration `(uc  1 e 1 0 ]
 {
 [v i2ADC_SetConfiguration@configuration configuration `E33  1 a 1 wreg ]
@@ -1283,19 +1287,19 @@ EVENT_TRANSFER_TERMINATED 5
 [v i2ADC_Enable@channel channel `E30  1 a 1 0 ]
 "142
 } 0
-"153 /home/s/Документы/forpic/microchip/mla/v2015_08_10/framework/usb/src/usb_device_hid.c
+"153 C:/microchip/mla/v2015_08_10/framework/usb/src/usb_device_hid.c
 [v _USBCheckHIDRequest USBCheckHIDRequest `(v  1 e 0 0 ]
 {
 "241
 } 0
-"75 /home/s/MPLABXProjects/src/app_led_usb_status.c
+"75 C:\Users\user\Downloads\hardkernel-usb-io-pic18f45k50-master\hardkernel-usb-io-pic18f45k50-master/src/app_led_usb_status.c
 [v _APP_LEDUpdateUSBStatus APP_LEDUpdateUSBStatus `(v  1 e 0 0 ]
 {
 "77
 [v APP_LEDUpdateUSBStatus@ledCount ledCount `ui  1 s 2 ledCount ]
 "124
 } 0
-"67 /home/s/MPLABXProjects/bsp_pic18f45k50/leds.c
+"67 C:\Users\user\Downloads\hardkernel-usb-io-pic18f45k50-master\hardkernel-usb-io-pic18f45k50-master/bsp_pic18f45k50/leds.c
 [v _LED_On LED_On `(v  1 e 0 0 ]
 {
 [v LED_On@led led `E2  1 a 1 wreg ]
@@ -1311,16 +1315,16 @@ EVENT_TRANSFER_TERMINATED 5
 [v LED_Off@led led `E2  1 a 1 0 ]
 "131
 } 0
-"80 /home/s/MPLABXProjects/src/app_device_custom_hid.c
+"84 C:\Users\user\Downloads\hardkernel-usb-io-pic18f45k50-master\hardkernel-usb-io-pic18f45k50-master/src/app_device_custom_hid.c
 [v _APP_DeviceCustomHIDInitialize APP_DeviceCustomHIDInitialize `(v  1 e 0 0 ]
 {
-"91
+"95
 } 0
-"1013 /home/s/Документы/forpic/microchip/mla/v2015_08_10/framework/usb/src/usb_device.c
+"1013 C:/microchip/mla/v2015_08_10/framework/usb/src/usb_device.c
 [v i2_USBTransferOnePacket USBTransferOnePacket `(*.39v  1 e 2 0 ]
 {
 [v i2USBTransferOnePacket@ep ep `uc  1 a 1 wreg ]
-[s S1119 . 1 `uc 1 BC8 1 0 :1:0 
+[s S793 . 1 `uc 1 BC8 1 0 :1:0 
 `uc 1 BC9 1 0 :1:1 
 `uc 1 BSTALL 1 0 :1:2 
 `uc 1 DTSEN 1 0 :1:3 
@@ -1329,24 +1333,24 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 DTS 1 0 :1:6 
 `uc 1 UOWN 1 0 :1:7 
 ]
-[s S1128 . 1 `uc 1 . 1 0 :2:0 
+[s S802 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID0 1 0 :1:2 
 `uc 1 PID1 1 0 :1:3 
 `uc 1 PID2 1 0 :1:4 
 `uc 1 PID3 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 ]
-[s S1135 . 1 `uc 1 . 1 0 :2:0 
+[s S809 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID 1 0 :4:2 
 `uc 1 . 1 0 :2:6 
 ]
-[u S1139 _BD_STAT 1 `uc 1 Val 1 0 `S1119 1 . 1 0 `S1128 1 . 1 0 `S1135 1 . 1 0 ]
-[s S1144 . 4 `S1139 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
-[s S1149 . 4 `uc 1 . 1 0 :8:0 
+[u S813 _BD_STAT 1 `uc 1 Val 1 0 `S793 1 . 1 0 `S802 1 . 1 0 `S809 1 . 1 0 ]
+[s S818 . 4 `S813 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S823 . 4 `uc 1 . 1 0 :8:0 
 `uc 1 . 1 1 :8:0 
 `ui 1 ADR 2 2 ]
-[u S1153 __BDT 4 `S1144 1 . 4 0 `S1149 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
-[v i2USBTransferOnePacket@handle USBTransferOnePacket `*.39VES1153  1 a 2 5 ]
+[u S827 __BDT 4 `S818 1 . 4 0 `S823 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v i2USBTransferOnePacket@handle USBTransferOnePacket `*.39VES827  1 a 2 5 ]
 [v i2USBTransferOnePacket@ep ep `uc  1 a 1 wreg ]
 [v i2USBTransferOnePacket@dir dir `uc  1 p 1 0 ]
 [v i2USBTransferOnePacket@data data `*.39uc  1 p 2 1 ]
@@ -1372,7 +1376,7 @@ EVENT_TRANSFER_TERMINATED 5
 [v _USBConfigureEndpoint USBConfigureEndpoint `(v  1 s 0 USBConfigureEndpoint ]
 {
 [v USBConfigureEndpoint@EPNum EPNum `uc  1 a 1 wreg ]
-[s S1119 . 1 `uc 1 BC8 1 0 :1:0 
+[s S793 . 1 `uc 1 BC8 1 0 :1:0 
 `uc 1 BC9 1 0 :1:1 
 `uc 1 BSTALL 1 0 :1:2 
 `uc 1 DTSEN 1 0 :1:3 
@@ -1382,24 +1386,24 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 UOWN 1 0 :1:7 
 ]
 "1563
-[s S1128 . 1 `uc 1 . 1 0 :2:0 
+[s S802 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID0 1 0 :1:2 
 `uc 1 PID1 1 0 :1:3 
 `uc 1 PID2 1 0 :1:4 
 `uc 1 PID3 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 ]
-[s S1135 . 1 `uc 1 . 1 0 :2:0 
+[s S809 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID 1 0 :4:2 
 `uc 1 . 1 0 :2:6 
 ]
-[u S1139 _BD_STAT 1 `uc 1 Val 1 0 `S1119 1 . 1 0 `S1128 1 . 1 0 `S1135 1 . 1 0 ]
-[s S1144 . 4 `S1139 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
-[s S1149 . 4 `uc 1 . 1 0 :8:0 
+[u S813 _BD_STAT 1 `uc 1 Val 1 0 `S793 1 . 1 0 `S802 1 . 1 0 `S809 1 . 1 0 ]
+[s S818 . 4 `S813 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S823 . 4 `uc 1 . 1 0 :8:0 
 `uc 1 . 1 1 :8:0 
 `ui 1 ADR 2 2 ]
-[u S1153 __BDT 4 `S1144 1 . 4 0 `S1149 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
-[v USBConfigureEndpoint@handle handle `*.39VES1153  1 a 2 6 ]
+[u S827 __BDT 4 `S818 1 . 4 0 `S823 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v USBConfigureEndpoint@handle handle `*.39VES827  1 a 2 6 ]
 "1561
 [v USBConfigureEndpoint@EPNum EPNum `uc  1 a 1 wreg ]
 [v USBConfigureEndpoint@direction direction `uc  1 p 1 0 ]

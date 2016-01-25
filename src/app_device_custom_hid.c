@@ -60,7 +60,11 @@ typedef enum
 {
     COMMAND_TOGGLE_LED = 0x80,
     COMMAND_GET_BUTTON_STATUS = 0x81,
-    COMMAND_READ_POTENTIOMETER = 0x37
+    COMMAND_READ_POTENTIOMETER = 0x37,
+    COMMAND_ACQUIRE_FROM_PIN = 101,
+    COMMAND_GENERATE_FROM_ADC = 102
+
+
 } CUSTOM_HID_DEMO_COMMANDS;
 
 /** FUNCTIONS ******************************************************/
@@ -134,7 +138,16 @@ void APP_DeviceCustomHIDTasks()
                     USBInHandle = HIDTxPacket(CUSTOM_DEVICE_HID_EP, (uint8_t*)&ToSendDataBuffer[0],64);
                 }
                 break;
+            case COMMAND_ACQUIRE_FROM_PIN:
+                {
 
+                }
+                break;
+            case COMMAND_GENERATE_FROM_ADC:
+                {
+
+                }
+                break;
             case COMMAND_READ_POTENTIOMETER:	//Read POT command.  Uses ADC to measure an analog voltage on one of the ANxx I/O pins, and returns the result to the host
                 {
                     uint16_t pot;

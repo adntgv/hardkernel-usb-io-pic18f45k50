@@ -2,7 +2,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "68 ../bsp_pic18f45k50/leds.c
 [c E2 0 1 .. ]
 [n E2 . LED_NONE LED_D1  ]
-"4429 /opt/microchip/xc8/v1.35/include/pic18f45k50.h
+"4429 C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18f45k50.h
 [s S298 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S298 . LATC0 LATC1 LATC2 . LATC4 LATC5 LATC6 LATC7 ]
 "4439
@@ -57,21 +57,20 @@ Version 3.2 HI-TECH Software Intermediate Code
 "332
 [v _ANSELCbits `VS14 ~T0 @X0 0 e@3933 ]
 [; ;stdbool.h: 12: typedef unsigned char bool;
-[; ;leds.h: 29: typedef enum
-[; ;leds.h: 30: {
-[; ;leds.h: 31: LED_NONE,
-[; ;leds.h: 32: LED_D1,
-[; ;leds.h: 38: } LED;
-[; ;leds.h: 58: void LED_On(LED led);
-[; ;leds.h: 76: void LED_Off(LED led);
-[; ;leds.h: 94: void LED_Toggle(LED led);
-[; ;leds.h: 112: bool LED_Get(LED led);
-[; ;leds.h: 129: void LED_Enable(LED led);
+[; ;bsp_pic18f45k50\leds.h: 29: typedef enum
+[; ;bsp_pic18f45k50\leds.h: 30: {
+[; ;bsp_pic18f45k50\leds.h: 31: LED_NONE,
+[; ;bsp_pic18f45k50\leds.h: 32: LED_D1,
+[; ;bsp_pic18f45k50\leds.h: 38: } LED;
+[; ;bsp_pic18f45k50\leds.h: 58: void LED_On(LED led);
+[; ;bsp_pic18f45k50\leds.h: 76: void LED_Off(LED led);
+[; ;bsp_pic18f45k50\leds.h: 94: void LED_Toggle(LED led);
+[; ;bsp_pic18f45k50\leds.h: 112: bool LED_Get(LED led);
+[; ;bsp_pic18f45k50\leds.h: 129: void LED_Enable(LED led);
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
-[; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
 [; ;pic18f45k50.h: 49: extern volatile unsigned char SRCON1 @ 0xF57;
-"51 /opt/microchip/xc8/v1.35/include/pic18f45k50.h
+"51 C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18f45k50.h
 [; ;pic18f45k50.h: 51: asm("SRCON1 equ 0F57h");
 [; <" SRCON1 equ 0F57h ;# ">
 [; ;pic18f45k50.h: 54: typedef union {
@@ -6250,12 +6249,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18f45k50.h: 16579: extern volatile __bit nTO @ (((unsigned) &RCON)*8) + 3;
 [; ;pic18f45k50.h: 16581: extern volatile __bit nW @ (((unsigned) &SSP1STAT)*8) + 2;
 [; ;pic18f45k50.h: 16583: extern volatile __bit nWRITE @ (((unsigned) &SSP1STAT)*8) + 2;
-[; ;pic18.h: 18: __attribute__((__unsupported__("The " "flash_write" " routine is no longer supported. Please use the MPLAB X MCC."))) void flash_write(const unsigned char *, unsigned int, __far unsigned char *);
-[; ;pic18.h: 19: __attribute__((__unsupported__("The " "EraseFlash" " routine is no longer supported. Please use the MPLAB X MCC."))) void EraseFlash(unsigned long startaddr, unsigned long endaddr);
-[; ;pic18.h: 43: extern void __nop(void);
-[; ;pic18.h: 152: extern __nonreentrant void _delay(unsigned long);
-[; ;pic18.h: 154: extern __nonreentrant void _delaywdt(unsigned long);
-[; ;pic18.h: 156: extern __nonreentrant void _delay3(unsigned char);
+[; ;pic18.h: 18: __attribute__((__unsupported__("The flash_write routine is no longer supported. Please use the peripheral library functions: WriteBytesFlash, WriteBlockFlash or WriteWordFlash"))) void flash_write(const unsigned char *, unsigned int, __far unsigned c
+[; ;pic18.h: 42: extern void __nop(void);
+[; ;pic18.h: 161: extern __nonreentrant void _delay(unsigned long);
+[; ;pic18.h: 163: extern __nonreentrant void _delaywdt(unsigned long);
+[; ;pic18.h: 165: extern __nonreentrant void _delay3(unsigned char);
 "67 ../bsp_pic18f45k50/leds.c
 [v _LED_On `(v ~T0 @X0 1 ef1`E2 ]
 "68

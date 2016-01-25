@@ -5,37 +5,6 @@
                    displayName="Header Files"
                    projectFiles="true">
       <logicalFolder name="inc" displayName="inc" projectFiles="true">
-        <itemPath>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb_device_phdc_com_model.h</itemPath>
-        <itemPath>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb_device_generic.h</itemPath>
-        <itemPath>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb_device_cdc.h</itemPath>
-        <itemPath>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb_host_msd_scsi.h</itemPath>
-        <itemPath>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb_host_cdc.h</itemPath>
-        <itemPath>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb_hal_pic16f1.h</itemPath>
-        <itemPath>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb_device_phdc.h</itemPath>
-        <itemPath>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb_host_android.h</itemPath>
-        <itemPath>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb_hal_pic24f.h</itemPath>
-        <itemPath>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb_device_msd.h</itemPath>
-        <itemPath>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb_hal.h</itemPath>
-        <itemPath>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb_host_audio_v1.h</itemPath>
-        <itemPath>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb_host_hid.h</itemPath>
-        <itemPath>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb_hid.h</itemPath>
-        <itemPath>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb_struct_queue.h</itemPath>
-        <itemPath>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb_device.h</itemPath>
-        <itemPath>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb_host_cdc_interface.h</itemPath>
-        <itemPath>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb_host_hid_parser.h</itemPath>
-        <itemPath>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb_device_hid.h</itemPath>
-        <itemPath>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb_host.h</itemPath>
-        <itemPath>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb_device_ccid.h</itemPath>
-        <itemPath>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb_device_midi.h</itemPath>
-        <itemPath>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb_host_msd.h</itemPath>
-        <itemPath>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb_hal_pic24.h</itemPath>
-        <itemPath>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb_hal_dspic33e.h</itemPath>
-        <itemPath>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb_common.h</itemPath>
-        <itemPath>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb_device_audio.h</itemPath>
-        <itemPath>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb.h</itemPath>
-        <itemPath>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb_ch9.h</itemPath>
-        <itemPath>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb_hal_pic18.h</itemPath>
-        <itemPath>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc/usb_hal_pic24e.h</itemPath>
       </logicalFolder>
       <logicalFolder name="src" displayName="src" projectFiles="true">
         <logicalFolder name="system_config"
@@ -80,9 +49,9 @@
         <itemPath>../src/main.c</itemPath>
         <itemPath>../src/app_device_custom_hid.c</itemPath>
         <itemPath>../src/app_led_usb_status.c</itemPath>
-        <itemPath>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/src/usb_device_hid.c</itemPath>
-        <itemPath>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/src/usb_device.c</itemPath>
-        <itemPath>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/src/usb_device_generic.c</itemPath>
+        <itemPath>../../../../../../microchip/mla/v2015_08_10/framework/usb/src/usb_device.c</itemPath>
+        <itemPath>../../../../../../microchip/mla/v2015_08_10/framework/usb/src/usb_device_generic.c</itemPath>
+        <itemPath>../../../../../../microchip/mla/v2015_08_10/framework/usb/src/usb_device_hid.c</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
@@ -96,6 +65,7 @@
     <Elem>../bsp_pic18f45k50</Elem>
     <Elem>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/src</Elem>
     <Elem>../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc</Elem>
+    <Elem>../../../../../../microchip/mla/v2015_08_10/framework/usb/src</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -107,8 +77,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>1.35</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>1.34</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -136,7 +106,7 @@
         <property key="asmlist" value="true"/>
         <property key="define-macros" value=""/>
         <property key="extra-include-directories"
-                  value="../src;../src/system_config/pic18f45k50;../bsp_pic18f45k50;../../Документы/forpic/microchip/mla/v2015_08_10/framework/usb/inc"/>
+                  value="../src;../src/system_config/pic18f45k50;../bsp_pic18f45k50;..\..\..\..\..\..\microchip\mla\v2015_08_10\framework\usb\inc"/>
         <property key="identifier-length" value="255"/>
         <property key="operation-mode" value="free"/>
         <property key="opt-xc8-compiler-strict_ansi" value="false"/>

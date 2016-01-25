@@ -22,6 +22,6 @@
 #include "system.h"
 
 #define BUTTON_USB_DEVICE_HID_CUSTOM            BUTTON_S2
-#define LED_USB_DEVICE_STATE                    LED_D1
+#define LED_USB_DEVICE_STATE                    LED_NONE
 #define LED_USB_DEVICE_HID_CUSTOM               LED_D1
 

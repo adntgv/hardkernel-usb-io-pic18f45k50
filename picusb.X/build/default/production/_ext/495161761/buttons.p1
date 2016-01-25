@@ -1,8 +1,8 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "64 ../bsp_pic18f45k50/buttons.c
-[c E6648 0 1 .. ]
-[n E6648 . BUTTON_NONE BUTTON_S2  ]
-"3571 /opt/microchip/xc8/v1.35/include/pic18f45k50.h
+[c E6643 0 1 .. ]
+[n E6643 . BUTTON_NONE BUTTON_S2  ]
+"3571 C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18f45k50.h
 [s S241 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S241 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
 "3581
@@ -36,10 +36,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "368
 [v _ANSELDbits `VS16 ~T0 @X0 0 e@3934 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
-[; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
 [; ;pic18f45k50.h: 49: extern volatile unsigned char SRCON1 @ 0xF57;
-"51 /opt/microchip/xc8/v1.35/include/pic18f45k50.h
+"51 C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18f45k50.h
 [; ;pic18f45k50.h: 51: asm("SRCON1 equ 0F57h");
 [; <" SRCON1 equ 0F57h ;# ">
 [; ;pic18f45k50.h: 54: typedef union {
@@ -6218,29 +6217,28 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18f45k50.h: 16579: extern volatile __bit nTO @ (((unsigned) &RCON)*8) + 3;
 [; ;pic18f45k50.h: 16581: extern volatile __bit nW @ (((unsigned) &SSP1STAT)*8) + 2;
 [; ;pic18f45k50.h: 16583: extern volatile __bit nWRITE @ (((unsigned) &SSP1STAT)*8) + 2;
-[; ;pic18.h: 18: __attribute__((__unsupported__("The " "flash_write" " routine is no longer supported. Please use the MPLAB X MCC."))) void flash_write(const unsigned char *, unsigned int, __far unsigned char *);
-[; ;pic18.h: 19: __attribute__((__unsupported__("The " "EraseFlash" " routine is no longer supported. Please use the MPLAB X MCC."))) void EraseFlash(unsigned long startaddr, unsigned long endaddr);
-[; ;pic18.h: 43: extern void __nop(void);
-[; ;pic18.h: 152: extern __nonreentrant void _delay(unsigned long);
-[; ;pic18.h: 154: extern __nonreentrant void _delaywdt(unsigned long);
-[; ;pic18.h: 156: extern __nonreentrant void _delay3(unsigned char);
+[; ;pic18.h: 18: __attribute__((__unsupported__("The flash_write routine is no longer supported. Please use the peripheral library functions: WriteBytesFlash, WriteBlockFlash or WriteWordFlash"))) void flash_write(const unsigned char *, unsigned int, __far unsigned c
+[; ;pic18.h: 42: extern void __nop(void);
+[; ;pic18.h: 161: extern __nonreentrant void _delay(unsigned long);
+[; ;pic18.h: 163: extern __nonreentrant void _delaywdt(unsigned long);
+[; ;pic18.h: 165: extern __nonreentrant void _delay3(unsigned char);
 [; ;stdbool.h: 12: typedef unsigned char bool;
-[; ;buttons.h: 29: typedef enum
-[; ;buttons.h: 30: {
-[; ;buttons.h: 31: BUTTON_NONE,
-[; ;buttons.h: 32: BUTTON_S2,
-[; ;buttons.h: 35: } BUTTON;
-[; ;buttons.h: 54: bool BUTTON_IsPressed(BUTTON button);
-[; ;buttons.h: 72: void BUTTON_Enable(BUTTON button);
+[; ;bsp_pic18f45k50\buttons.h: 29: typedef enum
+[; ;bsp_pic18f45k50\buttons.h: 30: {
+[; ;bsp_pic18f45k50\buttons.h: 31: BUTTON_NONE,
+[; ;bsp_pic18f45k50\buttons.h: 32: BUTTON_S2,
+[; ;bsp_pic18f45k50\buttons.h: 35: } BUTTON;
+[; ;bsp_pic18f45k50\buttons.h: 54: bool BUTTON_IsPressed(BUTTON button);
+[; ;bsp_pic18f45k50\buttons.h: 72: void BUTTON_Enable(BUTTON button);
 "63 ../bsp_pic18f45k50/buttons.c
-[v _BUTTON_IsPressed `(uc ~T0 @X0 1 ef1`E6648 ]
+[v _BUTTON_IsPressed `(uc ~T0 @X0 1 ef1`E6643 ]
 "64
 {
 [; ;buttons.c: 63: bool BUTTON_IsPressed(BUTTON button)
 [; ;buttons.c: 64: {
 [e :U _BUTTON_IsPressed ]
 "63
-[v _button `E6648 ~T0 @X0 1 r1 ]
+[v _button `E6643 ~T0 @X0 1 r1 ]
 "64
 [f ]
 [; ;buttons.c: 65: switch(button)
@@ -6269,8 +6267,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 934  ]
 "65
 [e :U 935 ]
-[e [\ _button , $ . `E6648 1 936
- , $ . `E6648 0 937
+[e [\ _button , $ . `E6643 1 936
+ , $ . `E6643 0 937
  934 ]
 "75
 [e :U 934 ]
@@ -6283,14 +6281,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :UE 933 ]
 }
 "96
-[v _BUTTON_Enable `(v ~T0 @X0 1 ef1`E6648 ]
+[v _BUTTON_Enable `(v ~T0 @X0 1 ef1`E6643 ]
 "97
 {
 [; ;buttons.c: 96: void BUTTON_Enable(BUTTON button)
 [; ;buttons.c: 97: {
 [e :U _BUTTON_Enable ]
 "96
-[v _button `E6648 ~T0 @X0 1 r1 ]
+[v _button `E6643 ~T0 @X0 1 r1 ]
 "97
 [f ]
 [; ;buttons.c: 98: switch(button)
@@ -6323,8 +6321,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 939  ]
 "98
 [e :U 940 ]
-[e [\ _button , $ . `E6648 1 941
- , $ . `E6648 0 942
+[e [\ _button , $ . `E6643 1 941
+ , $ . `E6643 0 942
  939 ]
 "112
 [e :U 939 ]
