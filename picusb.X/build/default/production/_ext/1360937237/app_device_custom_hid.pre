@@ -8011,6 +8011,7 @@ typedef uint16_t uintptr_t;
 typedef enum
 {
 ADC_CHANNEL_0 = 0,
+ADC_CHANNEL_1 = 1,
 } ADC_CHANNEL;
 
 typedef enum
@@ -8018,17 +8019,20 @@ typedef enum
 ADC_CONFIGURATION_DEFAULT
 } ADC_CONFIGURATION;
 
-# 60
+# 61
 uint8_t ADC_ReadPercentage(ADC_CHANNEL channel);
 
-# 81
+# 82
 uint16_t ADC_Read10bit(ADC_CHANNEL channel);
 
-# 95
+# 96
 bool ADC_Enable(ADC_CHANNEL channel);
 
-# 109
+# 110
 bool ADC_SetConfiguration(ADC_CONFIGURATION configuration);
+
+# 124
+void sendSignal();
 
 # 27 "../bsp_pic18f45k50\power.h"
 typedef enum
@@ -8908,6 +8912,34 @@ extern volatile CTRL_TRF_SETUP SetupPkt;
 extern const uint8_t configDescriptor1[];
 extern volatile uint8_t CtrlTrfData[8];
 
+# 30 "C:\Program Files (x86)\Microchip\xc8\v1.34\include\math.h"
+extern double fabs(double);
+extern double floor(double);
+extern double ceil(double);
+extern double modf(double, double *);
+extern double sqrt(double);
+extern double atof(const char *);
+extern double sin(double) ;
+extern double cos(double) ;
+extern double tan(double) ;
+extern double asin(double) ;
+extern double acos(double) ;
+extern double atan(double);
+extern double atan2(double, double) ;
+extern double log(double);
+extern double log10(double);
+extern double pow(double, double) ;
+extern double exp(double) ;
+extern double sinh(double) ;
+extern double cosh(double) ;
+extern double tanh(double);
+extern double eval_poly(double, const double *, int);
+extern double frexp(double, int *);
+extern double ldexp(double, int);
+extern double fmod(double, double);
+extern double trunc(double);
+extern double round(double);
+
 # 22 "C:\Program Files (x86)\Microchip\xc8\v1.34\include\string.h"
 extern void * memcpy(void *, const void *, size_t);
 extern void * memmove(void *, const void *, size_t);
@@ -8954,8 +8986,8 @@ typedef enum
 COMMAND_TOGGLE_LED = 0x80,
 COMMAND_GET_BUTTON_STATUS = 0x81,
 COMMAND_READ_POTENTIOMETER = 0x37,
-COMMAND_ACQUIRE_FROM_PIN = 101,
-COMMAND_GENERATE_FROM_ADC = 102
+COMMAND_ACQUIRE_FROM_PIN = 0x10,
+COMMAND_GENERATE_FROM_ADC = 0x11
 
 
 } CUSTOM_HID_DEMO_COMMANDS;
@@ -8993,27 +9025,45 @@ case COMMAND_GET_BUTTON_STATUS:
 if(!((USBInHandle != 0x0000) && ((*(volatile uint8_t*)USBInHandle & 0x80) != 0x00)))
 {
 ToSendDataBuffer[0] = 0x81;
-if(BUTTON_IsPressed(BUTTON_S2) == 0)
-{
-ToSendDataBuffer[1] = 0x01;
-}
-else
-{
-ToSendDataBuffer[1] = 0x00;
-}
+
 
 USBInHandle = USBTransferOnePacket(1,1,(uint8_t*)&ToSendDataBuffer[0],64);
 }
 break;
 case COMMAND_ACQUIRE_FROM_PIN:
+{uint8_t i,j;
+uint8_t pot;
+if(!((USBInHandle != 0x0000) && ((*(volatile uint8_t*)USBInHandle & 0x80) != 0x00)))
 {
+ToSendDataBuffer[0] = 0x10;
 
+for(i =1; i<64;i=i++ ){
+
+for (j=0;j<8;j++){
+pot = pot + pow(2,j)* ADC_ReadPercentage(ADC_CHANNEL_0) / 50 ;
+}
+ToSendDataBuffer[i] = pot;
+pot = 0;
+}
+
+USBInHandle = USBTransferOnePacket(1,1,(uint8_t*)&ToSendDataBuffer[0],64);
+}
 }
 break;
 case COMMAND_GENERATE_FROM_ADC:
 {
+uint8_t i,j;
+uint16_t pot;
+ToSendDataBuffer[0] = 0x11;
 
+for(i =1; i<63;i=i+2 ){
+pot = ADC_Read10bit(ADC_CHANNEL_0);
+ToSendDataBuffer[i] = (uint8_t)pot;
+ToSendDataBuffer[i+1] = pot >> 8;
 }
+USBInHandle = USBTransferOnePacket(1,1,(uint8_t*)&ToSendDataBuffer[0],64);
+}
+
 break;
 case COMMAND_READ_POTENTIOMETER:
 {
@@ -9023,7 +9073,7 @@ uint16_t pot;
 if(!((USBInHandle != 0x0000) && ((*(volatile uint8_t*)USBInHandle & 0x80) != 0x00)))
 {
 
-# 163
+# 181
 pot = ADC_Read10bit(ADC_CHANNEL_0);
 
 ToSendDataBuffer[0] = 0x37;

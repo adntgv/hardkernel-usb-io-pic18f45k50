@@ -9,10 +9,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 "58
 [v _LED_On `(v ~T0 @X0 0 ef1`E6679 ]
 "85 ../src/app_led_usb_status.c
-[c E6981 0 1 2 4 8 16 32 .. ]
-[n E6981 . DETACHED_STATE ATTACHED_STATE POWERED_STATE DEFAULT_STATE ADR_PENDING_STATE ADDRESS_STATE CONFIGURED_STATE  ]
+[c E6983 0 1 2 4 8 16 32 .. ]
+[n E6983 . DETACHED_STATE ATTACHED_STATE POWERED_STATE DEFAULT_STATE ADR_PENDING_STATE ADDRESS_STATE CONFIGURED_STATE  ]
 "2053 ../../../../../../microchip/mla/v2015_08_10/framework/usb/inc\usb_device.h
-[v _USBDeviceState `VE6981 ~T0 @X0 0 e ]
+[v _USBDeviceState `VE6983 ~T0 @X0 0 e ]
 [; ;stdint.h: 13: typedef signed char int8_t;
 [; ;stdint.h: 20: typedef signed int int16_t;
 [; ;stdint.h: 28: typedef signed short long int int24_t;
@@ -6249,15 +6249,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;bsp_pic18f45k50\adc.h: 32: typedef enum
 [; ;bsp_pic18f45k50\adc.h: 33: {
 [; ;bsp_pic18f45k50\adc.h: 34: ADC_CHANNEL_0 = 0,
-[; ;bsp_pic18f45k50\adc.h: 35: } ADC_CHANNEL;
-[; ;bsp_pic18f45k50\adc.h: 37: typedef enum
-[; ;bsp_pic18f45k50\adc.h: 38: {
-[; ;bsp_pic18f45k50\adc.h: 39: ADC_CONFIGURATION_DEFAULT
-[; ;bsp_pic18f45k50\adc.h: 40: } ADC_CONFIGURATION;
-[; ;bsp_pic18f45k50\adc.h: 60: uint8_t ADC_ReadPercentage(ADC_CHANNEL channel);
-[; ;bsp_pic18f45k50\adc.h: 81: uint16_t ADC_Read10bit(ADC_CHANNEL channel);
-[; ;bsp_pic18f45k50\adc.h: 95: bool ADC_Enable(ADC_CHANNEL channel);
-[; ;bsp_pic18f45k50\adc.h: 109: bool ADC_SetConfiguration(ADC_CONFIGURATION configuration);
+[; ;bsp_pic18f45k50\adc.h: 35: ADC_CHANNEL_1 = 1,
+[; ;bsp_pic18f45k50\adc.h: 36: } ADC_CHANNEL;
+[; ;bsp_pic18f45k50\adc.h: 38: typedef enum
+[; ;bsp_pic18f45k50\adc.h: 39: {
+[; ;bsp_pic18f45k50\adc.h: 40: ADC_CONFIGURATION_DEFAULT
+[; ;bsp_pic18f45k50\adc.h: 41: } ADC_CONFIGURATION;
+[; ;bsp_pic18f45k50\adc.h: 61: uint8_t ADC_ReadPercentage(ADC_CHANNEL channel);
+[; ;bsp_pic18f45k50\adc.h: 82: uint16_t ADC_Read10bit(ADC_CHANNEL channel);
+[; ;bsp_pic18f45k50\adc.h: 96: bool ADC_Enable(ADC_CHANNEL channel);
+[; ;bsp_pic18f45k50\adc.h: 110: bool ADC_SetConfiguration(ADC_CONFIGURATION configuration);
+[; ;bsp_pic18f45k50\adc.h: 124: void sendSignal();
 [; ;bsp_pic18f45k50\power.h: 27: typedef enum
 [; ;bsp_pic18f45k50\power.h: 28: {
 [; ;bsp_pic18f45k50\power.h: 29: POWER_SOURCE_USB,
@@ -6808,8 +6810,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U _APP_LEDUpdateUSBStatus ]
 [f ]
 "77
-[v F7322 `ui ~T0 @X0 1 s ledCount ]
-[i F7322
+[v F7324 `ui ~T0 @X0 1 s ledCount ]
+[i F7324
 -> -> 0 `i `ui
 ]
 [; ;app_led_usb_status.c: 77: static uint16_t ledCount = 0;
@@ -6840,7 +6842,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 990 ]
 [; ;app_led_usb_status.c: 90: if(ledCount == 1)
 "90
-[e $ ! == F7322 -> -> 1 `i `ui 991  ]
+[e $ ! == F7324 -> -> 1 `i `ui 991  ]
 [; ;app_led_usb_status.c: 91: {
 "91
 {
@@ -6854,7 +6856,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "94
 [e :U 991 ]
 [; ;app_led_usb_status.c: 94: else if(ledCount == 75)
-[e $ ! == F7322 -> -> 75 `i `ui 993  ]
+[e $ ! == F7324 -> -> 75 `i `ui 993  ]
 [; ;app_led_usb_status.c: 95: {
 "95
 {
@@ -6868,13 +6870,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 "98
 [e :U 993 ]
 [; ;app_led_usb_status.c: 98: else if(ledCount > 150)
-[e $ ! > F7322 -> -> 150 `i `ui 995  ]
+[e $ ! > F7324 -> -> 150 `i `ui 995  ]
 [; ;app_led_usb_status.c: 99: {
 "99
 {
 [; ;app_led_usb_status.c: 100: ledCount = 0;
 "100
-[e = F7322 -> -> 0 `i `ui ]
+[e = F7324 -> -> 0 `i `ui ]
 "101
 }
 [e :U 995 ]
@@ -6889,7 +6891,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 996 ]
 [; ;app_led_usb_status.c: 107: if(ledCount == 1)
 "107
-[e $ ! == F7322 -> -> 1 `i `ui 997  ]
+[e $ ! == F7324 -> -> 1 `i `ui 997  ]
 [; ;app_led_usb_status.c: 108: {
 "108
 {
@@ -6903,7 +6905,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "111
 [e :U 997 ]
 [; ;app_led_usb_status.c: 111: else if(ledCount == 50)
-[e $ ! == F7322 -> -> 50 `i `ui 999  ]
+[e $ ! == F7324 -> -> 50 `i `ui 999  ]
 [; ;app_led_usb_status.c: 112: {
 "112
 {
@@ -6917,13 +6919,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 "115
 [e :U 999 ]
 [; ;app_led_usb_status.c: 115: else if(ledCount > 950)
-[e $ ! > F7322 -> -> 950 `i `ui 1001  ]
+[e $ ! > F7324 -> -> 950 `i `ui 1001  ]
 [; ;app_led_usb_status.c: 116: {
 "116
 {
 [; ;app_led_usb_status.c: 117: ledCount = 0;
 "117
-[e = F7322 -> -> 0 `i `ui ]
+[e = F7324 -> -> 0 `i `ui ]
 "118
 }
 [e :U 1001 ]
@@ -6939,13 +6941,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 988  ]
 "85
 [e :U 989 ]
-[e [\ _USBDeviceState , $ . `E6981 6 990
+[e [\ _USBDeviceState , $ . `E6983 6 990
  996 ]
 "120
 [e :U 988 ]
 [; ;app_led_usb_status.c: 123: ledCount++;
 "123
-[e ++ F7322 -> -> 1 `i `ui ]
+[e ++ F7324 -> -> 1 `i `ui ]
 [; ;app_led_usb_status.c: 124: }
 "124
 [e :UE 986 ]

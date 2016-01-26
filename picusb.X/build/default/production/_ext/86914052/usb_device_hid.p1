@@ -6548,15 +6548,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;bsp_pic18f45k50\adc.h: 32: typedef enum
 [; ;bsp_pic18f45k50\adc.h: 33: {
 [; ;bsp_pic18f45k50\adc.h: 34: ADC_CHANNEL_0 = 0,
-[; ;bsp_pic18f45k50\adc.h: 35: } ADC_CHANNEL;
-[; ;bsp_pic18f45k50\adc.h: 37: typedef enum
-[; ;bsp_pic18f45k50\adc.h: 38: {
-[; ;bsp_pic18f45k50\adc.h: 39: ADC_CONFIGURATION_DEFAULT
-[; ;bsp_pic18f45k50\adc.h: 40: } ADC_CONFIGURATION;
-[; ;bsp_pic18f45k50\adc.h: 60: uint8_t ADC_ReadPercentage(ADC_CHANNEL channel);
-[; ;bsp_pic18f45k50\adc.h: 81: uint16_t ADC_Read10bit(ADC_CHANNEL channel);
-[; ;bsp_pic18f45k50\adc.h: 95: bool ADC_Enable(ADC_CHANNEL channel);
-[; ;bsp_pic18f45k50\adc.h: 109: bool ADC_SetConfiguration(ADC_CONFIGURATION configuration);
+[; ;bsp_pic18f45k50\adc.h: 35: ADC_CHANNEL_1 = 1,
+[; ;bsp_pic18f45k50\adc.h: 36: } ADC_CHANNEL;
+[; ;bsp_pic18f45k50\adc.h: 38: typedef enum
+[; ;bsp_pic18f45k50\adc.h: 39: {
+[; ;bsp_pic18f45k50\adc.h: 40: ADC_CONFIGURATION_DEFAULT
+[; ;bsp_pic18f45k50\adc.h: 41: } ADC_CONFIGURATION;
+[; ;bsp_pic18f45k50\adc.h: 61: uint8_t ADC_ReadPercentage(ADC_CHANNEL channel);
+[; ;bsp_pic18f45k50\adc.h: 82: uint16_t ADC_Read10bit(ADC_CHANNEL channel);
+[; ;bsp_pic18f45k50\adc.h: 96: bool ADC_Enable(ADC_CHANNEL channel);
+[; ;bsp_pic18f45k50\adc.h: 110: bool ADC_SetConfiguration(ADC_CONFIGURATION configuration);
+[; ;bsp_pic18f45k50\adc.h: 124: void sendSignal();
 [; ;bsp_pic18f45k50\power.h: 27: typedef enum
 [; ;bsp_pic18f45k50\power.h: 28: {
 [; ;bsp_pic18f45k50\power.h: 29: POWER_SOURCE_USB,
@@ -6960,7 +6962,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;usb_device_hid.c: 170: { inPipes[0].pSrc.bRom = (const uint8_t*)&configDescriptor1 + 18; inPipes[0].wCount.Val = sizeof(USB_HID_DSC)+3; inPipes[0].info.Val = 0x40 | 0x80 | 0x00; };
 "170
 {
-[v F7353 `*Cuc ~T0 @X0 1 t ]
+[v F7355 `*Cuc ~T0 @X0 1 t ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 0 1 -> + &U _configDescriptor1 * -> -> 18 `i `x -> -> # *U &U _configDescriptor1 `i `x `V*Cuc ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 2 0 + -> # `S987 `ui -> -> 3 `i `ui ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 1 -> | | -> 64 `i -> 128 `i -> 0 `i `uc ]
@@ -6981,7 +6983,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;usb_device_hid.c: 179: { inPipes[0].pSrc.bRom = (const uint8_t*)&hid_rpt01; inPipes[0].wCount.Val = 29; inPipes[0].info.Val = 0x40 | 0x80 | 0x00; };
 "179
 {
-[v F7356 `*Cuc ~T0 @X0 1 t ]
+[v F7358 `*Cuc ~T0 @X0 1 t ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 0 1 -> -> &U _hid_rpt01 `*Cuc `V*Cuc ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 2 0 -> -> 29 `i `ui ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 1 -> | | -> 64 `i -> 128 `i -> 0 `i `uc ]
@@ -7051,7 +7053,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;usb_device_hid.c: 219: { inPipes[0].pSrc.bRam = (uint8_t*)&idle_rate; inPipes[0].wCount.Val = 1; inPipes[0].info.Val = 0x40 | 0x80 | 0x01; };
 "219
 {
-[v F7358 `*uc ~T0 @X0 1 t ]
+[v F7360 `*uc ~T0 @X0 1 t ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 0 0 -> &U _idle_rate `V*uc ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 2 0 -> -> 1 `i `ui ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 1 -> | | -> 64 `i -> 128 `i -> 1 `i `uc ]
@@ -7078,7 +7080,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;usb_device_hid.c: 230: { inPipes[0].pSrc.bRam = (uint8_t*)&active_protocol; inPipes[0].wCount.Val = 1; inPipes[0].info.Val = 0x00 | 0x80 | 0x01; };
 "230
 {
-[v F7361 `*uc ~T0 @X0 1 t ]
+[v F7363 `*uc ~T0 @X0 1 t ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 0 0 -> &U _active_protocol `V*uc ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 2 0 -> -> 1 `i `ui ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 1 -> | | -> 0 `i -> 128 `i -> 1 `i `uc ]

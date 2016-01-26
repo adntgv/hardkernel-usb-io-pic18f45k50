@@ -108,6 +108,7 @@ void SYSTEM_Initialize( SYSTEM_STATE state )
             
             ADC_SetConfiguration(ADC_CONFIGURATION_DEFAULT);
             ADC_Enable(ADC_CHANNEL_POTENTIOMETER);
+            ADC_Enable(ADC_CHANNEL_1);
             break;
             
         case SYSTEM_STATE_USB_SUSPEND:

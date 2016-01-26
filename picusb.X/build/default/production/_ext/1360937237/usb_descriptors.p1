@@ -6250,15 +6250,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;bsp_pic18f45k50\adc.h: 32: typedef enum
 [; ;bsp_pic18f45k50\adc.h: 33: {
 [; ;bsp_pic18f45k50\adc.h: 34: ADC_CHANNEL_0 = 0,
-[; ;bsp_pic18f45k50\adc.h: 35: } ADC_CHANNEL;
-[; ;bsp_pic18f45k50\adc.h: 37: typedef enum
-[; ;bsp_pic18f45k50\adc.h: 38: {
-[; ;bsp_pic18f45k50\adc.h: 39: ADC_CONFIGURATION_DEFAULT
-[; ;bsp_pic18f45k50\adc.h: 40: } ADC_CONFIGURATION;
-[; ;bsp_pic18f45k50\adc.h: 60: uint8_t ADC_ReadPercentage(ADC_CHANNEL channel);
-[; ;bsp_pic18f45k50\adc.h: 81: uint16_t ADC_Read10bit(ADC_CHANNEL channel);
-[; ;bsp_pic18f45k50\adc.h: 95: bool ADC_Enable(ADC_CHANNEL channel);
-[; ;bsp_pic18f45k50\adc.h: 109: bool ADC_SetConfiguration(ADC_CONFIGURATION configuration);
+[; ;bsp_pic18f45k50\adc.h: 35: ADC_CHANNEL_1 = 1,
+[; ;bsp_pic18f45k50\adc.h: 36: } ADC_CHANNEL;
+[; ;bsp_pic18f45k50\adc.h: 38: typedef enum
+[; ;bsp_pic18f45k50\adc.h: 39: {
+[; ;bsp_pic18f45k50\adc.h: 40: ADC_CONFIGURATION_DEFAULT
+[; ;bsp_pic18f45k50\adc.h: 41: } ADC_CONFIGURATION;
+[; ;bsp_pic18f45k50\adc.h: 61: uint8_t ADC_ReadPercentage(ADC_CHANNEL channel);
+[; ;bsp_pic18f45k50\adc.h: 82: uint16_t ADC_Read10bit(ADC_CHANNEL channel);
+[; ;bsp_pic18f45k50\adc.h: 96: bool ADC_Enable(ADC_CHANNEL channel);
+[; ;bsp_pic18f45k50\adc.h: 110: bool ADC_SetConfiguration(ADC_CONFIGURATION configuration);
+[; ;bsp_pic18f45k50\adc.h: 124: void sendSignal();
 [; ;bsp_pic18f45k50\power.h: 27: typedef enum
 [; ;bsp_pic18f45k50\power.h: 28: {
 [; ;bsp_pic18f45k50\power.h: 29: POWER_SOURCE_USB,
@@ -7168,13 +7170,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;usb_descriptors.c: 262: 0x91, 0x00,
 [; ;usb_descriptors.c: 263: 0xC0}
 [; ;usb_descriptors.c: 264: };
-[v F7357 `*Cuc ~T0 @X0 1 t ]
+[v F7359 `*Cuc ~T0 @X0 1 t ]
 "268
 [v _USB_CD_Ptr `C*Cuc ~T0 @X0 -> 0 `x e ]
 [i _USB_CD_Ptr
 :U ..
 "271
-[v F7358 `*Cuc ~T0 @X0 1 t ]
+[v F7360 `*Cuc ~T0 @X0 1 t ]
 -> -> &U _configDescriptor1 `C*Cuc `*Cuc
 ..
 ]
@@ -7182,19 +7184,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;usb_descriptors.c: 269: {
 [; ;usb_descriptors.c: 270: (const uint8_t *const)&configDescriptor1
 [; ;usb_descriptors.c: 271: };
-[v F7362 `*Cuc ~T0 @X0 1 t ]
+[v F7364 `*Cuc ~T0 @X0 1 t ]
 "274
 [v _USB_SD_Ptr `C*Cuc ~T0 @X0 -> 0 `x e ]
 [i _USB_SD_Ptr
 :U ..
 "276
-[v F7363 `*Cuc ~T0 @X0 1 t ]
+[v F7365 `*Cuc ~T0 @X0 1 t ]
 -> -> &U _sd000 `C*Cuc `*Cuc
 "277
-[v F7365 `*Cuc ~T0 @X0 1 t ]
+[v F7367 `*Cuc ~T0 @X0 1 t ]
 -> -> &U _sd001 `C*Cuc `*Cuc
 "279
-[v F7367 `*Cuc ~T0 @X0 1 t ]
+[v F7369 `*Cuc ~T0 @X0 1 t ]
 -> -> &U _sd002 `C*Cuc `*Cuc
 ..
 ]

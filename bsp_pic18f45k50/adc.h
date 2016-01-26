@@ -32,6 +32,7 @@
 typedef enum
 {
     ADC_CHANNEL_0 = 0,
+    ADC_CHANNEL_1 = 1,
 } ADC_CHANNEL;
 
 typedef enum
@@ -107,5 +108,19 @@ bool ADC_Enable(ADC_CHANNEL channel);
 *
 ********************************************************************/
 bool ADC_SetConfiguration(ADC_CONFIGURATION configuration);
+
+/*********************************************************************
+* Function: sendSignal()
+*
+* Overview: Send a signal on a pin
+*
+* PreCondition: Sending pins have to be preconfigured
+*
+* Input:
+*
+* Output:
+*
+********************************************************************/
+void sendSignal();
 
 #endif  //ADC_H

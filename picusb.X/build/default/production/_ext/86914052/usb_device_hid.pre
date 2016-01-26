@@ -8255,6 +8255,7 @@ void LED_Enable(LED led);
 typedef enum
 {
 ADC_CHANNEL_0 = 0,
+ADC_CHANNEL_1 = 1,
 } ADC_CHANNEL;
 
 typedef enum
@@ -8262,17 +8263,20 @@ typedef enum
 ADC_CONFIGURATION_DEFAULT
 } ADC_CONFIGURATION;
 
-# 60
+# 61
 uint8_t ADC_ReadPercentage(ADC_CHANNEL channel);
 
-# 81
+# 82
 uint16_t ADC_Read10bit(ADC_CHANNEL channel);
 
-# 95
+# 96
 bool ADC_Enable(ADC_CHANNEL channel);
 
-# 109
+# 110
 bool ADC_SetConfiguration(ADC_CONFIGURATION configuration);
+
+# 124
+void sendSignal();
 
 # 27 "../bsp_pic18f45k50\power.h"
 typedef enum

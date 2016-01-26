@@ -1,7 +1,7 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "89 ../src/system_config/pic18f45k50/system.c
-[c E6713 0 1 2 .. ]
-[n E6713 . SYSTEM_STATE_USB_START SYSTEM_STATE_USB_SUSPEND SYSTEM_STATE_USB_RESUME  ]
+[c E6715 0 1 2 .. ]
+[n E6715 . SYSTEM_STATE_USB_START SYSTEM_STATE_USB_SUSPEND SYSTEM_STATE_USB_RESUME  ]
 "6569 C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18f45k50.h
 [v _OSCTUNE `Vuc ~T0 @X0 0 e@3995 ]
 "13179
@@ -29,14 +29,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 "72 ../bsp_pic18f45k50\buttons.h
 [v _BUTTON_Enable `(v ~T0 @X0 0 ef1`E6643 ]
 "109 ../src/system_config/pic18f45k50/system.c
-[c E6696 0 .. ]
-[n E6696 . ADC_CONFIGURATION_DEFAULT  ]
-"109 ../bsp_pic18f45k50\adc.h
-[v _ADC_SetConfiguration `(uc ~T0 @X0 0 ef1`E6696 ]
+[c E6697 0 .. ]
+[n E6697 . ADC_CONFIGURATION_DEFAULT  ]
+"110 ../bsp_pic18f45k50\adc.h
+[v _ADC_SetConfiguration `(uc ~T0 @X0 0 ef1`E6697 ]
 "110 ../src/system_config/pic18f45k50/system.c
-[c E6693 0 .. ]
-[n E6693 . ADC_CHANNEL_0  ]
-"95 ../bsp_pic18f45k50\adc.h
+[c E6693 0 1 .. ]
+[n E6693 . ADC_CHANNEL_0 ADC_CHANNEL_1  ]
+"96 ../bsp_pic18f45k50\adc.h
 [v _ADC_Enable `(uc ~T0 @X0 0 ef1`E6693 ]
 "298 ../../../../../../microchip/mla/v2015_08_10/framework/usb/inc\usb_device.h
 [v _USBDeviceTasks `(v ~T0 @X0 0 ef ]
@@ -6276,15 +6276,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;bsp_pic18f45k50\adc.h: 32: typedef enum
 [; ;bsp_pic18f45k50\adc.h: 33: {
 [; ;bsp_pic18f45k50\adc.h: 34: ADC_CHANNEL_0 = 0,
-[; ;bsp_pic18f45k50\adc.h: 35: } ADC_CHANNEL;
-[; ;bsp_pic18f45k50\adc.h: 37: typedef enum
-[; ;bsp_pic18f45k50\adc.h: 38: {
-[; ;bsp_pic18f45k50\adc.h: 39: ADC_CONFIGURATION_DEFAULT
-[; ;bsp_pic18f45k50\adc.h: 40: } ADC_CONFIGURATION;
-[; ;bsp_pic18f45k50\adc.h: 60: uint8_t ADC_ReadPercentage(ADC_CHANNEL channel);
-[; ;bsp_pic18f45k50\adc.h: 81: uint16_t ADC_Read10bit(ADC_CHANNEL channel);
-[; ;bsp_pic18f45k50\adc.h: 95: bool ADC_Enable(ADC_CHANNEL channel);
-[; ;bsp_pic18f45k50\adc.h: 109: bool ADC_SetConfiguration(ADC_CONFIGURATION configuration);
+[; ;bsp_pic18f45k50\adc.h: 35: ADC_CHANNEL_1 = 1,
+[; ;bsp_pic18f45k50\adc.h: 36: } ADC_CHANNEL;
+[; ;bsp_pic18f45k50\adc.h: 38: typedef enum
+[; ;bsp_pic18f45k50\adc.h: 39: {
+[; ;bsp_pic18f45k50\adc.h: 40: ADC_CONFIGURATION_DEFAULT
+[; ;bsp_pic18f45k50\adc.h: 41: } ADC_CONFIGURATION;
+[; ;bsp_pic18f45k50\adc.h: 61: uint8_t ADC_ReadPercentage(ADC_CHANNEL channel);
+[; ;bsp_pic18f45k50\adc.h: 82: uint16_t ADC_Read10bit(ADC_CHANNEL channel);
+[; ;bsp_pic18f45k50\adc.h: 96: bool ADC_Enable(ADC_CHANNEL channel);
+[; ;bsp_pic18f45k50\adc.h: 110: bool ADC_SetConfiguration(ADC_CONFIGURATION configuration);
+[; ;bsp_pic18f45k50\adc.h: 124: void sendSignal();
 [; ;bsp_pic18f45k50\power.h: 27: typedef enum
 [; ;bsp_pic18f45k50\power.h: 28: {
 [; ;bsp_pic18f45k50\power.h: 29: POWER_SOURCE_USB,
@@ -6909,14 +6911,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 "72
 [p x EBTRB=OFF ]
 "88
-[v _SYSTEM_Initialize `(v ~T0 @X0 1 ef1`E6713 ]
+[v _SYSTEM_Initialize `(v ~T0 @X0 1 ef1`E6715 ]
 "89
 {
 [; ;system.c: 88: void SYSTEM_Initialize( SYSTEM_STATE state )
 [; ;system.c: 89: {
 [e :U _SYSTEM_Initialize ]
 "88
-[v _state `E6713 ~T0 @X0 1 r1 ]
+[v _state `E6715 ~T0 @X0 1 r1 ]
 "89
 [f ]
 [; ;system.c: 90: switch(state)
@@ -6958,54 +6960,57 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _BUTTON_Enable (1 . `E6643 1 ]
 [; ;system.c: 109: ADC_SetConfiguration(ADC_CONFIGURATION_DEFAULT);
 "109
-[e ( _ADC_SetConfiguration (1 . `E6696 0 ]
+[e ( _ADC_SetConfiguration (1 . `E6697 0 ]
 [; ;system.c: 110: ADC_Enable(ADC_CHANNEL_0);
 "110
 [e ( _ADC_Enable (1 . `E6693 0 ]
-[; ;system.c: 111: break;
+[; ;system.c: 111: ADC_Enable(ADC_CHANNEL_1);
 "111
+[e ( _ADC_Enable (1 . `E6693 1 ]
+[; ;system.c: 112: break;
+"112
 [e $U 987  ]
-[; ;system.c: 113: case SYSTEM_STATE_USB_SUSPEND:
-"113
-[e :U 993 ]
-[; ;system.c: 114: break;
+[; ;system.c: 114: case SYSTEM_STATE_USB_SUSPEND:
 "114
+[e :U 993 ]
+[; ;system.c: 115: break;
+"115
 [e $U 987  ]
-[; ;system.c: 116: case SYSTEM_STATE_USB_RESUME:
-"116
-[e :U 994 ]
-[; ;system.c: 117: break;
+[; ;system.c: 117: case SYSTEM_STATE_USB_RESUME:
 "117
-[e $U 987  ]
+[e :U 994 ]
+[; ;system.c: 118: break;
 "118
+[e $U 987  ]
+"119
 }
-[; ;system.c: 118: }
+[; ;system.c: 119: }
 [e $U 987  ]
 "90
 [e :U 988 ]
-[e [\ _state , $ . `E6713 0 989
- , $ . `E6713 1 993
- , $ . `E6713 2 994
+[e [\ _state , $ . `E6715 0 989
+ , $ . `E6715 1 993
+ , $ . `E6715 2 994
  987 ]
-"118
-[e :U 987 ]
-[; ;system.c: 119: }
 "119
+[e :U 987 ]
+[; ;system.c: 120: }
+"120
 [e :UE 986 ]
 }
-[v F7323 `(v ~T0 @X0 1 tf ]
-"124
-[v _SYS_InterruptHigh `IF7323 ~T0 @X0 1 e ]
+[v F7325 `(v ~T0 @X0 1 tf ]
 "125
+[v _SYS_InterruptHigh `IF7325 ~T0 @X0 1 e ]
+"126
 {
-[; ;system.c: 124: void interrupt SYS_InterruptHigh(void)
-[; ;system.c: 125: {
+[; ;system.c: 125: void interrupt SYS_InterruptHigh(void)
+[; ;system.c: 126: {
 [e :U _SYS_InterruptHigh ]
 [f ]
-[; ;system.c: 127: USBDeviceTasks();
-"127
+[; ;system.c: 128: USBDeviceTasks();
+"128
 [e ( _USBDeviceTasks ..  ]
-[; ;system.c: 129: }
-"129
+[; ;system.c: 130: }
+"130
 [e :UE 995 ]
 }

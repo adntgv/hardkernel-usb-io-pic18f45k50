@@ -1,8 +1,8 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "54 ../bsp_pic18f45k50/adc.c
-[c E30 0 .. ]
-[n E30 . ADC_CHANNEL_0  ]
-"81 ../bsp_pic18f45k50\adc.h
+[c E30 0 1 .. ]
+[n E30 . ADC_CHANNEL_0 ADC_CHANNEL_1  ]
+"82 ../bsp_pic18f45k50\adc.h
 [v _ADC_Read10bit `(ui ~T0 @X0 0 ef1`E30 ]
 "10348 C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18f45k50.h
 [s S618 :1 `uc 1 :1 `uc 1 ]
@@ -30,7 +30,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S617 . . . . . . . . ]
 "10378
 [v _ADCON0bits `VS617 ~T0 @X0 0 e@4034 ]
-"10433
+"124 ../bsp_pic18f45k50\adc.h
+[v _sendSignal `(v ~T0 @X0 0 ef ]
+"10433 C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18f45k50.h
 [v _ADRESH `Vuc ~T0 @X0 0 e@4036 ]
 "10427
 [v _ADRESL `Vuc ~T0 @X0 0 e@4035 ]
@@ -53,15 +55,61 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S10 . . ]
 "240
 [v _ANSELAbits `VS10 ~T0 @X0 0 e@3931 ]
-"157 ../bsp_pic18f45k50/adc.c
-[c E33 0 .. ]
-[n E33 . ADC_CONFIGURATION_DEFAULT  ]
+"5589
+[s S356 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S356 . TRISC0 TRISC1 TRISC2 . TRISC4 TRISC5 TRISC6 TRISC7 ]
+"5599
+[s S357 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S357 . RC0 RC1 RC2 . RC6 RC7 ]
+"5607
+[s S358 :3 `uc 1 :1 `uc 1 ]
+[n S358 . . TRISC3 ]
+"5588
+[u S355 `S356 1 `S357 1 `S358 1 ]
+[n S355 . . . . ]
+"5612
+[v _TRISCbits `VS355 ~T0 @X0 0 e@3988 ]
+"163 ../bsp_pic18f45k50/adc.c
+[c E34 0 .. ]
+[n E34 . ADC_CONFIGURATION_DEFAULT  ]
 "10275 C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18f45k50.h
 [v _ADCON1 `Vuc ~T0 @X0 0 e@4033 ]
 "10205
 [v _ADCON2 `Vuc ~T0 @X0 0 e@4032 ]
 "10342
 [v _ADCON0 `Vuc ~T0 @X0 0 e@4034 ]
+"4429
+[s S298 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S298 . LATC0 LATC1 LATC2 . LATC4 LATC5 LATC6 LATC7 ]
+"4439
+[s S299 :1 `uc 1 ]
+[n S299 . LC0 ]
+"4442
+[s S300 :1 `uc 1 :1 `uc 1 ]
+[n S300 . . LC1 ]
+"4446
+[s S301 :2 `uc 1 :1 `uc 1 ]
+[n S301 . . LC2 ]
+"4450
+[s S302 :3 `uc 1 :1 `uc 1 ]
+[n S302 . . LC3 ]
+"4454
+[s S303 :4 `uc 1 :1 `uc 1 ]
+[n S303 . . LC4 ]
+"4458
+[s S304 :5 `uc 1 :1 `uc 1 ]
+[n S304 . . LC5 ]
+"4462
+[s S305 :6 `uc 1 :1 `uc 1 ]
+[n S305 . . LC6 ]
+"4466
+[s S306 :7 `uc 1 :1 `uc 1 ]
+[n S306 . . LC7 ]
+"4428
+[u S297 `S298 1 `S299 1 `S300 1 `S301 1 `S302 1 `S303 1 `S304 1 `S305 1 `S306 1 ]
+[n S297 . . . . . . . . . . ]
+"4471
+[v _LATCbits `VS297 ~T0 @X0 0 e@3979 ]
 [; ;stdint.h: 13: typedef signed char int8_t;
 [; ;stdint.h: 20: typedef signed int int16_t;
 [; ;stdint.h: 28: typedef signed short long int int24_t;
@@ -94,15 +142,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;bsp_pic18f45k50\adc.h: 32: typedef enum
 [; ;bsp_pic18f45k50\adc.h: 33: {
 [; ;bsp_pic18f45k50\adc.h: 34: ADC_CHANNEL_0 = 0,
-[; ;bsp_pic18f45k50\adc.h: 35: } ADC_CHANNEL;
-[; ;bsp_pic18f45k50\adc.h: 37: typedef enum
-[; ;bsp_pic18f45k50\adc.h: 38: {
-[; ;bsp_pic18f45k50\adc.h: 39: ADC_CONFIGURATION_DEFAULT
-[; ;bsp_pic18f45k50\adc.h: 40: } ADC_CONFIGURATION;
-[; ;bsp_pic18f45k50\adc.h: 60: uint8_t ADC_ReadPercentage(ADC_CHANNEL channel);
-[; ;bsp_pic18f45k50\adc.h: 81: uint16_t ADC_Read10bit(ADC_CHANNEL channel);
-[; ;bsp_pic18f45k50\adc.h: 95: bool ADC_Enable(ADC_CHANNEL channel);
-[; ;bsp_pic18f45k50\adc.h: 109: bool ADC_SetConfiguration(ADC_CONFIGURATION configuration);
+[; ;bsp_pic18f45k50\adc.h: 35: ADC_CHANNEL_1 = 1,
+[; ;bsp_pic18f45k50\adc.h: 36: } ADC_CHANNEL;
+[; ;bsp_pic18f45k50\adc.h: 38: typedef enum
+[; ;bsp_pic18f45k50\adc.h: 39: {
+[; ;bsp_pic18f45k50\adc.h: 40: ADC_CONFIGURATION_DEFAULT
+[; ;bsp_pic18f45k50\adc.h: 41: } ADC_CONFIGURATION;
+[; ;bsp_pic18f45k50\adc.h: 61: uint8_t ADC_ReadPercentage(ADC_CHANNEL channel);
+[; ;bsp_pic18f45k50\adc.h: 82: uint16_t ADC_Read10bit(ADC_CHANNEL channel);
+[; ;bsp_pic18f45k50\adc.h: 96: bool ADC_Enable(ADC_CHANNEL channel);
+[; ;bsp_pic18f45k50\adc.h: 110: bool ADC_SetConfiguration(ADC_CONFIGURATION configuration);
+[; ;bsp_pic18f45k50\adc.h: 124: void sendSignal();
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
 [; ;pic18f45k50.h: 49: extern volatile unsigned char SRCON1 @ 0xF57;
@@ -6404,120 +6454,150 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;adc.c: 107: ADCON0bits.GO = 1;
 "107
 [e = . . _ADCON0bits 3 1 -> -> 1 `i `uc ]
-[; ;adc.c: 108: while(ADCON0bits.NOT_DONE);
-"108
+[; ;adc.c: 109: sendSignal();
+"109
+[e ( _sendSignal ..  ]
+[; ;adc.c: 111: while(ADCON0bits.NOT_DONE);
+"111
 [e $U 944  ]
 [e :U 945 ]
 [e :U 944 ]
 [e $ != -> . . _ADCON0bits 4 1 `i -> -> -> 0 `i `Vuc `i 945  ]
 [e :U 946 ]
-[; ;adc.c: 110: result = ADRESH;
-"110
+[; ;adc.c: 113: result = ADRESH;
+"113
 [e = _result -> _ADRESH `ui ]
-[; ;adc.c: 111: result <<=8;
-"111
-[e =<< _result -> 8 `i ]
-[; ;adc.c: 112: result |= ADRESL;
-"112
-[e =| _result -> _ADRESL `ui ]
-[; ;adc.c: 114: return result;
+[; ;adc.c: 114: result <<=8;
 "114
+[e =<< _result -> 8 `i ]
+[; ;adc.c: 115: result |= ADRESL;
+"115
+[e =| _result -> _ADRESL `ui ]
+[; ;adc.c: 117: return result;
+"117
 [e ) _result ]
 [e $UE 939  ]
-[; ;adc.c: 115: }
-"115
+[; ;adc.c: 118: }
+"118
 [e :UE 939 ]
 }
-"130
-[v _ADC_Enable `(uc ~T0 @X0 1 ef1`E30 ]
-"131
-{
-[; ;adc.c: 130: bool ADC_Enable(ADC_CHANNEL channel)
-[; ;adc.c: 131: {
-[e :U _ADC_Enable ]
-"130
-[v _channel `E30 ~T0 @X0 1 r1 ]
-"131
-[f ]
-[; ;adc.c: 132: switch(channel)
-"132
-[e $U 949  ]
-[; ;adc.c: 133: {
 "133
-{
-[; ;adc.c: 134: case ADC_CHANNEL_0:
+[v _ADC_Enable `(uc ~T0 @X0 1 ef1`E30 ]
 "134
-[e :U 950 ]
-[; ;adc.c: 135: TRISAbits.TRISA0 = 1;
+{
+[; ;adc.c: 133: bool ADC_Enable(ADC_CHANNEL channel)
+[; ;adc.c: 134: {
+[e :U _ADC_Enable ]
+"133
+[v _channel `E30 ~T0 @X0 1 r1 ]
+"134
+[f ]
+[; ;adc.c: 135: switch(channel)
 "135
-[e = . . _TRISAbits 0 0 -> -> 1 `i `uc ]
-[; ;adc.c: 136: ANSELAbits.ANSA0 = 1;
+[e $U 949  ]
+[; ;adc.c: 136: {
 "136
-[e = . . _ANSELAbits 0 0 -> -> 1 `i `uc ]
-[; ;adc.c: 137: return 1;
+{
+[; ;adc.c: 137: case ADC_CHANNEL_0:
 "137
+[e :U 950 ]
+[; ;adc.c: 138: TRISAbits.TRISA0 = 1;
+"138
+[e = . . _TRISAbits 0 0 -> -> 1 `i `uc ]
+[; ;adc.c: 139: ANSELAbits.ANSA0 = 1;
+"139
+[e = . . _ANSELAbits 0 0 -> -> 1 `i `uc ]
+[; ;adc.c: 140: return 1;
+"140
 [e ) -> -> 1 `i `uc ]
 [e $UE 947  ]
-[; ;adc.c: 139: default:
-"139
+[; ;adc.c: 142: case ADC_CHANNEL_1:
+"142
 [e :U 951 ]
-[; ;adc.c: 140: return 0;
-"140
+[; ;adc.c: 143: TRISCbits.TRISC0 = 0;
+"143
+[e = . . _TRISCbits 0 0 -> -> 0 `i `uc ]
+[; ;adc.c: 144: return 1;
+"144
+[e ) -> -> 1 `i `uc ]
+[e $UE 947  ]
+[; ;adc.c: 145: default:
+"145
+[e :U 952 ]
+[; ;adc.c: 146: return 0;
+"146
 [e ) -> -> 0 `i `uc ]
 [e $UE 947  ]
-"141
+"147
 }
-[; ;adc.c: 141: }
+[; ;adc.c: 147: }
 [e $U 948  ]
-"132
+"135
 [e :U 949 ]
 [e [\ _channel , $ . `E30 0 950
- 951 ]
-"141
+ , $ . `E30 1 951
+ 952 ]
+"147
 [e :U 948 ]
-[; ;adc.c: 142: }
-"142
+[; ;adc.c: 148: }
+"148
 [e :UE 947 ]
 }
-"156
-[v _ADC_SetConfiguration `(uc ~T0 @X0 1 ef1`E33 ]
-"157
-{
-[; ;adc.c: 156: bool ADC_SetConfiguration(ADC_CONFIGURATION configuration)
-[; ;adc.c: 157: {
-[e :U _ADC_SetConfiguration ]
-"156
-[v _configuration `E33 ~T0 @X0 1 r1 ]
-"157
-[f ]
-[; ;adc.c: 158: if(configuration == ADC_CONFIGURATION_DEFAULT)
-"158
-[e $ ! == -> _configuration `i -> . `E33 0 `i 953  ]
-[; ;adc.c: 159: {
-"159
-{
-[; ;adc.c: 160: ADCON1=0;
-"160
-[e = _ADCON1 -> -> 0 `i `uc ]
-[; ;adc.c: 161: ADCON2=0xBE;
-"161
-[e = _ADCON2 -> -> 190 `i `uc ]
-[; ;adc.c: 162: ADCON0=0x01;
 "162
-[e = _ADCON0 -> -> 1 `i `uc ]
-[; ;adc.c: 164: return 1;
+[v _ADC_SetConfiguration `(uc ~T0 @X0 1 ef1`E34 ]
+"163
+{
+[; ;adc.c: 162: bool ADC_SetConfiguration(ADC_CONFIGURATION configuration)
+[; ;adc.c: 163: {
+[e :U _ADC_SetConfiguration ]
+"162
+[v _configuration `E34 ~T0 @X0 1 r1 ]
+"163
+[f ]
+[; ;adc.c: 164: if(configuration == ADC_CONFIGURATION_DEFAULT)
 "164
-[e ) -> -> 1 `i `uc ]
-[e $UE 952  ]
+[e $ ! == -> _configuration `i -> . `E34 0 `i 954  ]
+[; ;adc.c: 165: {
 "165
-}
-[e :U 953 ]
-[; ;adc.c: 165: }
-[; ;adc.c: 167: return 0;
+{
+[; ;adc.c: 166: ADCON1=0;
+"166
+[e = _ADCON1 -> -> 0 `i `uc ]
+[; ;adc.c: 167: ADCON2=0xBE;
 "167
-[e ) -> -> 0 `i `uc ]
-[e $UE 952  ]
-[; ;adc.c: 168: }
+[e = _ADCON2 -> -> 190 `i `uc ]
+[; ;adc.c: 168: ADCON0=0x01;
 "168
-[e :UE 952 ]
+[e = _ADCON0 -> -> 1 `i `uc ]
+[; ;adc.c: 170: return 1;
+"170
+[e ) -> -> 1 `i `uc ]
+[e $UE 953  ]
+"171
+}
+[e :U 954 ]
+[; ;adc.c: 171: }
+[; ;adc.c: 173: return 0;
+"173
+[e ) -> -> 0 `i `uc ]
+[e $UE 953  ]
+[; ;adc.c: 174: }
+"174
+[e :UE 953 ]
+}
+"188
+[v _sendSignal `(v ~T0 @X0 1 ef ]
+{
+[; ;adc.c: 188: void sendSignal(){
+[e :U _sendSignal ]
+[f ]
+[; ;adc.c: 189: LATCbits.LATC0 = 1;
+"189
+[e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
+[; ;adc.c: 190: LATCbits.LATC0 = 0;
+"190
+[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
+[; ;adc.c: 191: }
+"191
+[e :UE 955 ]
 }

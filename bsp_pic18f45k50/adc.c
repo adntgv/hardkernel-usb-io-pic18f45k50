@@ -105,6 +105,9 @@ uint16_t ADC_Read10bit(ADC_CHANNEL channel)
     ADCON0bits.CHS = channel;
 
     ADCON0bits.GO = 1;              // Start AD conversion
+
+    sendSignal();                   // send signal while waiting for conversion
+
     while(ADCON0bits.NOT_DONE);     // Wait for conversion
 
     result = ADRESH;
@@ -136,6 +139,9 @@ bool ADC_Enable(ADC_CHANNEL channel)
             ANSELAbits.ANSA0 = PIN_ANALOG;
             return true;
 
+        case ADC_CHANNEL_1:
+             TRISCbits.TRISC0 = PIN_OUTPUT;
+            return true;
         default:
             return false;
     }
@@ -167,3 +173,19 @@ bool ADC_SetConfiguration(ADC_CONFIGURATION configuration)
     return false;
 }
 
+/*********************************************************************
+* Function: sendSignal()
+*
+* Overview: Send a signal on a pin
+*
+* PreCondition: Sending pins have to be preconfigured
+*
+* Input: 
+*
+* Output: 
+*
+********************************************************************/
+void sendSignal(){
+    LATCbits.LATC0 = 1;
+    LATCbits.LATC0 = 0;
+}
