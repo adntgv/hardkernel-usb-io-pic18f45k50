@@ -23,7 +23,7 @@
 /** INCLUDES *******************************************************/
 #include "usb.h"
 #include "usb_device_hid.h"
-
+#include <math.h>
 #include <string.h>
 
 #include "system.h"
@@ -132,19 +132,23 @@ void APP_DeviceCustomHIDTasks()
                 }
                 break;
             case COMMAND_ACQUIRE_FROM_PIN:
-                int i;
-                uint16_t pot;
+               {uint8_t i,j;
+                uint8_t pot;
                 if(!HIDTxHandleBusy(USBInHandle))
                 {
-                    ToSendDataBuffer[0] = 0x10;				//Echo back to the host PC the command we are fulfilling in the first uint8_t.  In this case, the Get Pushbutton State command.
-
-                    for(i =1; i<64;i=i+2 ){
-                         ToSendDataBuffer[i] = (uint8_t)pot; //LSB
-                        ToSendDataBuffer[i+1] = pot >> 8;     //MSB
+                    ToSendDataBuffer[0] = 0x10;				//Echo back to the host PC the command we are fulfilling in the first uint8_t.  
+                    
+                    for(i =1; i<64;i=i++ ){
+                        pot = 0;
+                        for (j=0;j<8;j++){
+                            pot = pot + pow(2,i)* ADC_ReadPercentage(ADC_CHANNEL_POTENTIOMETER) / 50 ;
+                             }
+                         ToSendDataBuffer[i] = pot;
                     }
                     //Prepare the USB module to send the data packet to the host
                     USBInHandle = HIDTxPacket(CUSTOM_DEVICE_HID_EP, (uint8_t*)&ToSendDataBuffer[0],64);
                 }
+            }
                 break;
             case COMMAND_GENERATE_FROM_ADC:
                 {
