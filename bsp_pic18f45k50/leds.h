@@ -30,8 +30,8 @@ typedef enum
 {
     LED_NONE,
     LED_D1,
-    /*LED_D2,
-    LED_D3,
+    LED_D2,
+    /*LED_D3,
     LED_D4,*/
 //      D7 = Bus powered - hard wired to power supply
 //      D8 = Self powered - hard wired to power supply

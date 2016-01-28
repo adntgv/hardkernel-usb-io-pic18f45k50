@@ -7898,6 +7898,7 @@ typedef enum
 {
 LED_NONE,
 LED_D1,
+LED_D2,
 
 # 38
 } LED;
@@ -9019,6 +9020,7 @@ switch(ReceivedDataBuffer[0])
 {
 case COMMAND_TOGGLE_LED:
 LED_Toggle(LED_D1);
+LED_Toggle(LED_D2);
 break;
 case COMMAND_GET_BUTTON_STATUS:
 
@@ -9073,7 +9075,7 @@ uint16_t pot;
 if(!((USBInHandle != 0x0000) && ((*(volatile uint8_t*)USBInHandle & 0x80) != 0x00)))
 {
 
-# 181
+# 182
 pot = ADC_Read10bit(ADC_CHANNEL_0);
 
 ToSendDataBuffer[0] = 0x37;

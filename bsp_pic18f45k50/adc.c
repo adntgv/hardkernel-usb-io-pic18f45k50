@@ -24,6 +24,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include <xc.h>
+#include "leds.h"
 
 
 #define PIN_ANALOG    1
@@ -105,10 +106,13 @@ uint16_t ADC_Read10bit(ADC_CHANNEL channel)
     ADCON0bits.CHS = channel;
 
     ADCON0bits.GO = 1;              // Start AD conversion
-
-    sendSignal();                   // send signal while waiting for conversion
+    LED_On(LED_D1);
+    LED_On(LED_D2);
+    LED_Off(LED_D2);
+    //sendSignal();                   // send signal while waiting for conversion
 
     while(ADCON0bits.NOT_DONE);     // Wait for conversion
+    LED_Off(LED_D1);
 
     result = ADRESH;
     result <<=8;

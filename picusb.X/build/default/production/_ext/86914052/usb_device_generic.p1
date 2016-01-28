@@ -6198,6 +6198,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;bsp_pic18f45k50\leds.h: 30: {
 [; ;bsp_pic18f45k50\leds.h: 31: LED_NONE,
 [; ;bsp_pic18f45k50\leds.h: 32: LED_D1,
+[; ;bsp_pic18f45k50\leds.h: 33: LED_D2,
 [; ;bsp_pic18f45k50\leds.h: 38: } LED;
 [; ;bsp_pic18f45k50\leds.h: 58: void LED_On(LED led);
 [; ;bsp_pic18f45k50\leds.h: 76: void LED_Off(LED led);

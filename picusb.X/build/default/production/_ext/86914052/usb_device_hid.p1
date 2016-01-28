@@ -6539,6 +6539,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;bsp_pic18f45k50\leds.h: 30: {
 [; ;bsp_pic18f45k50\leds.h: 31: LED_NONE,
 [; ;bsp_pic18f45k50\leds.h: 32: LED_D1,
+[; ;bsp_pic18f45k50\leds.h: 33: LED_D2,
 [; ;bsp_pic18f45k50\leds.h: 38: } LED;
 [; ;bsp_pic18f45k50\leds.h: 58: void LED_On(LED led);
 [; ;bsp_pic18f45k50\leds.h: 76: void LED_Off(LED led);
@@ -6962,7 +6963,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;usb_device_hid.c: 170: { inPipes[0].pSrc.bRom = (const uint8_t*)&configDescriptor1 + 18; inPipes[0].wCount.Val = sizeof(USB_HID_DSC)+3; inPipes[0].info.Val = 0x40 | 0x80 | 0x00; };
 "170
 {
-[v F7355 `*Cuc ~T0 @X0 1 t ]
+[v F7356 `*Cuc ~T0 @X0 1 t ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 0 1 -> + &U _configDescriptor1 * -> -> 18 `i `x -> -> # *U &U _configDescriptor1 `i `x `V*Cuc ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 2 0 + -> # `S987 `ui -> -> 3 `i `ui ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 1 -> | | -> 64 `i -> 128 `i -> 0 `i `uc ]
@@ -6983,7 +6984,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;usb_device_hid.c: 179: { inPipes[0].pSrc.bRom = (const uint8_t*)&hid_rpt01; inPipes[0].wCount.Val = 29; inPipes[0].info.Val = 0x40 | 0x80 | 0x00; };
 "179
 {
-[v F7358 `*Cuc ~T0 @X0 1 t ]
+[v F7359 `*Cuc ~T0 @X0 1 t ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 0 1 -> -> &U _hid_rpt01 `*Cuc `V*Cuc ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 2 0 -> -> 29 `i `ui ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 1 -> | | -> 64 `i -> 128 `i -> 0 `i `uc ]
@@ -7053,7 +7054,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;usb_device_hid.c: 219: { inPipes[0].pSrc.bRam = (uint8_t*)&idle_rate; inPipes[0].wCount.Val = 1; inPipes[0].info.Val = 0x40 | 0x80 | 0x01; };
 "219
 {
-[v F7360 `*uc ~T0 @X0 1 t ]
+[v F7361 `*uc ~T0 @X0 1 t ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 0 0 -> &U _idle_rate `V*uc ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 2 0 -> -> 1 `i `ui ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 1 -> | | -> 64 `i -> 128 `i -> 1 `i `uc ]
@@ -7080,7 +7081,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;usb_device_hid.c: 230: { inPipes[0].pSrc.bRam = (uint8_t*)&active_protocol; inPipes[0].wCount.Val = 1; inPipes[0].info.Val = 0x00 | 0x80 | 0x01; };
 "230
 {
-[v F7363 `*uc ~T0 @X0 1 t ]
+[v F7364 `*uc ~T0 @X0 1 t ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 0 0 -> &U _active_protocol `V*uc ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 2 0 -> -> 1 `i `ui ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 1 -> | | -> 0 `i -> 128 `i -> 1 `i `uc ]

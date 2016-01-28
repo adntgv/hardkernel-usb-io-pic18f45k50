@@ -1,7 +1,7 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "68 ../bsp_pic18f45k50/leds.c
-[c E2 0 1 .. ]
-[n E2 . LED_NONE LED_D1  ]
+[c E2 0 1 2 .. ]
+[n E2 . LED_NONE LED_D1 LED_D2  ]
 "4429 C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18f45k50.h
 [s S298 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S298 . LATC0 LATC1 LATC2 . LATC4 LATC5 LATC6 LATC7 ]
@@ -61,6 +61,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;bsp_pic18f45k50\leds.h: 30: {
 [; ;bsp_pic18f45k50\leds.h: 31: LED_NONE,
 [; ;bsp_pic18f45k50\leds.h: 32: LED_D1,
+[; ;bsp_pic18f45k50\leds.h: 33: LED_D2,
 [; ;bsp_pic18f45k50\leds.h: 38: } LED;
 [; ;bsp_pic18f45k50\leds.h: 58: void LED_On(LED led);
 [; ;bsp_pic18f45k50\leds.h: 76: void LED_Off(LED led);
@@ -6280,9 +6281,18 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;leds.c: 73: break;
 "73
 [e $U 934  ]
+[; ;leds.c: 75: case LED_D2:
+"75
+[e :U 937 ]
+[; ;leds.c: 76: LATCbits.LATC0 = 1;
+"76
+[e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
+[; ;leds.c: 77: break;
+"77
+[e $U 934  ]
 [; ;leds.c: 87: case LED_NONE:
 "87
-[e :U 937 ]
+[e :U 938 ]
 [; ;leds.c: 88: break;
 "88
 [e $U 934  ]
@@ -6293,7 +6303,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 "69
 [e :U 935 ]
 [e [\ _led , $ . `E2 1 936
- , $ . `E2 0 937
+ , $ . `E2 2 937
+ , $ . `E2 0 938
  934 ]
 "89
 [e :U 934 ]
@@ -6314,39 +6325,49 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 [; ;leds.c: 110: switch(led)
 "110
-[e $U 940  ]
+[e $U 941  ]
 [; ;leds.c: 111: {
 "111
 {
 [; ;leds.c: 112: case LED_D1:
 "112
-[e :U 941 ]
+[e :U 942 ]
 [; ;leds.c: 113: LATCbits.LATC2 = 0;
 "113
 [e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
 [; ;leds.c: 114: break;
 "114
-[e $U 939  ]
+[e $U 940  ]
+[; ;leds.c: 116: case LED_D2:
+"116
+[e :U 943 ]
+[; ;leds.c: 117: LATCbits.LATC0 = 0;
+"117
+[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
+[; ;leds.c: 118: break;
+"118
+[e $U 940  ]
 [; ;leds.c: 128: case LED_NONE:
 "128
-[e :U 942 ]
+[e :U 944 ]
 [; ;leds.c: 129: break;
 "129
-[e $U 939  ]
+[e $U 940  ]
 "130
 }
 [; ;leds.c: 130: }
-[e $U 939  ]
+[e $U 940  ]
 "110
-[e :U 940 ]
-[e [\ _led , $ . `E2 1 941
- , $ . `E2 0 942
- 939 ]
+[e :U 941 ]
+[e [\ _led , $ . `E2 1 942
+ , $ . `E2 2 943
+ , $ . `E2 0 944
+ 940 ]
 "130
-[e :U 939 ]
+[e :U 940 ]
 [; ;leds.c: 131: }
 "131
-[e :UE 938 ]
+[e :UE 939 ]
 }
 "149
 [v _LED_Toggle `(v ~T0 @X0 1 ef1`E2 ]
@@ -6361,39 +6382,49 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 [; ;leds.c: 151: switch(led)
 "151
-[e $U 945  ]
+[e $U 947  ]
 [; ;leds.c: 152: {
 "152
 {
 [; ;leds.c: 153: case LED_D1:
 "153
-[e :U 946 ]
+[e :U 948 ]
 [; ;leds.c: 154: LATCbits.LATC2 ^= 1;
 "154
 [e =^ . . _LATCbits 0 2 -> -> 1 `i `uc ]
 [; ;leds.c: 155: break;
 "155
-[e $U 944  ]
+[e $U 946  ]
+[; ;leds.c: 157: case LED_D2:
+"157
+[e :U 949 ]
+[; ;leds.c: 158: LATCbits.LATC0 ^= 1;
+"158
+[e =^ . . _LATCbits 0 0 -> -> 1 `i `uc ]
+[; ;leds.c: 159: break;
+"159
+[e $U 946  ]
 [; ;leds.c: 168: case LED_NONE:
 "168
-[e :U 947 ]
+[e :U 950 ]
 [; ;leds.c: 169: break;
 "169
-[e $U 944  ]
+[e $U 946  ]
 "170
 }
 [; ;leds.c: 170: }
-[e $U 944  ]
+[e $U 946  ]
 "151
-[e :U 945 ]
-[e [\ _led , $ . `E2 1 946
- , $ . `E2 0 947
- 944 ]
+[e :U 947 ]
+[e [\ _led , $ . `E2 1 948
+ , $ . `E2 2 949
+ , $ . `E2 0 950
+ 946 ]
 "170
-[e :U 944 ]
+[e :U 946 ]
 [; ;leds.c: 171: }
 "171
-[e :UE 943 ]
+[e :UE 945 ]
 }
 "189
 [v _LED_Get `(uc ~T0 @X0 1 ef1`E2 ]
@@ -6408,42 +6439,50 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 [; ;leds.c: 191: switch(led)
 "191
-[e $U 950  ]
+[e $U 953  ]
 [; ;leds.c: 192: {
 "192
 {
 [; ;leds.c: 193: case LED_D1:
 "193
-[e :U 951 ]
+[e :U 954 ]
 [; ;leds.c: 194: return ( (LATCbits.LATC2 == 1) ? 1 : 0 );
 "194
 [e ) -> ? == -> . . _LATCbits 0 2 `i -> 1 `i : -> 1 `i -> 0 `i `uc ]
-[e $UE 948  ]
+[e $UE 951  ]
+[; ;leds.c: 196: case LED_D2:
+"196
+[e :U 955 ]
+[; ;leds.c: 197: return ( (LATCbits.LATC0 == 1) ? 1 : 0 );
+"197
+[e ) -> ? == -> . . _LATCbits 0 0 `i -> 1 `i : -> 1 `i -> 0 `i `uc ]
+[e $UE 951  ]
 [; ;leds.c: 205: case LED_NONE:
 "205
-[e :U 952 ]
+[e :U 956 ]
 [; ;leds.c: 206: return 0;
 "206
 [e ) -> -> 0 `i `uc ]
-[e $UE 948  ]
+[e $UE 951  ]
 "207
 }
 [; ;leds.c: 207: }
-[e $U 949  ]
+[e $U 952  ]
 "191
-[e :U 950 ]
-[e [\ _led , $ . `E2 1 951
- , $ . `E2 0 952
- 949 ]
+[e :U 953 ]
+[e [\ _led , $ . `E2 1 954
+ , $ . `E2 2 955
+ , $ . `E2 0 956
+ 952 ]
 "207
-[e :U 949 ]
+[e :U 952 ]
 [; ;leds.c: 209: return 0;
 "209
 [e ) -> -> 0 `i `uc ]
-[e $UE 948  ]
+[e $UE 951  ]
 [; ;leds.c: 210: }
 "210
-[e :UE 948 ]
+[e :UE 951 ]
 }
 "227
 [v _LED_Enable `(v ~T0 @X0 1 ef1`E2 ]
@@ -6458,13 +6497,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 [; ;leds.c: 229: switch(led)
 "229
-[e $U 955  ]
+[e $U 959  ]
 [; ;leds.c: 230: {
 "230
 {
 [; ;leds.c: 231: case LED_D1:
 "231
-[e :U 956 ]
+[e :U 960 ]
 [; ;leds.c: 232: TRISCbits.TRISC2 = 0;
 "232
 [e = . . _TRISCbits 0 2 -> -> 0 `i `uc ]
@@ -6473,25 +6512,38 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = . . _ANSELCbits 0 1 -> -> 0 `i `uc ]
 [; ;leds.c: 234: break;
 "234
-[e $U 954  ]
+[e $U 958  ]
+[; ;leds.c: 236: case LED_D2:
+"236
+[e :U 961 ]
+[; ;leds.c: 237: TRISCbits.TRISC0 = 0;
+"237
+[e = . . _TRISCbits 0 0 -> -> 0 `i `uc ]
+[; ;leds.c: 238: ANSELCbits.ANSC2 = 0;
+"238
+[e = . . _ANSELCbits 0 1 -> -> 0 `i `uc ]
+[; ;leds.c: 239: break;
+"239
+[e $U 958  ]
 [; ;leds.c: 251: case LED_NONE:
 "251
-[e :U 957 ]
+[e :U 962 ]
 [; ;leds.c: 252: break;
 "252
-[e $U 954  ]
+[e $U 958  ]
 "253
 }
 [; ;leds.c: 253: }
-[e $U 954  ]
+[e $U 958  ]
 "229
-[e :U 955 ]
-[e [\ _led , $ . `E2 1 956
- , $ . `E2 0 957
- 954 ]
+[e :U 959 ]
+[e [\ _led , $ . `E2 1 960
+ , $ . `E2 2 961
+ , $ . `E2 0 962
+ 958 ]
 "253
-[e :U 954 ]
+[e :U 958 ]
 [; ;leds.c: 254: }
 "254
-[e :UE 953 ]
+[e :UE 957 ]
 }

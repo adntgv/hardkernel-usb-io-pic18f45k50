@@ -7995,7 +7995,32 @@ extern __nonreentrant void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __nonreentrant void _delay3(unsigned char);
 
-# 53 "../bsp_pic18f45k50/adc.c"
+# 29 "../bsp_pic18f45k50/leds.h"
+typedef enum
+{
+LED_NONE,
+LED_D1,
+LED_D2,
+
+# 38
+} LED;
+
+# 58
+void LED_On(LED led);
+
+# 76
+void LED_Off(LED led);
+
+# 94
+void LED_Toggle(LED led);
+
+# 112
+bool LED_Get(LED led);
+
+# 129
+void LED_Enable(LED led);
+
+# 54 "../bsp_pic18f45k50/adc.c"
 uint8_t ADC_ReadPercentage
 (ADC_CHANNEL channel) {
 uint8_t percent;
@@ -8018,7 +8043,7 @@ percent = 100;
 return percent;
 }
 
-# 93
+# 94
 uint16_t ADC_Read10bit(ADC_CHANNEL channel)
 {
 uint16_t result;
@@ -8034,10 +8059,13 @@ return 0xFFFF;
 ADCON0bits.CHS = channel;
 
 ADCON0bits.GO = 1;
+LED_On(LED_D1);
+LED_On(LED_D2);
+LED_Off(LED_D2);
 
-sendSignal();
 
 while(ADCON0bits.NOT_DONE);
+LED_Off(LED_D1);
 
 result = ADRESH;
 result <<=8;
@@ -8046,7 +8074,7 @@ result |= ADRESL;
 return result;
 }
 
-# 133
+# 137
 bool ADC_Enable(ADC_CHANNEL channel)
 {
 switch(channel)
@@ -8064,7 +8092,7 @@ return 0;
 }
 }
 
-# 162
+# 166
 bool ADC_SetConfiguration(ADC_CONFIGURATION configuration)
 {
 if(configuration == ADC_CONFIGURATION_DEFAULT)
@@ -8079,7 +8107,7 @@ return 1;
 return 0;
 }
 
-# 188
+# 192
 void sendSignal(){
 LATCbits.LATC0 = 1;
 LATCbits.LATC0 = 0;

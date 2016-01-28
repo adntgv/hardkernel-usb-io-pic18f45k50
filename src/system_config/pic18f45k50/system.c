@@ -103,7 +103,7 @@ void SYSTEM_Initialize( SYSTEM_STATE state )
 			
             LED_Enable(LED_USB_DEVICE_STATE);
             LED_Enable(LED_USB_DEVICE_HID_CUSTOM);
-            
+            LED_Enable(LED_D2);
             BUTTON_Enable(BUTTON_USB_DEVICE_HID_CUSTOM);
             
             ADC_SetConfiguration(ADC_CONFIGURATION_DEFAULT);

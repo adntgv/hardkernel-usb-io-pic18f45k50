@@ -6213,6 +6213,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;bsp_pic18f45k50\leds.h: 30: {
 [; ;bsp_pic18f45k50\leds.h: 31: LED_NONE,
 [; ;bsp_pic18f45k50\leds.h: 32: LED_D1,
+[; ;bsp_pic18f45k50\leds.h: 33: LED_D2,
 [; ;bsp_pic18f45k50\leds.h: 38: } LED;
 [; ;bsp_pic18f45k50\leds.h: 58: void LED_On(LED led);
 [; ;bsp_pic18f45k50\leds.h: 76: void LED_Off(LED led);
@@ -7170,13 +7171,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;usb_descriptors.c: 262: 0x91, 0x00,
 [; ;usb_descriptors.c: 263: 0xC0}
 [; ;usb_descriptors.c: 264: };
-[v F7359 `*Cuc ~T0 @X0 1 t ]
+[v F7360 `*Cuc ~T0 @X0 1 t ]
 "268
 [v _USB_CD_Ptr `C*Cuc ~T0 @X0 -> 0 `x e ]
 [i _USB_CD_Ptr
 :U ..
 "271
-[v F7360 `*Cuc ~T0 @X0 1 t ]
+[v F7361 `*Cuc ~T0 @X0 1 t ]
 -> -> &U _configDescriptor1 `C*Cuc `*Cuc
 ..
 ]
@@ -7184,19 +7185,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;usb_descriptors.c: 269: {
 [; ;usb_descriptors.c: 270: (const uint8_t *const)&configDescriptor1
 [; ;usb_descriptors.c: 271: };
-[v F7364 `*Cuc ~T0 @X0 1 t ]
+[v F7365 `*Cuc ~T0 @X0 1 t ]
 "274
 [v _USB_SD_Ptr `C*Cuc ~T0 @X0 -> 0 `x e ]
 [i _USB_SD_Ptr
 :U ..
 "276
-[v F7365 `*Cuc ~T0 @X0 1 t ]
+[v F7366 `*Cuc ~T0 @X0 1 t ]
 -> -> &U _sd000 `C*Cuc `*Cuc
 "277
-[v F7367 `*Cuc ~T0 @X0 1 t ]
+[v F7368 `*Cuc ~T0 @X0 1 t ]
 -> -> &U _sd001 `C*Cuc `*Cuc
 "279
-[v F7369 `*Cuc ~T0 @X0 1 t ]
+[v F7370 `*Cuc ~T0 @X0 1 t ]
 -> -> &U _sd002 `C*Cuc `*Cuc
 ..
 ]

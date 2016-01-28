@@ -1,19 +1,19 @@
 Version 3.2 HI-TECH Software Intermediate Code
 [p mainexit ]
 "37 ../src/main.c
-[c E6715 0 1 2 .. ]
-[n E6715 . SYSTEM_STATE_USB_START SYSTEM_STATE_USB_SUSPEND SYSTEM_STATE_USB_RESUME  ]
+[c E6716 0 1 2 .. ]
+[n E6716 . SYSTEM_STATE_USB_START SYSTEM_STATE_USB_SUSPEND SYSTEM_STATE_USB_RESUME  ]
 "59 ../src/system.h
-[v _SYSTEM_Initialize `(v ~T0 @X0 0 ef1`E6715 ]
+[v _SYSTEM_Initialize `(v ~T0 @X0 0 ef1`E6716 ]
 "194 ../../../../../../microchip/mla/v2015_08_10/framework/usb/inc\usb_device.h
 [v _USBDeviceInit `(v ~T0 @X0 0 ef ]
 "634
 [v _USBDeviceAttach `(v ~T0 @X0 0 ef ]
 "65 ../src/main.c
-[c E6983 0 1 2 4 8 16 32 .. ]
-[n E6983 . DETACHED_STATE ATTACHED_STATE POWERED_STATE DEFAULT_STATE ADR_PENDING_STATE ADDRESS_STATE CONFIGURED_STATE  ]
+[c E6984 0 1 2 4 8 16 32 .. ]
+[n E6984 . DETACHED_STATE ATTACHED_STATE POWERED_STATE DEFAULT_STATE ADR_PENDING_STATE ADDRESS_STATE CONFIGURED_STATE  ]
 "2053 ../../../../../../microchip/mla/v2015_08_10/framework/usb/inc\usb_device.h
-[v _USBDeviceState `VE6983 ~T0 @X0 0 e ]
+[v _USBDeviceState `VE6984 ~T0 @X0 0 e ]
 "449 C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18f45k50.h
 [s S21 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S21 . . SUSPND RESUME USBEN PKTDIS SE0 PPBRST ]
@@ -25,8 +25,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 "67 ../src/app_device_custom_hid.h
 [v _APP_DeviceCustomHIDTasks `(v ~T0 @X0 0 ef ]
 "110 ../src/main.c
-[c E6924 0 1 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 400 500 600 700 800 900 1000 10000 32767 .. ]
-[n E6924 . EVENT_NONE EVENT_DEVICE_STACK_BASE EVENT_HOST_STACK_BASE EVENT_HUB_ATTACH EVENT_STALL EVENT_VBUS_SES_REQUEST EVENT_VBUS_OVERCURRENT EVENT_VBUS_REQUEST_POWER EVENT_VBUS_RELEASE_POWER EVENT_VBUS_POWER_AVAILABLE EVENT_UNSUPPORTED_DEVICE EVENT_CANNOT_ENUMERATE EVENT_CLIENT_INIT_ERROR EVENT_OUT_OF_MEMORY EVENT_UNSPECIFIED_ERROR EVENT_DETACH EVENT_TRANSFER EVENT_SOF EVENT_RESUME EVENT_SUSPEND EVENT_RESET EVENT_DATA_ISOC_READ EVENT_DATA_ISOC_WRITE EVENT_OVERRIDE_CLIENT_DRIVER_SELECTION EVENT_1MS EVENT_ALT_INTERFACE EVENT_HOLD_BEFORE_CONFIGURATION EVENT_GENERIC_BASE EVENT_MSD_BASE EVENT_HID_BASE EVENT_PRINTER_BASE EVENT_CDC_BASE EVENT_CHARGER_BASE EVENT_AUDIO_BASE EVENT_USER_BASE EVENT_BUS_ERROR  ]
+[c E6925 0 1 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 400 500 600 700 800 900 1000 10000 32767 .. ]
+[n E6925 . EVENT_NONE EVENT_DEVICE_STACK_BASE EVENT_HOST_STACK_BASE EVENT_HUB_ATTACH EVENT_STALL EVENT_VBUS_SES_REQUEST EVENT_VBUS_OVERCURRENT EVENT_VBUS_REQUEST_POWER EVENT_VBUS_RELEASE_POWER EVENT_VBUS_POWER_AVAILABLE EVENT_UNSUPPORTED_DEVICE EVENT_CANNOT_ENUMERATE EVENT_CLIENT_INIT_ERROR EVENT_OUT_OF_MEMORY EVENT_UNSPECIFIED_ERROR EVENT_DETACH EVENT_TRANSFER EVENT_SOF EVENT_RESUME EVENT_SUSPEND EVENT_RESET EVENT_DATA_ISOC_READ EVENT_DATA_ISOC_WRITE EVENT_OVERRIDE_CLIENT_DRIVER_SELECTION EVENT_1MS EVENT_ALT_INTERFACE EVENT_HOLD_BEFORE_CONFIGURATION EVENT_GENERIC_BASE EVENT_MSD_BASE EVENT_HID_BASE EVENT_PRINTER_BASE EVENT_CDC_BASE EVENT_CHARGER_BASE EVENT_AUDIO_BASE EVENT_USER_BASE EVENT_BUS_ERROR  ]
 "40 ../src/app_led_usb_status.h
 [v _APP_LEDUpdateUSBStatus `(v ~T0 @X0 0 ef ]
 "35 ../src/app_device_custom_hid.h
@@ -34,8 +34,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 "98 ../../../../../../microchip/mla/v2015_08_10/framework/usb/inc\usb_device_hid.h
 [v _USBCheckHIDRequest `(v ~T0 @X0 0 ef ]
 "111 ../src/main.c
-[c E6992 1 2 3 4 5 .. ]
-[n E6992 . EVENT_CONFIGURED EVENT_SET_DESCRIPTOR EVENT_EP0_REQUEST EVENT_ATTACH EVENT_TRANSFER_TERMINATED  ]
+[c E6993 1 2 3 4 5 .. ]
+[n E6993 . EVENT_CONFIGURED EVENT_SET_DESCRIPTOR EVENT_EP0_REQUEST EVENT_ATTACH EVENT_TRANSFER_TERMINATED  ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
 [; ;pic18f45k50.h: 49: extern volatile unsigned char SRCON1 @ 0xF57;
@@ -6235,6 +6235,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;bsp_pic18f45k50\leds.h: 30: {
 [; ;bsp_pic18f45k50\leds.h: 31: LED_NONE,
 [; ;bsp_pic18f45k50\leds.h: 32: LED_D1,
+[; ;bsp_pic18f45k50\leds.h: 33: LED_D2,
 [; ;bsp_pic18f45k50\leds.h: 38: } LED;
 [; ;bsp_pic18f45k50\leds.h: 58: void LED_On(LED led);
 [; ;bsp_pic18f45k50\leds.h: 76: void LED_Off(LED led);
@@ -6855,7 +6856,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 [; ;main.c: 37: SYSTEM_Initialize(SYSTEM_STATE_USB_START);
 "37
-[e ( _SYSTEM_Initialize (1 . `E6715 0 ]
+[e ( _SYSTEM_Initialize (1 . `E6716 0 ]
 [; ;main.c: 39: USBDeviceInit();
 "39
 [e ( _USBDeviceInit ..  ]
@@ -6871,7 +6872,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 44: ;
 [; ;main.c: 65: if( USBDeviceState < CONFIGURED_STATE )
 "65
-[e $ ! < -> _USBDeviceState `i -> . `E6983 6 `i 992  ]
+[e $ ! < -> _USBDeviceState `i -> . `E6984 6 `i 992  ]
 [; ;main.c: 66: {
 "66
 {
@@ -6910,14 +6911,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :UE 988 ]
 }
 "109
-[v _USER_USB_CALLBACK_EVENT_HANDLER `(uc ~T0 @X0 1 ef3`E6924`*v`ui ]
+[v _USER_USB_CALLBACK_EVENT_HANDLER `(uc ~T0 @X0 1 ef3`E6925`*v`ui ]
 "110
 {
 [; ;main.c: 109: bool USER_USB_CALLBACK_EVENT_HANDLER(USB_EVENT event, void *pdata, uint16_t size)
 [; ;main.c: 110: {
 [e :U _USER_USB_CALLBACK_EVENT_HANDLER ]
 "109
-[v _event `E6924 ~T0 @X0 1 r1 ]
+[v _event `E6925 ~T0 @X0 1 r1 ]
 [v _pdata `*v ~T0 @X0 1 r2 ]
 [v _size `ui ~T0 @X0 1 r3 ]
 "110
@@ -6951,7 +6952,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _APP_LEDUpdateUSBStatus ..  ]
 [; ;main.c: 132: SYSTEM_Initialize(SYSTEM_STATE_USB_SUSPEND);
 "132
-[e ( _SYSTEM_Initialize (1 . `E6715 1 ]
+[e ( _SYSTEM_Initialize (1 . `E6716 1 ]
 [; ;main.c: 133: break;
 "133
 [e $U 995  ]
@@ -6963,7 +6964,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _APP_LEDUpdateUSBStatus ..  ]
 [; ;main.c: 143: SYSTEM_Initialize(SYSTEM_STATE_USB_RESUME);
 "143
-[e ( _SYSTEM_Initialize (1 . `E6715 2 ]
+[e ( _SYSTEM_Initialize (1 . `E6716 2 ]
 [; ;main.c: 144: break;
 "144
 [e $U 995  ]
@@ -7015,15 +7016,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 995  ]
 "111
 [e :U 996 ]
-[e [\ -> _event `i , $ -> . `E6924 16 `i 997
- , $ -> . `E6924 17 `i 998
- , $ -> . `E6924 19 `i 999
- , $ -> . `E6924 18 `i 1000
- , $ -> . `E6992 0 `i 1001
- , $ -> . `E6992 1 `i 1002
- , $ -> . `E6992 2 `i 1003
- , $ -> . `E6924 35 `i 1004
- , $ -> . `E6992 4 `i 1005
+[e [\ -> _event `i , $ -> . `E6925 16 `i 997
+ , $ -> . `E6925 17 `i 998
+ , $ -> . `E6925 19 `i 999
+ , $ -> . `E6925 18 `i 1000
+ , $ -> . `E6993 0 `i 1001
+ , $ -> . `E6993 1 `i 1002
+ , $ -> . `E6993 2 `i 1003
+ , $ -> . `E6925 35 `i 1004
+ , $ -> . `E6993 4 `i 1005
  1006 ]
 "169
 [e :U 995 ]

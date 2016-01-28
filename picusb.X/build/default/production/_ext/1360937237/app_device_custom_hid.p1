@@ -4,22 +4,22 @@ Version 3.2 HI-TECH Software Intermediate Code
 "443
 [v _USBTransferOnePacket `(*v ~T0 @X0 0 ef4`uc`uc`*uc`uc ]
 "122 ../src/app_device_custom_hid.c
-[c E6651 0 1 .. ]
-[n E6651 . LED_NONE LED_D1  ]
+[c E6651 0 1 2 .. ]
+[n E6651 . LED_NONE LED_D1 LED_D2  ]
 "94 ../bsp_pic18f45k50\leds.h
 [v _LED_Toggle `(v ~T0 @X0 0 ef1`E6651 ]
 "45 C:\Program Files (x86)\Microchip\xc8\v1.34\include\math.h
 [v _pow `(d ~T0 @X0 0 ef2`d`d ]
-"144 ../src/app_device_custom_hid.c
-[c E6693 0 1 .. ]
-[n E6693 . ADC_CHANNEL_0 ADC_CHANNEL_1  ]
+"145 ../src/app_device_custom_hid.c
+[c E6694 0 1 .. ]
+[n E6694 . ADC_CHANNEL_0 ADC_CHANNEL_1  ]
 "61 ../bsp_pic18f45k50\adc.h
-[v _ADC_ReadPercentage `(uc ~T0 @X0 0 ef1`E6693 ]
+[v _ADC_ReadPercentage `(uc ~T0 @X0 0 ef1`E6694 ]
 "82
-[v _ADC_Read10bit `(ui ~T0 @X0 0 ef1`E6693 ]
+[v _ADC_Read10bit `(ui ~T0 @X0 0 ef1`E6694 ]
 "119 ../src/app_device_custom_hid.c
-[c E7460 128 129 55 16 17 .. ]
-[n E7460 . COMMAND_TOGGLE_LED COMMAND_GET_BUTTON_STATUS COMMAND_READ_POTENTIOMETER COMMAND_ACQUIRE_FROM_PIN COMMAND_GENERATE_FROM_ADC  ]
+[c E7461 128 129 55 16 17 .. ]
+[n E7461 . COMMAND_TOGGLE_LED COMMAND_GET_BUTTON_STATUS COMMAND_READ_POTENTIOMETER COMMAND_ACQUIRE_FROM_PIN COMMAND_GENERATE_FROM_ADC  ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
 [; ;pic18f45k50.h: 49: extern volatile unsigned char SRCON1 @ 0xF57;
@@ -6219,6 +6219,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;bsp_pic18f45k50\leds.h: 30: {
 [; ;bsp_pic18f45k50\leds.h: 31: LED_NONE,
 [; ;bsp_pic18f45k50\leds.h: 32: LED_D1,
+[; ;bsp_pic18f45k50\leds.h: 33: LED_D2,
 [; ;bsp_pic18f45k50\leds.h: 38: } LED;
 [; ;bsp_pic18f45k50\leds.h: 58: void LED_On(LED led);
 [; ;bsp_pic18f45k50\leds.h: 76: void LED_Off(LED led);
@@ -6944,220 +6945,223 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;app_device_custom_hid.c: 122: LED_Toggle(LED_D1);
 "122
 [e ( _LED_Toggle (1 . `E6651 1 ]
-[; ;app_device_custom_hid.c: 123: break;
+[; ;app_device_custom_hid.c: 123: LED_Toggle(LED_D2);
 "123
-[e $U 991  ]
-[; ;app_device_custom_hid.c: 124: case COMMAND_GET_BUTTON_STATUS:
+[e ( _LED_Toggle (1 . `E6651 2 ]
+[; ;app_device_custom_hid.c: 124: break;
 "124
+[e $U 991  ]
+[; ;app_device_custom_hid.c: 125: case COMMAND_GET_BUTTON_STATUS:
+"125
 [e :U 994 ]
-[; ;app_device_custom_hid.c: 126: if(!((USBInHandle != 0x0000) && ((*(volatile uint8_t*)USBInHandle & 0x80) != 0x00)))
-"126
-[e $ ! ! && != _USBInHandle -> -> 0 `i `*Vv != & -> *U -> _USBInHandle `*Vuc `i -> 128 `i -> 0 `i 995  ]
-[; ;app_device_custom_hid.c: 127: {
+[; ;app_device_custom_hid.c: 127: if(!((USBInHandle != 0x0000) && ((*(volatile uint8_t*)USBInHandle & 0x80) != 0x00)))
 "127
-{
-[; ;app_device_custom_hid.c: 128: ToSendDataBuffer[0] = 0x81;
+[e $ ! ! && != _USBInHandle -> -> 0 `i `*Vv != & -> *U -> _USBInHandle `*Vuc `i -> 128 `i -> 0 `i 995  ]
+[; ;app_device_custom_hid.c: 128: {
 "128
+{
+[; ;app_device_custom_hid.c: 129: ToSendDataBuffer[0] = 0x81;
+"129
 [e = *U + &U _ToSendDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> -> 129 `i `uc ]
-[; ;app_device_custom_hid.c: 131: USBInHandle = USBTransferOnePacket(1,1,(uint8_t*)&ToSendDataBuffer[0],64);
-"131
-[e = _USBInHandle -> ( _USBTransferOnePacket (4 , , , -> -> 1 `i `uc -> -> 1 `i `uc &U *U + &U _ToSendDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> -> 64 `i `uc `*Vv ]
+[; ;app_device_custom_hid.c: 132: USBInHandle = USBTransferOnePacket(1,1,(uint8_t*)&ToSendDataBuffer[0],64);
 "132
+[e = _USBInHandle -> ( _USBTransferOnePacket (4 , , , -> -> 1 `i `uc -> -> 1 `i `uc &U *U + &U _ToSendDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> -> 64 `i `uc `*Vv ]
+"133
 }
 [e :U 995 ]
-[; ;app_device_custom_hid.c: 132: }
-[; ;app_device_custom_hid.c: 133: break;
-"133
-[e $U 991  ]
-[; ;app_device_custom_hid.c: 134: case COMMAND_ACQUIRE_FROM_PIN:
+[; ;app_device_custom_hid.c: 133: }
+[; ;app_device_custom_hid.c: 134: break;
 "134
-[e :U 996 ]
-[; ;app_device_custom_hid.c: 135: {uint8_t i,j;
+[e $U 991  ]
+[; ;app_device_custom_hid.c: 135: case COMMAND_ACQUIRE_FROM_PIN:
 "135
+[e :U 996 ]
+[; ;app_device_custom_hid.c: 136: {uint8_t i,j;
+"136
 {
 [v _i `uc ~T0 @X0 1 a ]
 [v _j `uc ~T0 @X0 1 a ]
-"136
-[v _pot `uc ~T0 @X0 1 a ]
-[; ;app_device_custom_hid.c: 136: uint8_t pot;
-[; ;app_device_custom_hid.c: 137: if(!((USBInHandle != 0x0000) && ((*(volatile uint8_t*)USBInHandle & 0x80) != 0x00)))
 "137
-[e $ ! ! && != _USBInHandle -> -> 0 `i `*Vv != & -> *U -> _USBInHandle `*Vuc `i -> 128 `i -> 0 `i 997  ]
-[; ;app_device_custom_hid.c: 138: {
+[v _pot `uc ~T0 @X0 1 a ]
+[; ;app_device_custom_hid.c: 137: uint8_t pot;
+[; ;app_device_custom_hid.c: 138: if(!((USBInHandle != 0x0000) && ((*(volatile uint8_t*)USBInHandle & 0x80) != 0x00)))
 "138
-{
-[; ;app_device_custom_hid.c: 139: ToSendDataBuffer[0] = 0x10;
+[e $ ! ! && != _USBInHandle -> -> 0 `i `*Vv != & -> *U -> _USBInHandle `*Vuc `i -> 128 `i -> 0 `i 997  ]
+[; ;app_device_custom_hid.c: 139: {
 "139
+{
+[; ;app_device_custom_hid.c: 140: ToSendDataBuffer[0] = 0x10;
+"140
 [e = *U + &U _ToSendDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> -> 16 `i `uc ]
-[; ;app_device_custom_hid.c: 141: for(i =1; i<64;i=i++ ){
-"141
+[; ;app_device_custom_hid.c: 142: for(i =1; i<64;i=i++ ){
+"142
 {
 [e = _i -> -> 1 `i `uc ]
 [e $ < -> _i `i -> 64 `i 998  ]
 [e $U 999  ]
 [e :U 998 ]
 {
-[; ;app_device_custom_hid.c: 143: for (j=0;j<8;j++){
-"143
+[; ;app_device_custom_hid.c: 144: for (j=0;j<8;j++){
+"144
 {
 [e = _j -> -> 0 `i `uc ]
 [e $ < -> _j `i -> 8 `i 1001  ]
 [e $U 1002  ]
 [e :U 1001 ]
 {
-[; ;app_device_custom_hid.c: 144: pot = pot + pow(2,j)* ADC_ReadPercentage(ADC_CHANNEL_0) / 50 ;
-"144
-[e = _pot -> + -> _pot `d / * ( _pow (2 , -> -> 2 `i `d -> _j `d -> ( _ADC_ReadPercentage (1 . `E6693 0 `d -> -> 50 `i `d `uc ]
+[; ;app_device_custom_hid.c: 145: pot = pot + pow(2,j)* ADC_ReadPercentage(ADC_CHANNEL_0) / 50 ;
 "145
+[e = _pot -> + -> _pot `d / * ( _pow (2 , -> -> 2 `i `d -> _j `d -> ( _ADC_ReadPercentage (1 . `E6694 0 `d -> -> 50 `i `d `uc ]
+"146
 }
-"143
+"144
 [e ++ _j -> -> 1 `i `uc ]
 [e $ < -> _j `i -> 8 `i 1001  ]
 [e :U 1002 ]
-"145
-}
-[; ;app_device_custom_hid.c: 145: }
-[; ;app_device_custom_hid.c: 146: ToSendDataBuffer[i] = pot;
 "146
-[e = *U + &U _ToSendDataBuffer * -> _i `ux -> -> # *U &U _ToSendDataBuffer `ui `ux _pot ]
-[; ;app_device_custom_hid.c: 147: pot = 0;
-"147
-[e = _pot -> -> 0 `i `uc ]
-"148
 }
-"141
+[; ;app_device_custom_hid.c: 146: }
+[; ;app_device_custom_hid.c: 147: ToSendDataBuffer[i] = pot;
+"147
+[e = *U + &U _ToSendDataBuffer * -> _i `ux -> -> # *U &U _ToSendDataBuffer `ui `ux _pot ]
+[; ;app_device_custom_hid.c: 148: pot = 0;
+"148
+[e = _pot -> -> 0 `i `uc ]
+"149
+}
+"142
 [e = _i ++ _i -> -> 1 `i `uc ]
 [e $ < -> _i `i -> 64 `i 998  ]
 [e :U 999 ]
-"148
+"149
 }
-[; ;app_device_custom_hid.c: 148: }
-[; ;app_device_custom_hid.c: 150: USBInHandle = USBTransferOnePacket(1,1,(uint8_t*)&ToSendDataBuffer[0],64);
-"150
-[e = _USBInHandle -> ( _USBTransferOnePacket (4 , , , -> -> 1 `i `uc -> -> 1 `i `uc &U *U + &U _ToSendDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> -> 64 `i `uc `*Vv ]
+[; ;app_device_custom_hid.c: 149: }
+[; ;app_device_custom_hid.c: 151: USBInHandle = USBTransferOnePacket(1,1,(uint8_t*)&ToSendDataBuffer[0],64);
 "151
-}
-[e :U 997 ]
+[e = _USBInHandle -> ( _USBTransferOnePacket (4 , , , -> -> 1 `i `uc -> -> 1 `i `uc &U *U + &U _ToSendDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> -> 64 `i `uc `*Vv ]
 "152
 }
-[; ;app_device_custom_hid.c: 151: }
-[; ;app_device_custom_hid.c: 152: }
-[; ;app_device_custom_hid.c: 153: break;
+[e :U 997 ]
 "153
-[e $U 991  ]
-[; ;app_device_custom_hid.c: 154: case COMMAND_GENERATE_FROM_ADC:
+}
+[; ;app_device_custom_hid.c: 152: }
+[; ;app_device_custom_hid.c: 153: }
+[; ;app_device_custom_hid.c: 154: break;
 "154
-[e :U 1004 ]
-[; ;app_device_custom_hid.c: 155: {
+[e $U 991  ]
+[; ;app_device_custom_hid.c: 155: case COMMAND_GENERATE_FROM_ADC:
 "155
-{
+[e :U 1004 ]
+[; ;app_device_custom_hid.c: 156: {
 "156
+{
+"157
 [v _i `uc ~T0 @X0 1 a ]
 [v _j `uc ~T0 @X0 1 a ]
-"157
-[v _pot `ui ~T0 @X0 1 a ]
-[; ;app_device_custom_hid.c: 156: uint8_t i,j;
-[; ;app_device_custom_hid.c: 157: uint16_t pot;
-[; ;app_device_custom_hid.c: 158: ToSendDataBuffer[0] = 0x11;
 "158
+[v _pot `ui ~T0 @X0 1 a ]
+[; ;app_device_custom_hid.c: 157: uint8_t i,j;
+[; ;app_device_custom_hid.c: 158: uint16_t pot;
+[; ;app_device_custom_hid.c: 159: ToSendDataBuffer[0] = 0x11;
+"159
 [e = *U + &U _ToSendDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> -> 17 `i `uc ]
-[; ;app_device_custom_hid.c: 160: for(i =1; i<63;i=i+2 ){
-"160
+[; ;app_device_custom_hid.c: 161: for(i =1; i<63;i=i+2 ){
+"161
 {
 [e = _i -> -> 1 `i `uc ]
 [e $ < -> _i `i -> 63 `i 1005  ]
 [e $U 1006  ]
 [e :U 1005 ]
 {
-[; ;app_device_custom_hid.c: 161: pot = ADC_Read10bit(ADC_CHANNEL_0);
-"161
-[e = _pot ( _ADC_Read10bit (1 . `E6693 0 ]
-[; ;app_device_custom_hid.c: 162: ToSendDataBuffer[i] = (uint8_t)pot;
+[; ;app_device_custom_hid.c: 162: pot = ADC_Read10bit(ADC_CHANNEL_0);
 "162
-[e = *U + &U _ToSendDataBuffer * -> _i `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> _pot `uc ]
-[; ;app_device_custom_hid.c: 163: ToSendDataBuffer[i+1] = pot >> 8;
+[e = _pot ( _ADC_Read10bit (1 . `E6694 0 ]
+[; ;app_device_custom_hid.c: 163: ToSendDataBuffer[i] = (uint8_t)pot;
 "163
-[e = *U + &U _ToSendDataBuffer * -> -> + -> _i `i -> 1 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> >> _pot -> 8 `i `uc ]
+[e = *U + &U _ToSendDataBuffer * -> _i `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> _pot `uc ]
+[; ;app_device_custom_hid.c: 164: ToSendDataBuffer[i+1] = pot >> 8;
 "164
+[e = *U + &U _ToSendDataBuffer * -> -> + -> _i `i -> 1 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> >> _pot -> 8 `i `uc ]
+"165
 }
-"160
+"161
 [e = _i -> + -> _i `i -> 2 `i `uc ]
 [e $ < -> _i `i -> 63 `i 1005  ]
 [e :U 1006 ]
-"164
-}
-[; ;app_device_custom_hid.c: 164: }
-[; ;app_device_custom_hid.c: 165: USBInHandle = USBTransferOnePacket(1,1,(uint8_t*)&ToSendDataBuffer[0],64);
 "165
-[e = _USBInHandle -> ( _USBTransferOnePacket (4 , , , -> -> 1 `i `uc -> -> 1 `i `uc &U *U + &U _ToSendDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> -> 64 `i `uc `*Vv ]
+}
+[; ;app_device_custom_hid.c: 165: }
+[; ;app_device_custom_hid.c: 166: USBInHandle = USBTransferOnePacket(1,1,(uint8_t*)&ToSendDataBuffer[0],64);
 "166
-}
-[; ;app_device_custom_hid.c: 166: }
-[; ;app_device_custom_hid.c: 168: break;
-"168
-[e $U 991  ]
-[; ;app_device_custom_hid.c: 169: case COMMAND_READ_POTENTIOMETER:
-"169
-[e :U 1008 ]
-[; ;app_device_custom_hid.c: 170: {
-"170
-{
-"171
-[v _pot `ui ~T0 @X0 1 a ]
-[; ;app_device_custom_hid.c: 171: uint16_t pot;
-[; ;app_device_custom_hid.c: 174: if(!((USBInHandle != 0x0000) && ((*(volatile uint8_t*)USBInHandle & 0x80) != 0x00)))
-"174
-[e $ ! ! && != _USBInHandle -> -> 0 `i `*Vv != & -> *U -> _USBInHandle `*Vuc `i -> 128 `i -> 0 `i 1009  ]
-[; ;app_device_custom_hid.c: 175: {
-"175
-{
-[; ;app_device_custom_hid.c: 181: pot = ADC_Read10bit(ADC_CHANNEL_0);
-"181
-[e = _pot ( _ADC_Read10bit (1 . `E6693 0 ]
-[; ;app_device_custom_hid.c: 183: ToSendDataBuffer[0] = 0x37;
-"183
-[e = *U + &U _ToSendDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> -> 55 `i `uc ]
-[; ;app_device_custom_hid.c: 184: ToSendDataBuffer[1] = (uint8_t)pot;
-"184
-[e = *U + &U _ToSendDataBuffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> _pot `uc ]
-[; ;app_device_custom_hid.c: 185: ToSendDataBuffer[2] = pot >> 8;
-"185
-[e = *U + &U _ToSendDataBuffer * -> -> -> 2 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> >> _pot -> 8 `i `uc ]
-[; ;app_device_custom_hid.c: 189: USBInHandle = USBTransferOnePacket(1,1,(uint8_t*)&ToSendDataBuffer[0],64);
-"189
 [e = _USBInHandle -> ( _USBTransferOnePacket (4 , , , -> -> 1 `i `uc -> -> 1 `i `uc &U *U + &U _ToSendDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> -> 64 `i `uc `*Vv ]
-"190
+"167
 }
-[e :U 1009 ]
+[; ;app_device_custom_hid.c: 167: }
+[; ;app_device_custom_hid.c: 169: break;
+"169
+[e $U 991  ]
+[; ;app_device_custom_hid.c: 170: case COMMAND_READ_POTENTIOMETER:
+"170
+[e :U 1008 ]
+[; ;app_device_custom_hid.c: 171: {
+"171
+{
+"172
+[v _pot `ui ~T0 @X0 1 a ]
+[; ;app_device_custom_hid.c: 172: uint16_t pot;
+[; ;app_device_custom_hid.c: 175: if(!((USBInHandle != 0x0000) && ((*(volatile uint8_t*)USBInHandle & 0x80) != 0x00)))
+"175
+[e $ ! ! && != _USBInHandle -> -> 0 `i `*Vv != & -> *U -> _USBInHandle `*Vuc `i -> 128 `i -> 0 `i 1009  ]
+[; ;app_device_custom_hid.c: 176: {
+"176
+{
+[; ;app_device_custom_hid.c: 182: pot = ADC_Read10bit(ADC_CHANNEL_0);
+"182
+[e = _pot ( _ADC_Read10bit (1 . `E6694 0 ]
+[; ;app_device_custom_hid.c: 184: ToSendDataBuffer[0] = 0x37;
+"184
+[e = *U + &U _ToSendDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> -> 55 `i `uc ]
+[; ;app_device_custom_hid.c: 185: ToSendDataBuffer[1] = (uint8_t)pot;
+"185
+[e = *U + &U _ToSendDataBuffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> _pot `uc ]
+[; ;app_device_custom_hid.c: 186: ToSendDataBuffer[2] = pot >> 8;
+"186
+[e = *U + &U _ToSendDataBuffer * -> -> -> 2 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> >> _pot -> 8 `i `uc ]
+[; ;app_device_custom_hid.c: 190: USBInHandle = USBTransferOnePacket(1,1,(uint8_t*)&ToSendDataBuffer[0],64);
+"190
+[e = _USBInHandle -> ( _USBTransferOnePacket (4 , , , -> -> 1 `i `uc -> -> 1 `i `uc &U *U + &U _ToSendDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> -> 64 `i `uc `*Vv ]
 "191
 }
-[; ;app_device_custom_hid.c: 190: }
-[; ;app_device_custom_hid.c: 191: }
-[; ;app_device_custom_hid.c: 192: break;
+[e :U 1009 ]
 "192
-[e $U 991  ]
-"193
 }
-[; ;app_device_custom_hid.c: 193: }
+[; ;app_device_custom_hid.c: 191: }
+[; ;app_device_custom_hid.c: 192: }
+[; ;app_device_custom_hid.c: 193: break;
+"193
+[e $U 991  ]
+"194
+}
+[; ;app_device_custom_hid.c: 194: }
 [e $U 991  ]
 "119
 [e :U 992 ]
-[e [\ *U + &U _ReceivedDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ReceivedDataBuffer `ui `ux , $ -> . `E7460 0 `uc 993
- , $ -> . `E7460 1 `uc 994
- , $ -> . `E7460 3 `uc 996
- , $ -> . `E7460 4 `uc 1004
- , $ -> . `E7460 2 `uc 1008
+[e [\ *U + &U _ReceivedDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ReceivedDataBuffer `ui `ux , $ -> . `E7461 0 `uc 993
+ , $ -> . `E7461 1 `uc 994
+ , $ -> . `E7461 3 `uc 996
+ , $ -> . `E7461 4 `uc 1004
+ , $ -> . `E7461 2 `uc 1008
  991 ]
-"193
+"194
 [e :U 991 ]
-[; ;app_device_custom_hid.c: 196: USBOutHandle = USBTransferOnePacket(1,0,(uint8_t*)&ReceivedDataBuffer,64);
-"196
-[e = _USBOutHandle -> ( _USBTransferOnePacket (4 , , , -> -> 1 `i `uc -> -> 0 `i `uc &U _ReceivedDataBuffer -> -> 64 `i `uc `*Vv ]
+[; ;app_device_custom_hid.c: 197: USBOutHandle = USBTransferOnePacket(1,0,(uint8_t*)&ReceivedDataBuffer,64);
 "197
+[e = _USBOutHandle -> ( _USBTransferOnePacket (4 , , , -> -> 1 `i `uc -> -> 0 `i `uc &U _ReceivedDataBuffer -> -> 64 `i `uc `*Vv ]
+"198
 }
 [e :U 990 ]
-[; ;app_device_custom_hid.c: 197: }
 [; ;app_device_custom_hid.c: 198: }
-"198
+[; ;app_device_custom_hid.c: 199: }
+"199
 [e :UE 989 ]
 }

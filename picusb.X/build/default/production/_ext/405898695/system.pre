@@ -7898,6 +7898,7 @@ typedef enum
 {
 LED_NONE,
 LED_D1,
+LED_D2,
 
 # 38
 } LED;
@@ -8947,7 +8948,7 @@ ACTCON = 0x90;
 
 LED_Enable(LED_NONE);
 LED_Enable(LED_D1);
-
+LED_Enable(LED_D2);
 BUTTON_Enable(BUTTON_S2);
 
 ADC_SetConfiguration(ADC_CONFIGURATION_DEFAULT);

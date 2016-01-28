@@ -7898,6 +7898,7 @@ typedef enum
 {
 LED_NONE,
 LED_D1,
+LED_D2,
 
 # 38
 } LED;
